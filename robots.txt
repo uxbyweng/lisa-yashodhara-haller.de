@@ -1,0 +1,26 @@
+# ########################################### #
+# robots.txt from https://www.lisa-yashodhara-haller.de/
+# ########################################### #
+# Validator and Testing Tool: 
+# https://technicalseo.com/tools/robots-txt/
+# ########## ########## ########## ########## #
+# # Last update: 04.03.2005
+# ########## ########## ########## ########## #
+
+# valid for all robots
+User-agent: *
+
+# disallow
+Disallow: /jens.php
+Disallow: /_backup
+Disallow: /css/
+Disallow: /downloads/
+Disallow: /error/
+Disallow: /fonts/
+Disallow: /imgages/*.psd
+Disallow: /includes/
+Disallow: /js/
+Disallow: /vendor/
+
+# path of current sitemap :
+Sitemap: https://www.lisa-yashodhara-haller.de/sitemap.xml 

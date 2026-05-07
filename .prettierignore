@@ -1,0 +1,15 @@
+*.min.css
+*.min.js
+assets/css
+build
+coverage
+dist
+fonts/
+js/bootstrap.min.js
+js/popper.min.js
+js/cookieconsent.min.js
+js/modernizr-custom.js
+node_modules
+package-lock.json
+vendor
+

@@ -1,0 +1,62 @@
+# Basis: Alle Textdateien normalisieren
+* text=auto
+
+# Erzwinge LF für bestimmte Textdateien (nie CRLF auschecken)
+*.htaccess text eol=lf
+
+# Erzwinge LF für Config/Code-Dateien
+*.sh  text eol=lf
+*.bash text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.xml  text eol=lf
+*.php  text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.html text eol=lf
+*.md   text eol=lf
+*.scss text eol=lf
+*.sass text eol=lf
+*.ts   text eol=lf
+*.tsx  text eol=lf
+*.vue  text eol=lf
+*.map  text eol=lf
+*.lock text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.config.js text eol=lf
+*.config.mjs text eol=lf
+.*ignore text eol=lf
+.editorconfig text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.nvmrc text eol=lf
+
+# Minifizierte Dateien sind Binärdateien (keine Zeilenenden-Konvertierung, keine Diffs)
+*.min.js  binary
+*.min.css binary
+
+# Windows-PowerShell-Skripte dürfen CRLF behalten
+*.ps1 text eol=crlf
+
+# Markiere Binärdateien (keine Zeilenenden-Konvertierung, keine Diffs)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.svg  text
+*.woff  binary
+*.woff2 binary
+*.ttf  binary
+*.eot  binary
+*.pdf  binary
+*.psd  binary
+*.ai   binary
+*.webp binary
+*.ico  binary
+*.zip  binary
+
+
