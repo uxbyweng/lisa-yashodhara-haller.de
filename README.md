@@ -11,7 +11,7 @@ Live: [https://www.lisa-yashodhara-haller.de](https://www.lisa-yashodhara-haller
 | Layer | Technology |
 |---|---|
 | Backend | PHP (no CMS, no framework) |
-| Frontend | Bootstrap 5, Vanilla JS, jQuery 3.5.1 |
+| Frontend | Bootstrap 5, Vanilla JS, jQuery 3.7.1 |
 | Server | Apache, `.htaccess` |
 | Deployment | FTP upload |
 | Language | German (`de_DE`) |
@@ -61,6 +61,7 @@ lisa-yashodhara-haller.de/
 ├── downloads/              # Publicly downloadable PDFs
 ├── error/                  # Custom 404 page
 ├── images/                 # Site images (WebP, AVIF, JPG, PNG, SVG)
+│   └── yt-thumbs/          # Local YouTube thumbnails (GDPR-compliant façade)
 ├── imprint/                # Imprint (Impressum)
 ├── includes/               # Shared PHP includes
 │   ├── header.php          # <head>, meta, OG, Schema.org
@@ -81,7 +82,7 @@ lisa-yashodhara-haller.de/
 ├── publications/           # Publications list
 ├── talks-and-workshops/    # Talks and workshops
 ├── vendor/                 # Third-party libraries (local, no CDN)
-│   ├── jquery.min.js       # jQuery 3.5.1
+│   ├── jquery.min.js       # jQuery 3.7.1
 │   ├── bootstrap/          # Bootstrap 5
 │   ├── slick/              # Slick Slider
 │   ├── fancybox/           # FancyBox lightbox
@@ -144,7 +145,12 @@ Copy the template and fill in your values:
 
 ```bash
 # .env
-CONTACT_MAIL=your@email.com
+AUTH_USER=your_username
+AUTH_PASS=your_password
+
+MAIL_FROM=info@your-domain.de   # Must be a real mailbox on the server
+MAIL_SENDTO=you@your-email.de
+MAIL_BCC=                        # Optional BCC address
 ```
 
 ---
