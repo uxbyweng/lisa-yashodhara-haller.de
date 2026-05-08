@@ -82,21 +82,14 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 
 ### 🟡 MITTEL – Diesen Monat (8 Punkte)
 
-- [ ] **PERFORMANCE: WebP-Bilder werden nicht gecacht (falscher MIME-Typ)**
-  - Datei: `.htaccess`, Zeile 186
-  - `video/webp` → `image/webp`
-  - Aufwand: 2 Min
+- [x] **PERFORMANCE: WebP MIME-Typ korrigiert** ✓ 08.05.2026
+  - `.htaccess`: `video/webp` → `image/webp`
 
-- [ ] **PERFORMANCE: Cache-Busting via `time()` für Isotope deaktiviert effektiv Caching**
-  - Datei: `includes/footer.php`, Zeile 132
-  - `?v=" . time()` → `?v=3.0.6` (statische Versionsnummer)
-  - Aufwand: 5 Min
+- [x] **PERFORMANCE: Cache-Busting `time()` entfernt** ✓ 08.05.2026
+  - `includes/footer.php`: `?v=" . time()` → `?v=3.0.6`
 
-- [ ] **PERFORMANCE: Gzip auf bereits komprimierten Binärdateien entfernen**
-  - Datei: `.htaccess`, Zeilen 69–73
-  - JPG/PNG/WebP sind bereits binär komprimiert – DEFLATE darüber kostet CPU ohne Nutzen
-  - Fix: `<FilesMatch>` Block auf `.js` und `.css` beschränken
-  - Aufwand: 10 Min
+- [x] **PERFORMANCE: Gzip auf Binärdateien deaktiviert** ✓ 08.05.2026
+  - `.htaccess`: `FilesMatch` auf `.js|css` beschränkt – JPG/PNG/WebP werden nicht mehr nutzlos komprimiert
 
 - [ ] **ACCESSIBILITY: ARIA-Labels für Scroll-Button und Social-Links ergänzen**
   - Datei: `includes/footer.php`, Zeilen 105–107 und 14–29
@@ -166,9 +159,9 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 |---|---|---|---|
 | 🔴 Kritisch | 4 | 4 | 0 |
 | 🟠 Hoch | 7 | 7 | 0 |
-| 🟡 Mittel | 8 | 1 | 7 |
+| 🟡 Mittel | 8 | 4 | 4 |
 | 🟢 Niedrig | 6 | 0 | 6 |
-| **Gesamt** | **25** | **12** | **13** |
+| **Gesamt** | **25** | **15** | **10** |
 
 ---
 

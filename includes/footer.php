@@ -128,7 +128,7 @@ $(function () {
 <!-- Fancybox -->
 <script src="/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
 <!-- isotop -->
-<script src="/vendor/isotope.pkgd.min.js<?php if (dirname($_SERVER['SCRIPT_NAME']) == '/projects') { echo "?v=" . time(); } ?>"></script>
+<script src="/vendor/isotope.pkgd.min.js?v=3.0.6"></script>
 <!-- validator js -->
 <script src="/vendor/validator.js"></script>
 <!-- Custom js -->
