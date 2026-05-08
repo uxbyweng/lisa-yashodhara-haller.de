@@ -39,26 +39,14 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 
 ### 🟠 HOCH – Diese Woche (7 Punkte)
 
-- [ ] **SICHERHEIT: HTTP-Sicherheitsheader ergänzen**
-  - Datei: `.htaccess`
-  - Fehlend: `Content-Security-Policy`, `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`
-  - Fix: Nach HSTS-Zeile einfügen:
-    ```apache
-    <IfModule mod_headers.c>
-        Header always set X-Frame-Options "SAMEORIGIN"
-        Header always set X-Content-Type-Options "nosniff"
-        Header always set Referrer-Policy "strict-origin-when-cross-origin"
-        Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-        Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://img.youtube.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'"
-    </IfModule>
-    ```
-  - Aufwand: 1 Std
+- [x] **SICHERHEIT: HTTP-Sicherheitsheader ergänzt** ✓ 08.05.2026
+  - Datei: `.htaccess`, nach HSTS-Zeile eingefügt
+  - Gesetzt: `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, `Content-Security-Policy`
 
-- [ ] **SICHERHEIT: jQuery 3.5.1 aktualisieren (CVE-2020-11022 + CVE-2020-11023)**
+- [x] **SICHERHEIT: jQuery 3.5.1 auf 3.7.1 aktualisiert (CVE-2020-11022 + CVE-2020-11023)** ✓ 08.05.2026
   - Betrifft: `vendor/jquery.min.js`
   - Beide CVEs sind XSS-Lücken, direkt relevant wegen `.html()`-Aufruf in `theme.js`
-  - Fix: jQuery 3.7.1 herunterladen und als `/vendor/jquery.min.js` ersetzen
-  - Aufwand: 20 Min
+  - Fix: jQuery 3.7.1 heruntergeladen und als `/vendor/jquery.min.js` ersetzt
 
 - [ ] **DATENSCHUTZ/DSGVO: YouTube-Videos ohne Einwilligung laden externe Ressourcen**
   - Datei: `components/youtube_video.php`
@@ -177,10 +165,10 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 | Priorität | Gesamt | Erledigt | Offen |
 |---|---|---|---|
 | 🔴 Kritisch | 4 | 4 | 0 |
-| 🟠 Hoch | 7 | 2 | 5 |
+| 🟠 Hoch | 7 | 4 | 3 |
 | 🟡 Mittel | 8 | 0 | 8 |
 | 🟢 Niedrig | 6 | 0 | 6 |
-| **Gesamt** | **25** | **6** | **19** |
+| **Gesamt** | **25** | **8** | **17** |
 
 ---
 
