@@ -12,6 +12,15 @@
 # activate HSTS (HTTP Strict Transport Security)
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
 
+# HTTP Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://img.youtube.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'"
+</IfModule>
+
 # ----------------------------------------------------------------------
 # RewriteEngine Rules
 # ----------------------------------------------------------------------
