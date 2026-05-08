@@ -129,8 +129,24 @@
             });
           }
 
-    
-$(window).on ('load', function (){ 
+
+// --------------------- YouTube Two-Click-Façade
+    $(document).on('click', '.yt-facade', function (e) {
+        if ($(e.target).closest('.yt-facade__notice').length) return;
+        $(this).find('.yt-facade__notice').show();
+    });
+    $(document).on('click', '.yt-facade__accept', function (e) {
+        e.stopPropagation();
+        var $f = $(this).closest('.yt-facade');
+        $.fancybox.open({
+            src: 'https://www.youtube.com/embed/' + $f.data('ytId') + '?start=' + ($f.data('ytStart') || 0) + '&autoplay=1',
+            type: 'iframe',
+            opts: { animationEffect: 'zoom-in-out', transitionEffect: 'zoom-in-out' }
+        });
+    });
+
+
+$(window).on ('load', function (){
 // makes sure the whole site is loaded
 
 

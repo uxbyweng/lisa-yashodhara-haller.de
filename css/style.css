@@ -8371,5 +8371,48 @@ body .btn-twentySix:hover:after {top: 0; left: 0;}
 .form-style-five ::-webkit-input-placeholder {color: #fff;}
 .form-style-five :-ms-input-placeholder { color: #fff;}
 .form-style-five ::placeholder {color: #fff;}
+
+/*^^^^^^^^^^^^^^^^^^^^^ YouTube Two-Click-Façade ^^^^^^^^^^^^^^^^^^^^^^^^*/
+.yt-facade {
+    background: #1a1a2e;
+    cursor: pointer;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    overflow: hidden;
+}
+.yt-facade__notice {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    color: #fff;
+    text-align: center;
+    z-index: 10;
+}
+.yt-facade__notice p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    max-width: 420px;
+}
+.yt-facade__notice a { color: rgba(255,255,255,0.75); text-decoration: underline; }
+.yt-facade__accept {
+    background: #950000;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.yt-facade__accept:hover,
+.yt-facade__accept:focus { background: #b30000; }
 .form-style-five [class*="btn-"] {font-size: 14px; letter-spacing: 0.88px;}
 .form-style-five [class*="btn-"]:hover {background: var(--prime-eight); color: #000;}

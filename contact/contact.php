@@ -1,7 +1,7 @@
 <?php
 // Mail-Konfiguration – Werte in .env hinterlegen
 $fromEmail   = getenv('MAIL_FROM')   ?: 'info@lisa-yashodhara-haller.de'; // MUSS als Postfach auf dem Server existieren
-$fromName    = 'Lisa Yashodhara Haller';
+$fromName    = 'Dr. Prof. Lisa Yashodhara Haller';
 $sendTo      = getenv('MAIL_SENDTO') ?: 'yashodhara@gmx.de';
 $bcc         = getenv('MAIL_BCC')    ?: '';
 
@@ -84,7 +84,7 @@ try {
                 "Sehr geehrte/r $senderName,\n\n" .
                 "vielen Dank für Ihre Nachricht. Ich habe Ihre Anfrage erhalten und werde mich zeitnah bei Ihnen melden.\n\n" .
                 "Mit freundlichen Grüßen\n" .
-                "Lisa Yashodhara Haller\n" .
+                "Prof. Dr. Lisa Yashodhara Haller\n" .
                 "https://www.lisa-yashodhara-haller.de";
             $confirmHeaders = [
                 'Content-Type: text/plain; charset="UTF-8"',

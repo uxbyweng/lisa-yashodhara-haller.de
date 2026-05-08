@@ -54,12 +54,12 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
   - Beide CVEs sind XSS-Lücken, direkt relevant wegen `.html()`-Aufruf in `theme.js`
   - Fix: jQuery 3.7.1 heruntergeladen und als `/vendor/jquery.min.js` ersetzt
 
-- [ ] **DATENSCHUTZ/DSGVO: YouTube-Videos ohne Einwilligung laden externe Ressourcen**
-  - Datei: `components/youtube_video.php`
-  - Thumbnail lädt von `img.youtube.com`, überträgt IP ohne Consent
-  - Fix: Two-Click-Façade implementieren – erst nach Klick + Einwilligung lädt YouTube
-  - Datenschutzerklärung: YouTube als Drittanbieter ergänzen
-  - Aufwand: 3–4 Std
+- [x] **DATENSCHUTZ/DSGVO: YouTube Two-Click-Façade implementiert** ✓ 08.05.2026
+  - `components/youtube_video.php`: Kein Thumbnail mehr von `img.youtube.com`, dunkler Platzhalter stattdessen
+  - Klick 1: Consent-Overlay erscheint (Text + „Zustimmen & abspielen"-Button)
+  - Klick 2: Fancybox öffnet das Video – erst jetzt kontaktiert der Browser YouTube
+  - CSS in `css/style.css` ergänzt, JS in `js/theme.js` ergänzt
+  - Datenschutzerklärung erwähnt YouTube bereits (Abschnitt 8)
 
 - [x] **SICHERHEIT: CSRF-Schutz im Kontaktformular implementiert** ✓ 08.05.2026
   - `contact/index.php`: `session_start()`, Token via `bin2hex(random_bytes(32))` generiert, als Hidden-Field ausgegeben
@@ -165,10 +165,10 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 | Priorität | Gesamt | Erledigt | Offen |
 |---|---|---|---|
 | 🔴 Kritisch | 4 | 4 | 0 |
-| 🟠 Hoch | 7 | 6 | 1 |
+| 🟠 Hoch | 7 | 7 | 0 |
 | 🟡 Mittel | 8 | 1 | 7 |
 | 🟢 Niedrig | 6 | 0 | 6 |
-| **Gesamt** | **25** | **11** | **14** |
+| **Gesamt** | **25** | **12** | **13** |
 
 ---
 
