@@ -19,7 +19,9 @@ $senderEmail = trim((string) ($_POST['email'] ?? ''));
 $okMessage    = 'Hallo ' . htmlspecialchars($senderName, ENT_QUOTES, 'UTF-8') . ', vielen Dank für Ihre Nachricht, ich werde mich bald bei Ihnen melden!';
 $errorMessage = 'Beim Absenden des Formulars ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.';
 
-error_reporting(0);
+error_reporting(E_ALL);
+ini_set('display_errors', '0');
+ini_set('log_errors', '1');
 try {
     if ($_SERVER['REQUEST_METHOD'] !== 'POST' || count($_POST) === 0) {
         throw new \Exception('Form is empty');

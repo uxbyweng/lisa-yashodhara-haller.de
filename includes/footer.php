@@ -13,17 +13,17 @@
                     </h3>
                     <ul class="social-icon d-flex social-icon style-none mt-20">
                         <li>
-                            <a href="https://www.linkedin.com/in/dr-lisa-yashodhara-haller-22122699/" target="_blank">
+                            <a href="https://www.linkedin.com/in/dr-lisa-yashodhara-haller-22122699/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn-Profil (öffnet in neuem Tab)">
                                 <strong>in</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.researchgate.net/profile/Lisa-Haller" target="_blank">
+                            <a href="https://www.researchgate.net/profile/Lisa-Haller" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate-Profil (öffnet in neuem Tab)">
                                 <strong>RG</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="https://orcid.org/0000-0001-5094-207X" target="_blank">
+                            <a href="https://orcid.org/0000-0001-5094-207X" target="_blank" rel="noopener noreferrer" aria-label="ORCID-Profil (öffnet in neuem Tab)">
                                 <strong>iD</strong>
                             </a>
                         </li>
@@ -102,7 +102,7 @@
         </div>
     </div>
 </div>
-<button class="scroll-top">
+<button class="scroll-top" aria-label="Zurück nach oben">
     <i class="bi bi-arrow-up-short"></i>
 </button>
 </div>
@@ -132,6 +132,7 @@ $(function () {
 <!-- validator js -->
 <script src="/vendor/validator.js"></script>
 <!-- Custom js -->
+<script src="/js/email.js"></script>
 <script src="/js/theme.js"></script>
 
 

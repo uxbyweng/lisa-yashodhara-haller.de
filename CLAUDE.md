@@ -91,30 +91,20 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 - [x] **PERFORMANCE: Gzip auf Binärdateien deaktiviert** ✓ 08.05.2026
   - `.htaccess`: `FilesMatch` auf `.js|css` beschränkt – JPG/PNG/WebP werden nicht mehr nutzlos komprimiert
 
-- [ ] **ACCESSIBILITY: ARIA-Labels für Scroll-Button und Social-Links ergänzen**
-  - Datei: `includes/footer.php`, Zeilen 105–107 und 14–29
-  - Scroll-Button: `aria-label="Zurück nach oben"` hinzufügen
-  - Social-Links: `aria-label="LinkedIn-Profil (öffnet in neuem Tab)"` etc., `rel="noopener noreferrer"`
-  - Aufwand: 45 Min
+- [x] **ACCESSIBILITY: ARIA-Labels für Scroll-Button und Social-Links** ✓ 08.05.2026
+  - `footer.php`: Scroll-Button `aria-label="Zurück nach oben"`, alle Social-Links mit `aria-label` + `rel="noopener noreferrer"`
 
-- [ ] **CODE-QUALITÄT: Doppelte E-Mail-Assembly-Logik bereinigen**
-  - Datei: `js/theme.js`, Zeilen 26–36 (identisch mit `js/email.js`)
-  - Fix: Doppelten Block aus `theme.js` entfernen, nur `email.js` behalten
-  - Aufwand: 10 Min
+- [x] **CODE-QUALITÄT: Doppelte E-Mail-Assembly-Logik bereinigt** ✓ 08.05.2026
+  - Duplikat aus `theme.js` entfernt, `email.js` in `footer.php` eingebunden
 
 - [x] **CODE-QUALITÄT: Auskommentiertes doppeltes Formular entfernt** ✓ 08.05.2026
   - Datei: `contact/index.php`
 
-- [ ] **UX: Submit-Button während AJAX-Request deaktivieren**
-  - Datei: `js/theme.js`, Zeilen 111–144
-  - Fix: Button bei Submit disablen, nach Antwort wieder enablen, Ladetext anzeigen
-  - Aufwand: 30 Min
+- [x] **UX: Submit-Button während AJAX deaktiviert** ✓ 08.05.2026
+  - `theme.js`: Button disabled + „Wird gesendet …" beim Submit, nach Antwort/Fehler wieder aktiv
 
-- [ ] **MONITORING: PHP-Fehler-Logging einrichten**
-  - Datei: `contact/contact.php`, Zeile 40
-  - `error_reporting(0)` → Fehler in Logdatei schreiben statt ignorieren
-  - Fix: `ini_set('display_errors', '0'); ini_set('log_errors', '1');`
-  - Aufwand: 15 Min
+- [x] **MONITORING: PHP-Fehler-Logging eingerichtet** ✓ 08.05.2026
+  - `contact/contact.php`: `error_reporting(E_ALL)`, `display_errors=0`, `log_errors=1`
 
 ---
 
@@ -159,9 +149,9 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 |---|---|---|---|
 | 🔴 Kritisch | 4 | 4 | 0 |
 | 🟠 Hoch | 7 | 7 | 0 |
-| 🟡 Mittel | 8 | 4 | 4 |
+| 🟡 Mittel | 8 | 8 | 0 |
 | 🟢 Niedrig | 6 | 0 | 6 |
-| **Gesamt** | **25** | **15** | **10** |
+| **Gesamt** | **25** | **19** | **6** |
 
 ---
 

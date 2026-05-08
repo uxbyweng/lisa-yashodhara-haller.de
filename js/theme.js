@@ -13,19 +13,6 @@
         })
 
 
-// ----------------------------- E-Mail Address Assembly
-    document.addEventListener('DOMContentLoaded', function () {
-        var mailAddresses = document.querySelectorAll('.mailaddress');
-        mailAddresses.forEach(function(mailAddress) {
-            var name = mailAddress.dataset.name;
-            var domain = mailAddress.dataset.domain;
-            var tld = mailAddress.dataset.tld;
-            var emailAddress = name + '@' + domain + '.' + tld;
-            mailAddress.setAttribute('href', 'mailto:' + emailAddress);
-            mailAddress.textContent = emailAddress;
-        });
-    });
-
 // ------------------------ Navigation Scroll
         $(window).on('scroll', function (){   
           var sticky = $('.sticky-menu'),
@@ -98,30 +85,28 @@
 
         if($("#contact-form").length) {
             $('#contact-form').validator();
-            // when the form is submitted
             $('#contact-form').on('submit', function (e) {
-
-                // if the validator does not prevent form submit
                 if (!e.isDefaultPrevented()) {
-                    var url = "contact.php";
+                    var $form = $(this);
+                    var $btn  = $form.find('button[type="submit"], button:not([type])');
+                    $btn.prop('disabled', true).text('Wird gesendet …');
 
-                    // POST values in the background the the script URL
                     $.ajax({
                         type: "POST",
-                        url: url,
-                        data: $(this).serialize(),
-                        success: function (data)
-                        {
-                            // data = JSON object that contact.php returns
-
+                        url: "contact.php",
+                        data: $form.serialize(),
+                        success: function (data) {
                             var messageAlert = 'alert-' + data.type;
-                            var messageText = data.message;
-
+                            var messageText  = data.message;
                             if (messageAlert && messageText) {
                                 var $alertBox = $('<div>').addClass('alert ' + messageAlert + ' alert-dismissable').text(messageText);
-                                $('#contact-form').find('.messages').empty().append($alertBox);
-                                $('#contact-form')[0].reset();
+                                $form.find('.messages').empty().append($alertBox);
+                                $form[0].reset();
                             }
+                            $btn.prop('disabled', false).text('Mitteilung senden');
+                        },
+                        error: function () {
+                            $btn.prop('disabled', false).text('Mitteilung senden');
                         }
                     });
                     return false;
