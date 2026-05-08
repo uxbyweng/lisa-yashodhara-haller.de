@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Projekt VEIL | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Infos zum Projekt Values, Equality & Differences in Liberal Democracies (VEIL)";
-$metaKeyw = "Values, Equality, Differences, Liberal Democracies, Freie Universität Berlin";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

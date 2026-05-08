@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Projekt GagS | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Projekt GagS: Infos zum Projekt Gemeinschaftliche oder Alleinausübung der gemeinsamen elterlichen Sorge?";
-$metaKeyw = "Elterlichen Sorge, internationaler Vergleich, Projekt, Rechtsordnung";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

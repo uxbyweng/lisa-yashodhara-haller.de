@@ -23,7 +23,6 @@ require_once( $_SERVER[ "DOCUMENT_ROOT" ] . "/components/youtube_video.php" );
 <?php /*  SITENTITEL, -BESCHREIBUNG UND -KEYWORDS */ ?>
 <title><?= isset ($metaTitle) ? $metaTitle : "Prof. Dr. Lisa Yashodhara Haller" ?></title> 
 <meta name="description" content="<?= isset ($metaDesc) ? $metaDesc :  'Forschung, Beratung und Bildung rund um die Themen Sozialpolitik, Elternschaft und Geschlecht.' ?>" />
-<meta name="keywords" content="<?= isset ($metaKeyw) ? $metaKeyw :  'Sozialpolitik, Elternschaft, Geschlecht, Gender, staatliche Steuerung, Kapital, sozialstaatliche Steuerung, Familie, Familienpolitik' ?>" />
 <meta name="robots" content="index,follow" />
 	
 <?php /* FAVICON */ ?>
@@ -68,49 +67,6 @@ require_once( $_SERVER[ "DOCUMENT_ROOT" ] . "/components/youtube_video.php" );
 <link rel="canonical" href="https://www.lisa-yashodhara-haller.de<?php echo dirname($_SERVER['SCRIPT_NAME']); if (dirname($_SERVER['SCRIPT_NAME']) != '/') { echo "/";} ?>" />
     
 <?php /* CSS */ ?>
-<style>
-    body {
-        background-color: #faf5ec;
-        font-family: 'gordita';
-        font-weight: normal;
-        font-size: 16px;
-        position: relative;
-        color: var(--text-color);
-    }
-    .main-page-wrapper {
-        overflow-x: hidden;
-    }
-    .pt-200 {
-        padding-top: 200px;
-    }
-    .position-relative {
-        position: relative!important;
-    }
-    h1.main-title {
-        color: var(--title-color);
-        font-weight: 700 !important;
-    }
-    .main-title>span {
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-    }
-    .mb-40 {
-        margin-bottom: 40px;
-    }
-    .h1, h1 {
-        font-size: 60px;
-        line-height: 1.18em;
-    }
-    p {
-        font-size: 1.25rem;
-        line-height: 1.40em;
-    }
-    p {
-        margin-top: 0;
-        margin-bottom: 1rem;
-    }
-</style>
 <link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
 <link rel="stylesheet" type="text/css" href="/css/responsive.css" media="all">
 </head>

@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Projekt FFA | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Projekt FFA: Infos zum Projekt FEMINISMUS Fragen und Antworten (FFA)";
-$metaKeyw = "Feminismus, Gender-Pay-Gap, Fragen und Antworten, Broschüre";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

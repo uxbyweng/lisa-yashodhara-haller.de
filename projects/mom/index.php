@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Projekt MOM | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Infos zum Projekt Macht und Ohnmacht der Mutterschaft (MOM)";
-$metaKeyw = "Macht, Ohnmacht, Mutterschaft, Elternschaft, Gendertheorie";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

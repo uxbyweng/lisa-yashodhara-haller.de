@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Projekt LAA | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Infos zum Projekt Liebe, Arbeit, Anerkennung – Anerkennung und Ungleichheit in Doppelkarriere-Paaren (LAA)";
-$metaKeyw = "Liebe, Arbeit, Anerkennung, Paara, Doppelkarriere";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

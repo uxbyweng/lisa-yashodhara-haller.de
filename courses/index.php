@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Lehrveranstaltungen | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Kurse und Gastvorträge bei Ringvorlesungen in feministischer Sozial- und Wirtschaftsforschung mit Fokus auf aktuelle Themen und praxisnahen Erkenntnissen";
-$metaKeyw = "lehrveranstaltungen, gastvorträge, ringvorlesungen";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

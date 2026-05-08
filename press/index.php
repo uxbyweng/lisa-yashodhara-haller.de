@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Presse | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Presse Material zu den Themen Elternschaft, Feminismus, Familienrecht, Kindergrundsicherung";
-$metaKeyw = "presse, material, zeitungsartikel, pr, public relation";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

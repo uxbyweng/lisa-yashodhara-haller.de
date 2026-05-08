@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "About | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Ich forsche, berate und lehre rund um die Themen Sozialpolitik, Elternschaft und Geschlecht.";
-$metaKeyw = "Lisa Haller, Sozialpolitik, Elternschaft, Geschlechterdynamiken, Gender, staatliche Steuerung, Kapital, Familienpolitik";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

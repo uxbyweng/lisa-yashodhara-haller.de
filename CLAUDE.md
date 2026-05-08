@@ -113,16 +113,13 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 - [x] **VERALTETES: `<meta http-equiv="X-UA-Compatible">` entfernt** ✓ 08.05.2026
   - `includes/header.php`: IE-Tag entfernt
 
-- [ ] **SEO: `meta name="keywords"` entfernen**
-  - Datei: `includes/header.php` + alle Seiten
-  - Google ignoriert Keywords-Meta seit 2009 – unnötiger Wartungsaufwand
-  - Aufwand: 30 Min
+- [x] **SEO: `meta name="keywords"` entfernt** ✓ 08.05.2026
+  - `header.php`: `<meta name="keywords">` Tag entfernt
+  - `$metaKeyw`-Zuweisung aus 23 Seiten entfernt (PowerShell-Skript)
 
-- [ ] **CODE-QUALITÄT: Inline-CSS aus `header.php` in Stylesheet auslagern**
-  - Datei: `includes/header.php`, Zeilen 82–124
-  - >40 Zeilen CSS direkt im `<head>`, verhindert Caching
-  - Fix: In `css/style.css` verschieben
-  - Aufwand: 1 Std
+- [x] **CODE-QUALITÄT: Inline-CSS in `style.css` ausgelagert** ✓ 08.05.2026
+  - `<style>`-Block (43 Zeilen) aus `header.php` entfernt
+  - `.pt-200` und `.mb-40` nach `css/style.css` verschoben (rest war bereits dort)
 
 - [x] **CODE-QUALITÄT: Auskommentierte E-Mail-Adressen entfernt** ✓ 08.05.2026
   - Bereits beim contact.php-Rewrite erledigt
@@ -144,8 +141,8 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 | 🔴 Kritisch | 4 | 4 | 0 |
 | 🟠 Hoch | 7 | 7 | 0 |
 | 🟡 Mittel | 8 | 8 | 0 |
-| 🟢 Niedrig | 6 | 3 | 3 |
-| **Gesamt** | **25** | **22** | **3** |
+| 🟢 Niedrig | 6 | 5 | 1 |
+| **Gesamt** | **25** | **24** | **1** |
 
 ---
 

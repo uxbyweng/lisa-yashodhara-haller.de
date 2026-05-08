@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Projekt PRiNa | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Infos zum Projekt Politiken der Reproduktion (PRiNa)";
-$metaKeyw = "Reproduktion, Feminismus, Geschlecht, Norm, Elternschaft, Regulation";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

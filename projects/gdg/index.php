@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Projekt GDG | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Infos zum Projekt Geschäftsstelle Dritter Gleichstellungsbericht der Bundesregierung. (GDG)";
-$metaKeyw = "Gleichstellungsbericht, Bundesregierung, geschlechtergerecht , Digitalisierung";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

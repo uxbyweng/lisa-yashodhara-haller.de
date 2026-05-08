@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Aktuelles | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Gesprächsabend zum Thema Neue Wege in der Familienfinanzierung im Bildungswerk der Heinrich Böll Stiftung";
-$metaKeyw = "Sozialpolitik, Elterngeld, Familienfinanzierung, Gesprächsabend, Bildungswerk, Familienpolitik, Heinrich Böll Stiftung";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

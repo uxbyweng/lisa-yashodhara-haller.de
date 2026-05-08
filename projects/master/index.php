@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Projekt MASTER | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Infos zum Projekt Template als Grundlage für Projekt Seiten (MASTER)";
-$metaKeyw = "[Projekt-Keyword 1], [Projekt-Keyword 2], [Projekt-Keyword 3]";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

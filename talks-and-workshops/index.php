@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Vorträge & Workshops | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Vorträge, Workshops und Podiumsveranstaltungen von Dr. Lisa Yashodhara Hallers  mit Einblicken in Elternschaft, Wirtschaft und feministische Theorien.";
-$metaKeyw = "vorträge, talks, workshops, podiumsveranstaltungen";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

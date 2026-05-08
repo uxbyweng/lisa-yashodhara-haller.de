@@ -1,7 +1,6 @@
 <?php  
 $metaTitle = "Projekt CMP | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Projekt CMP: Fragebogen zur Kindesunterhaltspolitik – finanzielle Verpflichtungen von Eltern gegenüber nicht im selben Haushalt lebenden Kindern.";
-$metaKeyw = "Unterhaltsrichtlinie, Kinder, familiäre Verpflichtung";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

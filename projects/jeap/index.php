@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Projekt JEAP | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Infos zum Projekt Junge Erwachsene zwischen Aktivierung und Prekarisierung (JEAP)";
-$metaKeyw = "Junge Erwachsene, Prekarisierung, Institutionelle Interventionen";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

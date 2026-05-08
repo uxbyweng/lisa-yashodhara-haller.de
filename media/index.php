@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Medien | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Medieninhalte zum Anschauen und Anhören, darunter aufschlussreiche Experteninterviews und Diskussionen mit Dr. Lisa Yashodhara Haller.";
-$metaKeyw = "medien, video, audio, podcast, diskussionen, debatte, anschauen, anhören, interviews";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

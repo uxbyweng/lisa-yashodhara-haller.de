@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Projekte | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Übersicht wissenschaftlichen Projekte, von geschlechtergerechter Jugendhilfe bis zur Analyse sozial- und familienpolitischer Interventionen.";
-$metaKeyw = "Sozialpolitik, Elternschaft, Geschlecht, Gender, staatliche Steuerung, Kapital, sozialstaatliche Steuerung, Familie, Familienpolitik";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

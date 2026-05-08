@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Projekt GKJV | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Konzeptualisierung eines Beratungsinstruments zur Sensibilisierung der Multiplikator*innen. ";
-$metaKeyw = "Gleichstellung, GKJV, Kinder, Jugendhilfe, Vorarlberg, Familie, Beratung";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

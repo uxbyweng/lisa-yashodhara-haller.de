@@ -124,6 +124,8 @@ h2.main-title {
     position: relative;
     z-index: 1;
 }
+.pt-200 { padding-top: 200px; }
+.mb-40 { margin-bottom: 40px; }
 .main-title span:before {
     content: '';
     position: absolute;

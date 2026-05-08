@@ -1,7 +1,6 @@
 <?php 
 $metaTitle = "Projekt KKK | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Infos zum Projekt Körper, Kinder, Kassensturz. Handlungsempfehlungen für die Umsetzung des Koalitionsvertrags (KKK)";
-$metaKeyw = "kkk, kinder, kassensturz";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

@@ -9,7 +9,6 @@ setcookie('csrf_token', $csrfToken, [
 ]);
 $metaTitle = "Kontakt | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Kontaktieren Sie Prof. Dr. Lisa Yashodhara Haller für aktuelle Blogbeiträge zu Sozialpolitik, Elternschaft und Geschlechterdynamiken.";
-$metaKeyw = "Kontakt, Sozialpolitik, Elternschaft, Geschlechterdynamiken, Gender, staatliche Steuerung, Kapital, Familienpolitik";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 

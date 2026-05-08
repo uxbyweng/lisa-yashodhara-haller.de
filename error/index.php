@@ -1,7 +1,6 @@
 <?php
 $metaTitle = "Error 404 | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Opps! you’r on the wrong place.";
-$metaKeyw = "Error, 404, Fehler";
 include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
 ?>
 
