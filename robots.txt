@@ -11,7 +11,6 @@
 User-agent: *
 
 # disallow
-Disallow: /jens.php
 Disallow: /_backup
 Disallow: /css/
 Disallow: /downloads/

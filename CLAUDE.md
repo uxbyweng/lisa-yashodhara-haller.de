@@ -110,13 +110,11 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 
 ### 🟢 NIEDRIG – Backlog (6 Punkte)
 
-- [ ] **VERALTETES: `<meta http-equiv="X-UA-Compatible" content="IE=edge">` entfernen**
-  - Datei: `includes/header.php`, Zeile 32
-  - IE seit 2022 abgekündigt, Tag wirkungslos
-  - Aufwand: 1 Min
+- [x] **VERALTETES: `<meta http-equiv="X-UA-Compatible">` entfernt** ✓ 08.05.2026
+  - `includes/header.php`: IE-Tag entfernt
 
 - [ ] **SEO: `meta name="keywords"` entfernen**
-  - Datei: `includes/header.php`, Zeile 42 + alle Seiten
+  - Datei: `includes/header.php` + alle Seiten
   - Google ignoriert Keywords-Meta seit 2009 – unnötiger Wartungsaufwand
   - Aufwand: 30 Min
 
@@ -126,15 +124,11 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
   - Fix: In `css/style.css` verschieben
   - Aufwand: 1 Std
 
-- [ ] **CODE-QUALITÄT: Auskommentierte E-Mail-Adressen aus Kontakt-Handler entfernen**
-  - Datei: `contact/contact.php`, Zeilen 7–8, 15
-  - Private E-Mail-Adressen im Quellcode
-  - Aufwand: 2 Min
+- [x] **CODE-QUALITÄT: Auskommentierte E-Mail-Adressen entfernt** ✓ 08.05.2026
+  - Bereits beim contact.php-Rewrite erledigt
 
-- [ ] **CONTENT: `jens/`-Verzeichnis prüfen und bereinigen**
-  - Leeres Verzeichnis + `jens.php`-Eintrag in `robots.txt`
-  - Fix: Zweck klären, wenn ungenutzt löschen + robots.txt-Eintrag entfernen
-  - Aufwand: 10 Min
+- [x] **CONTENT: `jens/`-Verzeichnis bereinigt** ✓ 08.05.2026
+  - Leeres Verzeichnis gelöscht, `Disallow: /jens.php` aus `robots.txt` entfernt
 
 - [ ] **VERALTETES: Slick Slider mittelfristig ablösen**
   - Kein aktives Maintainer-Projekt seit 2017, keine Sicherheitsupdates
@@ -150,8 +144,8 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 | 🔴 Kritisch | 4 | 4 | 0 |
 | 🟠 Hoch | 7 | 7 | 0 |
 | 🟡 Mittel | 8 | 8 | 0 |
-| 🟢 Niedrig | 6 | 0 | 6 |
-| **Gesamt** | **25** | **19** | **6** |
+| 🟢 Niedrig | 6 | 3 | 3 |
+| **Gesamt** | **25** | **22** | **3** |
 
 ---
 
