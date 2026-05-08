@@ -1,6 +1,6 @@
 # lisa-yashodhara-haller.de
 
-Personal academic website for **Prof. Dr. Lisa Yashodhara Haller** — professor, researcher, and consultant specialising in social policy, parenthood, and gender. The site presents her research projects, publications, talks, workshops, press appearances, and contact information.
+Personal academic website for **Prof. Dr. Lisa Yashodhara Haller**, professor of social policy with a focus on parenthood, gender dynamics, and family policy. Built with PHP, Bootstrap 5, and vanilla JS – no CMS, hosted on Apache.
 
 Live: [https://www.lisa-yashodhara-haller.de](https://www.lisa-yashodhara-haller.de)
 
