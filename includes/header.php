@@ -74,3 +74,4 @@ require_once( $_SERVER[ "DOCUMENT_ROOT" ] . "/components/youtube_video.php" );
 <body>
     <div class="main-page-wrapper">
     <?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/navi.php" ); ?>
+    <main>
