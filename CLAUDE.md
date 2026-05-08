@@ -10,6 +10,12 @@
 
 ---
 
+## Arbeitsweise
+
+- Nach jedem abgeschlossenen Task: Zusammenfassung + kurze, knackige Commit Message ausgeben
+
+---
+
 ## Audit-Checkliste – Priorisierter Maßnahmenplan
 
 Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
@@ -64,12 +70,9 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
   - Gleichzeitig behoben: `og:image:type` von `image/jpg` → `image/jpeg` (Zeile 63)
   - Gleichzeitig behoben: Schema.org `@context` von `http://` → `https://` (Zeile 68)
 
-- [ ] **SEO: Schema.org-Markup korrigieren und erweitern**
-  - Datei: `includes/header.php`, Zeilen 27 und 66–75
-  - Fehler 1: `<html itemtype="productionCompany">` → entfernen (itemtype im HTML-Tag)
-  - Fehler 2: `@context` von `http://` auf `https://` ändern
-  - Fehler 3: Schema mit `sameAs`, `description`, `jobTitle` (korrekt) anreichern
-  - Aufwand: 30 Min
+- [x] **SEO: Schema.org-Markup korrigiert und erweitert** ✓ 08.05.2026
+  - `<html>`-Tag: `itemscope`/`itemtype="productionCompany"` entfernt
+  - JSON-LD: `description` und `sameAs` (LinkedIn, ResearchGate, ORCID) ergänzt, leeres `telephone` entfernt
 
 - [x] **CODE-QUALITÄT: `counterUp`-Code entfernt** ✓ 07.05.2026
   - Datei: `js/theme.js`, Zeilen 17–23
@@ -162,10 +165,10 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 | Priorität | Gesamt | Erledigt | Offen |
 |---|---|---|---|
 | 🔴 Kritisch | 4 | 4 | 0 |
-| 🟠 Hoch | 7 | 5 | 2 |
+| 🟠 Hoch | 7 | 6 | 1 |
 | 🟡 Mittel | 8 | 1 | 7 |
 | 🟢 Niedrig | 6 | 0 | 6 |
-| **Gesamt** | **25** | **10** | **15** |
+| **Gesamt** | **25** | **11** | **14** |
 
 ---
 

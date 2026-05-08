@@ -9,7 +9,7 @@ require_once( $_SERVER[ "DOCUMENT_ROOT" ] . "/components/youtube_video.php" );
 ?>
 <!DOCTYPE html>
 
-<html itemscope="" itemtype="https://schema.org/productionCompany" lang="de">
+<html lang="de">
     
 <head>
 <?php /* TECHNISCHE META-ANGABEN, WICHTIG FÜR DIE DARSTELLUNG IM BROWSER */ ?>
@@ -53,9 +53,14 @@ require_once( $_SERVER[ "DOCUMENT_ROOT" ] . "/components/youtube_video.php" );
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Prof. Dr. rer. pol. Lisa Yashodhara Haller",
-  "jobTitle": "Doktor der Wirtschafts- und Sozialwissenschaften",
-  "telephone": "",
-  "url": "https://www.lisa-yashodhara-haller.de/"
+  "jobTitle": "Professorin für Sozialpolitik",
+  "description": "Professorin für Sozialpolitik mit Schwerpunkt Elternschaft, Geschlecht und Familie. Forschung, Beratung und Bildung zu Familienpolitik, Geschlechterdynamiken und staatlicher Steuerung.",
+  "url": "https://www.lisa-yashodhara-haller.de/",
+  "sameAs": [
+    "https://www.linkedin.com/in/dr-lisa-yashodhara-haller-22122699/",
+    "https://www.researchgate.net/profile/Lisa-Haller",
+    "https://orcid.org/0000-0001-5094-207X"
+  ]
 }
 </script>
 <script src="/js/setimglazy.js" defer></script>
