@@ -1,4 +1,12 @@
-<?php 
+<?php
+$csrfToken = bin2hex(random_bytes(32));
+setcookie('csrf_token', $csrfToken, [
+    'expires'  => 0,
+    'path'     => '/',
+    'samesite' => 'Lax',
+    'httponly' => true,
+    'secure'   => !empty($_SERVER['HTTPS']),
+]);
 $metaTitle = "Kontakt | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Kontaktieren Sie Prof. Dr. Lisa Yashodhara Haller für aktuelle Blogbeiträge zu Sozialpolitik, Elternschaft und Geschlechterdynamiken.";
 $metaKeyw = "Kontakt, Sozialpolitik, Elternschaft, Geschlechterdynamiken, Gender, staatliche Steuerung, Kapital, Familienpolitik";
@@ -59,6 +67,11 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
+                                    <!-- Honeypot: für Menschen unsichtbar, Bots füllen es aus -->
+                                    <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;">
+                                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                                    </div>
+                                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8') ?>">
                                     <div class="col-12">
                                         <button class="btn-twentyOne fw-500 tran3s d-block">
                                             Mitteilung senden
@@ -67,44 +80,6 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                                 </div>
                             </form>
                         </div>
-                            <!--form action="contact.php" id="contact-form" data-toggle="validator">
-                                <div class="messages"></div>
-                                <div class="row controls">
-                                    <div class="col-12">
-                                        <div class="input-group-meta form-group mb-30">
-                                            <input type="text" placeholder="Ihr Name*" name="name" required="required" data-error="Name ist erforderlich.">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="input-group-meta form-group mb-50">
-                                            <input type="email" placeholder="E-Mail-Adresse*" name="email" required="required" data-error="Eine gültige E-Mail-Adresse ist erforderlich.">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="input-group-meta form-group mb-30">
-                                            <textarea placeholder="Ihre Nachricht*" name="message" required="required" data-error="Bitte hinterlassen Sie mir eine Nachricht."></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="input-group-meta form-group mb-30">
-                                            <label>
-                                                <input type="checkbox" name="privacy" required="required" data-error="Sie müssen die Datenschutzerklärung akzeptieren.">
-                                                Ich habe die <a href="/privacy/">Datenschutzerklärung</a> gelesen und akzeptiere sie
-                                            </label>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn-twentyOne fw-500 tran3s d-block">
-                                            Mitteilung senden
-                                        </button>
-                                    </div>
-                                </div>
-                            </form-->
                     </div>
                     <div class="col-xl-4 col-lg-5 ms-auto wow fadeInRight">
                         <div class="address-block-three d-flex mb-70 lg-mb-40 mt-20">

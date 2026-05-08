@@ -55,10 +55,9 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
   - Datenschutzerklärung: YouTube als Drittanbieter ergänzen
   - Aufwand: 3–4 Std
 
-- [ ] **SICHERHEIT: CSRF-Schutz im Kontaktformular implementieren**
-  - Datei: `contact/contact.php` + `contact/index.php`
-  - Fix: CSRF-Token in Session generieren, als Hidden-Field im Formular ausgeben, serverseitig validieren
-  - Aufwand: 1 Std
+- [x] **SICHERHEIT: CSRF-Schutz im Kontaktformular implementiert** ✓ 08.05.2026
+  - `contact/index.php`: `session_start()`, Token via `bin2hex(random_bytes(32))` generiert, als Hidden-Field ausgegeben
+  - `contact/contact.php`: `session_start()`, Token mit `hash_equals()` timing-sicher geprüft
 
 - [x] **SEO/SICHERHEIT: og:url von HTTP auf HTTPS korrigiert** ✓ 07.05.2026
   - Datei: `includes/header.php`, Zeile 58
@@ -107,10 +106,8 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
   - Fix: Doppelten Block aus `theme.js` entfernen, nur `email.js` behalten
   - Aufwand: 10 Min
 
-- [ ] **CODE-QUALITÄT: Auskommentiertes doppeltes Formular entfernen**
-  - Datei: `contact/index.php`, Zeilen 70–107
-  - Fix: Gesamten auskommentierten Formular-Block löschen
-  - Aufwand: 2 Min
+- [x] **CODE-QUALITÄT: Auskommentiertes doppeltes Formular entfernt** ✓ 08.05.2026
+  - Datei: `contact/index.php`
 
 - [ ] **UX: Submit-Button während AJAX-Request deaktivieren**
   - Datei: `js/theme.js`, Zeilen 111–144
@@ -165,10 +162,10 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 | Priorität | Gesamt | Erledigt | Offen |
 |---|---|---|---|
 | 🔴 Kritisch | 4 | 4 | 0 |
-| 🟠 Hoch | 7 | 4 | 3 |
-| 🟡 Mittel | 8 | 0 | 8 |
+| 🟠 Hoch | 7 | 5 | 2 |
+| 🟡 Mittel | 8 | 1 | 7 |
 | 🟢 Niedrig | 6 | 0 | 6 |
-| **Gesamt** | **25** | **8** | **17** |
+| **Gesamt** | **25** | **10** | **15** |
 
 ---
 
