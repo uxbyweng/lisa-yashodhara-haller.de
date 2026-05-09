@@ -6,18 +6,15 @@
 <header class="theme-main-menu sticky-menu theme-menu-one">
     <div class="inner-content position-relative">
         <div class="d-flex align-items-center justify-content-between">
-            <!--div class="logo order-lg-0"-->
-                <a href="/" class="d-block" aria-label="Link zur Startseite">
-                    <!--img src="/images/logo/logo_02.png" alt="Logo: Lisa Yashodhara Haller" width="250" height="57" class="img-responsive"-->
-                    <img src="/images/logo/logo_03.png" alt="Logo: Prof. Dr. Lisa Yashodhara Haller" width="301" height="58" class="img-responsive">
-                </a>
-            <!--/div-->
+            <a href="/" class="d-block" aria-label="Link zur Startseite">
+                <img src="/images/svg/logo.svg" alt="Logo: Prof. Dr. Lisa Yashodhara Haller" width="301" height="58" class="img-responsive">
+            </a>
 
             <!-- Mobile Content -->
-            <div class="right-widget d-flex align-items-center order-lg-3"> 
+            <div class="right-widget d-flex align-items-center order-lg-3">
                 <a href="/contact/" class="btn-one fs-16 fw-500 text-white d-none d-lg-block" aria-label="Zur Kontaktseite">
                     Kontakt
-                </a> 
+                </a>
             </div>
             <!-- /.right-widget -->
 
@@ -26,63 +23,68 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="d-block d-lg-none">
-                            <!--div class="logo"--> 
-                                <a href="/" class="d-block" aria-label="Link zur Startseite"> 
-                                    <!--img src="/images/logo/logo_02.png" alt="Logo: Lisa Yashodhara Haller" width="250" height="57" class="img-responsive"-->
-                                    <img src="/images/logo/logo_03.png" alt="Logo: Prof. Dr. Lisa Yashodhara Haller" width="301" height="58" class="img-responsive">  
-                                </a> 
-                            <!--/div-->
+                            <a href="/" class="d-block" aria-label="Link zur Startseite">
+                                <img src="/images/svg/logo.svg" alt="Logo: Prof. Dr. Lisa Yashodhara Haller" width="301" height="58" class="img-responsive">
+                            </a>
                         </li>
-                        <li class="nav-item<?php if (dirname($_SERVER['SCRIPT_NAME']) == '/') { echo " active";} ?>">
-                            <a class="nav-link" href="/" role="button">Home</a> 
+                        <li class="nav-item<?php if (dirname($_SERVER['SCRIPT_NAME']) == '/') {
+                                                echo " active";
+                                            } ?>">
+                            <a class="nav-link" href="/" role="button">Home</a>
                         </li>
-                        <li class="nav-item<?php if (dirname($_SERVER['SCRIPT_NAME']) == '/about') { echo " active";} ?>"> 
+                        <li class="nav-item<?php if (dirname($_SERVER['SCRIPT_NAME']) == '/about') {
+                                                echo " active";
+                                            } ?>">
                             <a class="nav-link" href="/about/" role="button">
                                 About
-                            </a> 
+                            </a>
                         </li>
                         <li class="nav-item dropdown<?php if (
-                                    (dirname($_SERVER['SCRIPT_NAME']) == '/projects') OR 
-                                    (dirname($_SERVER['SCRIPT_NAME']) == '/publications') OR
-                                    (dirname($_SERVER['SCRIPT_NAME']) == '/press')) { 
-                                    echo " active"; } ?>"> 
+                                                        (dirname($_SERVER['SCRIPT_NAME']) == '/projects') or
+                                                        (dirname($_SERVER['SCRIPT_NAME']) == '/publications') or
+                                                        (dirname($_SERVER['SCRIPT_NAME']) == '/press')
+                                                    ) {
+                                                        echo " active";
+                                                    } ?>">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" aria-label="Dropdown Menu: Forschung">
-                                Forschung 
+                                Forschung
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
                                     <a href="/projects/" class="dropdown-item">
-                                        <span>Projekte</span> 
-                                    </a> 
+                                        <span>Projekte</span>
+                                    </a>
                                 </li>
-                                <li> 
-                                    <a href="/publications/" class="dropdown-item"> 
+                                <li>
+                                    <a href="/publications/" class="dropdown-item">
                                         <span>Publikationen</span>
-                                    </a> 
+                                    </a>
                                 </li>
-                                <li> 
+                                <li>
                                     <a href="/press/" class="dropdown-item">
                                         <span>Presse</span>
-                                    </a> 
+                                    </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown<?php if (
-                                    (dirname($_SERVER['SCRIPT_NAME']) == '/talks-and-workshops') OR 
-                                    (dirname($_SERVER['SCRIPT_NAME']) == '/courses') OR
-                                    (dirname($_SERVER['SCRIPT_NAME']) == '/media')) { 
-                                    echo " active"; } ?>"> 
+                                                        (dirname($_SERVER['SCRIPT_NAME']) == '/talks-and-workshops') or
+                                                        (dirname($_SERVER['SCRIPT_NAME']) == '/courses') or
+                                                        (dirname($_SERVER['SCRIPT_NAME']) == '/media')
+                                                    ) {
+                                                        echo " active";
+                                                    } ?>">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" aria-label="Dropdown Menu: Lehre">
                                 <span>Lehre</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="/talks-and-workshops/" class="dropdown-item"> 
+                                    <a href="/talks-and-workshops/" class="dropdown-item">
                                         <span>Vorträge & Workshops</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/courses/" class="dropdown-item"> 
+                                    <a href="/courses/" class="dropdown-item">
                                         <span>Lehrveranstaltungen</span>
                                     </a>
                                 </li>
@@ -98,7 +100,7 @@
                             <div class="d-flex flex-column align-items-center justify-content-center mt-70">
                                 <a href="/contact/" class="btn-one fs-16 fw-500 text-white">
                                     Kontakt
-                                </a> 
+                                </a>
                             </div>
                         </li>
                     </ul>
