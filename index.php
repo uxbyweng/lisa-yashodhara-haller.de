@@ -18,9 +18,9 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
                         <span class="position-relative d-inline-block">Lisa Yashodhara Haller</span> forscht, berät und bildet rund um die Themen Sozialpolitik, Elternschaft und Geschlecht.
                     </h2>
                     <picture>
-                        <source srcset="/images/home/img_lisa_haller_xs.webp 1x, /images/home/img_lisa_haller.webp 2x" type="image/webp">
-                        <source srcset="/images/home/img_lisa_haller_xs.png 1x, /images/home/img_lisa_haller.png 2x" type="image/png">
-                        <img class="d-block d-lg-none img-responsive mb-3 start-50" src="/images/home/img_lisa_haller_xs.png" alt="Porträt von Prof. Dr. Lisa Yashodhara Haller" width="320" height="400">
+                        <source srcset="/images/home/img_lisa_haller_xs.webp" type="image/webp">
+                        <source srcset="/images/home/img_lisa_haller_xs.png" type="image/png">
+                        <img class="d-block d-lg-none img-responsive mb-3 start-50" src="/images/home/img_lisa_haller_xs.png" alt="Porträt von Prof. Dr. Lisa Yashodhara Haller" width="320" height="400" fetchpriority="high" loading="eager">
                     </picture>
                     <p class="text-lg pb-60 lg-pb-10">
                         Einprägsam veranschaulicht sie Vermittlungszusammenhänge zwischen der staatlichen Steuerung unserer kapitalistischen Wirtschaft und vermeintlich ganz privaten Entscheidungen des Alltags: sozialstaatliche Steuerungsabsichten können so, in den einzelnen Subjekten, deren Handlungen, Einstellungen und der Ausgestaltung ihres Lebens wiederentdeckt und als gewordene und veränderbare Resultate politischer Steuerung entmystifiziert werden.
