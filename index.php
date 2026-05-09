@@ -32,7 +32,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
                     <source srcset="/images/home/img_lisa_haller.webp" type="image/webp">
                     <source srcset="/images/home/img_lisa_haller.avif" type="image/avif">
                     <source srcset="/images/home/img_lisa_haller.png" type="image/png">
-                    <img class="img-responsive" src="/images/home/img_lisa_haller.png" alt="Prof. Dr. Lisa Yashodhara Haller" width="637" height="770">
+                    <img class="img-responsive" src="/images/home/img_lisa_haller.png" alt="Prof. Dr. Lisa Yashodhara Haller" width="637" height="770" fetchpriority="high" loading="eager">
                 </picture>
             </div>
         </div>

@@ -190,9 +190,9 @@ FilterProtocol  COMPRESS  DEFLATE change=yes;byteranges=no
   ExpiresByType image/svg+xml                     "access plus 1 year"
     
 # CSS and JavaScript
-  ExpiresByType text/css                  "access plus 1 week"
-  ExpiresByType application/javascript    "access plus 1 week"
-  ExpiresByType text/javascript           "access plus 1 week"
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+  ExpiresByType text/javascript           "access plus 1 year"
   
   <IfModule mod_headers.c>
     Header append Cache-Control "public"
