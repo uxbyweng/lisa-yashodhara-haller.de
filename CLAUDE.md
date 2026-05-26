@@ -182,7 +182,7 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 - Enthält: `HP_WEBSITE`, `HP_EMAIL_CONFIRM`, `HP_TERMS` (Honeypot-Feldnamen)
 - Vorlage für neue Server-Setups: `.config/private.example.php` (im Repo, mit Platzhalterwerten)
 
-**Warum Feldnamen in private.php?** Wer das Repository liest, sieht nur die Konstantennamen (z. B. `HP_WEBSITE`), nicht die tatsächlichen HTML-Feldnamen die ein Bot kennen müsste. Die Feldnamen lauten aktuell: `homepage`, `email_repeat`, `newsletter`.
+**Warum Feldnamen in private.php?** Wer das Repository liest, sieht nur die Konstantennamen (z. B. `HP_WEBSITE`), nicht die tatsächlichen HTML-Feldnamen die ein Bot kennen müsste. Die konkreten Feldnamen stehen nur in `.config/private.php` (gitignored).
 
 ### CSS-Versteck der Honeypots
 
