@@ -165,15 +165,24 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 
 | Schicht | Implementierung | Datei |
 |---|---|---|
+| Rate-Limit | Max. 5 Absendungen pro IP pro Stunde, dateibasiert in `sys_get_temp_dir()` | `contact/contact.php` |
 | CSRF-Token | Cookie + Hidden-Field, `hash_equals()` | `contact/index.php`, `contact/contact.php` |
-| Honeypot 1 | Unsichtbares Textfeld (`HP_WEBSITE`) | `contact/index.php` Z. 71 |
-| Honeypot 2 | Unsichtbares E-Mail-Feld (`HP_EMAIL_CONFIRM`) | `contact/index.php` Z. 72 |
-| Honeypot 3 | Unsichtbare Checkbox (`HP_TERMS`) | `contact/index.php` Z. 73 |
-| URL-Filter | `preg_match('/\bhttps?:\/\/\S+/i', $message)` | `contact/contact.php` Z. 60 |
-| Mindestlänge | Mindestens 3 Wörter in der Nachricht | `contact/contact.php` Z. 65 |
-| Datenschutz-Checkbox | Pflichtfeld `privacy` | `contact/index.php` Z. 63 |
-| Fake-Success | Bots bekommen dieselbe Erfolgsmeldung | `contact/contact.php` Z. 106 |
-| Kein Mail-Relay | Bestätigungsmail an Absender entfernt (war Abuse-Vektor) | `contact/contact.php` |
+| Honeypot 1 | Unsichtbares Textfeld (`HP_WEBSITE`) | `contact/index.php` |
+| Honeypot 2 | Unsichtbares E-Mail-Feld (`HP_EMAIL_CONFIRM`) | `contact/index.php` |
+| Honeypot 3 | Unsichtbare Checkbox (`HP_TERMS`) | `contact/index.php` |
+| URL-Filter | `preg_match('/\bhttps?:\/\/\S+/i', $message)` | `contact/contact.php` |
+| Mindestlänge | Mindestens 3 Wörter, 20–5000 Zeichen | `contact/contact.php` |
+| Eingabevalidierung | Name max. 120 Z., E-Mail via `filter_var`, Newlines entfernt | `contact/contact.php` |
+| Datenschutz-Checkbox | Pflichtfeld `privacy` | `contact/index.php` |
+| Fake-Success | Bots bekommen dieselbe Erfolgsmeldung | `contact/contact.php` |
+| Bestätigungsmail | Nur wenn alle Schichten bestanden — kein Relay-Risiko mehr | `contact/contact.php` |
+
+### `.htaccess`-Schutz (ergänzt 26.05.2026)
+
+- `.config/`-Verzeichnis per `RedirectMatch 404` gesperrt
+- `.env`-Dateien gesperrt
+- `.git`-Verzeichnis gesperrt
+- `composer.json`, `package.json` u. ä. gesperrt
 
 ### Konfigurationsdatei `.config/private.php`
 
