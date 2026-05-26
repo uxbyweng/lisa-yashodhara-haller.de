@@ -153,8 +153,7 @@ try {
             "Sehr geehrte/r $senderName,\n\n" .
             "vielen Dank für Ihre Nachricht. Ich habe Ihre Anfrage erhalten und werde mich zeitnah bei Ihnen melden.\n\n" .
             "Mit freundlichen Grüßen\n" .
-            "Prof. Dr. Lisa Yashodhara Haller\n" .
-            "https://www.lisa-yashodhara-haller.de";
+            "Prof. Dr. Lisa Yashodhara Haller";
         $confirmHeaders = [
             'Content-Type: text/plain; charset="UTF-8"',
             'From: ' . $fromEnc . ' <' . $fromEmail . '>',
