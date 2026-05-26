@@ -1,9 +1,9 @@
 <?php
-// Mail-Konfiguration – Werte in .env hinterlegen
-$fromEmail   = getenv('MAIL_FROM')   ?: 'info@lisa-yashodhara-haller.de'; // MUSS als Postfach auf dem Server existieren
-$fromName    = 'Dr. Prof. Lisa Yashodhara Haller';
-$sendTo      = getenv('MAIL_SENDTO') ?: 'yashodhara@gmx.de';
-$bcc         = getenv('MAIL_BCC')    ?: '';
+require __DIR__ . '/../.config/private.php';
+$fromEmail = MAIL_FROM;
+$fromName  = MAIL_FROM_NAME;
+$sendTo    = MAIL_SENDTO;
+$bcc       = MAIL_BCC;
 
 // MIME-Header-Kodierung (ü/ä/ö im Absendernamen)
 $fromEnc = function_exists('mb_encode_mimeheader')
@@ -43,8 +43,14 @@ try {
     // Spam-Prüfungen
     $isHuman = true;
 
-    // Honeypot: unsichtbares Feld – Bots füllen es aus, Menschen nicht
-    if (!empty($_POST['website'] ?? '')) {
+    // Honeypots: unsichtbare Felder – Bots füllen sie aus, Menschen nicht
+    if (!empty($_POST[HP_WEBSITE] ?? '')) {
+        $isHuman = false;
+    }
+    if (!empty($_POST[HP_EMAIL_CONFIRM] ?? '')) {
+        $isHuman = false;
+    }
+    if (!empty($_POST[HP_TERMS] ?? '')) {
         $isHuman = false;
     }
 

@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . '/../.config/private.php';
 $csrfToken = bin2hex(random_bytes(32));
 setcookie('csrf_token', $csrfToken, [
     'expires'  => 0,
@@ -9,10 +10,9 @@ setcookie('csrf_token', $csrfToken, [
 ]);
 $metaTitle = "Kontakt | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Kontaktieren Sie Prof. Dr. Lisa Yashodhara Haller für aktuelle Blogbeiträge zu Sozialpolitik, Elternschaft und Geschlechterdynamiken.";
-include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
+include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
 ?>
 
-		
 <!-- 
 =============================================
     KONTAKT FORMULAR
@@ -26,7 +26,7 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 
             </h1>
             <p class="fs-20 mt-30 lg-mt-20">
-                Möchten Sie, dass ich einen Vortrag oder einen Workshop für Ihr Unternehmen oder Ihre Konferenz halte? Benötigen Sie Beratung rund um die Themen Sozialpolitik, Elternschaft und Geschlecht? 
+                Möchten Sie, dass ich einen Vortrag oder einen Workshop für Ihr Unternehmen oder Ihre Konferenz halte? Benötigen Sie Beratung rund um die Themen Sozialpolitik, Elternschaft und Geschlecht?
             </p>
         </div>
         <div class="container">
@@ -66,9 +66,11 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
-                                    <!-- Honeypot: für Menschen unsichtbar, Bots füllen es aus -->
+                                    <!-- Honeypots: für Menschen unsichtbar, Bots füllen sie aus -->
                                     <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;">
-                                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                                        <input type="text"     name="<?= htmlspecialchars(HP_WEBSITE,       ENT_QUOTES, 'UTF-8') ?>" tabindex="-1" autocomplete="off">
+                                        <input type="email"    name="<?= htmlspecialchars(HP_EMAIL_CONFIRM, ENT_QUOTES, 'UTF-8') ?>" tabindex="-1" autocomplete="off">
+                                        <input type="checkbox" name="<?= htmlspecialchars(HP_TERMS,         ENT_QUOTES, 'UTF-8') ?>" tabindex="-1">
                                     </div>
                                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8') ?>">
                                     <div class="col-12">
@@ -83,7 +85,7 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                     <div class="col-xl-4 col-lg-5 ms-auto wow fadeInRight">
                         <div class="address-block-three d-flex mb-70 lg-mb-40 mt-20">
                             <img src="/images/contact/lisa_contact_250x250.jpg" alt="Dr. Lisa Yashodhara Haller" class="rounded-3">
-                        </div> 
+                        </div>
                         <div class="address-block-three d-flex mb-70 lg-mb-40">
                             <div class="icon"><img src="/images/icon/icon_162.svg" alt=""></div>
                             <div class="text">
@@ -92,16 +94,16 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                                 <a href="https://orcid.org/0000-0001-5094-207X" target="_blank">OrcID</a><br>
                                 <a href="mailto:L.Haller@em.uni-frankfurt.de" target="_blank">E-Mail</a>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
-            </div> 
-        </div> 
-    </div> 
-</div> 
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
-<?php 
-include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/footer.php" );
-?>	
+<?php
+include($_SERVER["DOCUMENT_ROOT"] . "/includes/footer.php");
+?>
