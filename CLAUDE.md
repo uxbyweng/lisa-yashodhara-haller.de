@@ -148,11 +148,49 @@ Legende: `[ ]` offen · `[x]` erledigt · `[~]` in Arbeit
 
 ## Arbeitsnotizen
 
-<!-- Hier können laufende Notizen, Entscheidungen und Kontextinfos festgehalten werden -->
-
 - Alle 🔴 kritischen Punkte abgeschlossen (07.05.2026)
 - Audit-Datum: 07.05.2026
 - Kein Analytics-Tracking auf der Seite (DSGVO-konform by default, solange das so bleibt)
 - HTTPS-Weiterleitung ist laut .htaccess-Kommentar serverseitig konfiguriert (nicht im Code)
 - `og:image:type` von `image/jpg` → `image/jpeg` behoben (07.05.2026)
 - Schema.org `@context` von `http://` → `https://` behoben (07.05.2026)
+
+---
+
+## Kontaktformular – Anti-Spam-Architektur (Stand 26.05.2026)
+
+**Anlass:** Clientin hat 500 Spam-Mails über das Kontaktformular erhalten.
+
+### Schutzschichten (alle aktiv)
+
+| Schicht | Implementierung | Datei |
+|---|---|---|
+| CSRF-Token | Cookie + Hidden-Field, `hash_equals()` | `contact/index.php`, `contact/contact.php` |
+| Honeypot 1 | Unsichtbares Textfeld (`HP_WEBSITE`) | `contact/index.php` Z. 71 |
+| Honeypot 2 | Unsichtbares E-Mail-Feld (`HP_EMAIL_CONFIRM`) | `contact/index.php` Z. 72 |
+| Honeypot 3 | Unsichtbare Checkbox (`HP_TERMS`) | `contact/index.php` Z. 73 |
+| URL-Filter | `preg_match('/\bhttps?:\/\/\S+/i', $message)` | `contact/contact.php` Z. 60 |
+| Mindestlänge | Mindestens 3 Wörter in der Nachricht | `contact/contact.php` Z. 65 |
+| Datenschutz-Checkbox | Pflichtfeld `privacy` | `contact/index.php` Z. 63 |
+| Fake-Success | Bots bekommen dieselbe Erfolgsmeldung | `contact/contact.php` Z. 106 |
+| Kein Mail-Relay | Bestätigungsmail an Absender entfernt (war Abuse-Vektor) | `contact/contact.php` |
+
+### Konfigurationsdatei `.config/private.php`
+
+- **Gitignored** – liegt nie im öffentlichen Repository
+- Enthält: `MAIL_FROM`, `MAIL_FROM_NAME`, `MAIL_SENDTO`, `MAIL_BCC`
+- Enthält: `HP_WEBSITE`, `HP_EMAIL_CONFIRM`, `HP_TERMS` (Honeypot-Feldnamen)
+- Vorlage für neue Server-Setups: `.config/private.example.php` (im Repo, mit Platzhalterwerten)
+
+**Warum Feldnamen in private.php?** Wer das Repository liest, sieht nur die Konstantennamen (z. B. `HP_WEBSITE`), nicht die tatsächlichen HTML-Feldnamen die ein Bot kennen müsste. Die Feldnamen lauten aktuell: `homepage`, `email_repeat`, `newsletter`.
+
+### CSS-Versteck der Honeypots
+
+Die Honeypot-Inputs stehen in einem `<div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;">` — kein separater CSS-Eintrag nötig, Inline-Style reicht hier bewusst.
+
+### Bekannte Konsolen-Warnung (kein Bug)
+
+```
+Unchecked runtime.lastError: Could not establish connection. Receiving end does not exist.
+```
+Das ist ein **Browser-Extension-Fehler** (z. B. uBlock, Grammarly o. ä.) — entsteht wenn eine Extension mit einem bereits entladenen Content-Script kommuniziert. Hat nichts mit dem Kontaktformular oder der Website zu tun. Kann ignoriert werden.

@@ -86,22 +86,6 @@ try {
 
         @mail($sendTo, 'Neue Mitteilung von lisa-yashodhara-haller.de', $emailText, implode("\n", $headers));
 
-        // Bestätigungsmail an den Absender
-        if ($senderEmail !== '' && filter_var($senderEmail, FILTER_VALIDATE_EMAIL)) {
-            $confirmText =
-                "Sehr geehrte/r $senderName,\n\n" .
-                "vielen Dank für Ihre Nachricht. Ich habe Ihre Anfrage erhalten und werde mich zeitnah bei Ihnen melden.\n\n" .
-                "Mit freundlichen Grüßen\n" .
-                "Prof. Dr. Lisa Yashodhara Haller\n" .
-                "https://www.lisa-yashodhara-haller.de";
-            $confirmHeaders = [
-                'Content-Type: text/plain; charset="UTF-8"',
-                'From: '        . $fromEnc . ' <' . $fromEmail . '>',
-                'Reply-To: '    . $fromEmail,
-                'Return-Path: ' . $fromEmail,
-            ];
-            @mail($senderEmail, 'Ihre Nachricht an Lisa Yashodhara Haller', $confirmText, implode("\n", $confirmHeaders));
-        }
     }
     // Bots bekommen dieselbe Erfolgsmeldung – kein Hinweis auf Erkennung
 
