@@ -147,6 +147,20 @@ try {
             error_log('Contact form mail() failed');
             throw new \Exception('Mail sending failed');
         }
+
+        // Bestätigungsmail an den Absender
+        $confirmText =
+            "Sehr geehrte/r $senderName,\n\n" .
+            "vielen Dank für Ihre Nachricht. Ich habe Ihre Anfrage erhalten und werde mich zeitnah bei Ihnen melden.\n\n" .
+            "Mit freundlichen Grüßen\n" .
+            "Prof. Dr. Lisa Yashodhara Haller\n" .
+            "https://www.lisa-yashodhara-haller.de";
+        $confirmHeaders = [
+            'Content-Type: text/plain; charset="UTF-8"',
+            'From: ' . $fromEnc . ' <' . $fromEmail . '>',
+            'Reply-To: ' . $fromEmail,
+        ];
+        @mail($senderEmail, 'Ihre Nachricht an Lisa Yashodhara Haller', $confirmText, implode("\r\n", $confirmHeaders));
     }
     // Bots bekommen dieselbe Erfolgsmeldung – kein Hinweis auf Erkennung
 
