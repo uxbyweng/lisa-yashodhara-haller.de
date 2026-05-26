@@ -49,7 +49,6 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
             <div class="grid-sizer"></div>
 
             <!-- Zum Anschauen -->
-            <section>
                 <!-- 01 -->
                 <div class="isotop-item hcard visual">
                     <div class="row">
@@ -226,10 +225,8 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
                         </div>
                     </div>
                 </div>
-            </section>
 
             <!-- Zum Reinhören -->
-            <section>
                 <!-- 00 -->
                 <div class="isotop-item hcard audio">
                     <div class="row">
@@ -353,7 +350,6 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
                         </div>
                     </div>
                 </div>
-            </section>
 
         </div>
     </div>
