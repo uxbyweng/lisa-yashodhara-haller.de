@@ -1,17 +1,21 @@
 #######################################################################
 #  .htaccess for lisa-yashodhara-haller.de                            #
-#  Last Update: 07.05.2026                                           #
+#  Last Update: 26.05.2026                                           #
 #  Author: Weng                                                       #
 #######################################################################
 
-# Block direct HTTP access to sensitive files
-<Files ~ "^\.env">
-    Require all denied
-</Files>
+# Block .config directory from HTTP access
+RedirectMatch 404 "(^|/)\.config(/|$)"
 
-<DirectoryMatch "^(.+/)?\.config(/|$)">
-    Require all denied
-</DirectoryMatch>
+# Block env files
+RedirectMatch 404 "(^|/)\.env$"
+RedirectMatch 404 "(^|/).*\.env$"
+
+# Block git internals
+RedirectMatch 404 "(^|/)\.git(/|$)"
+
+# Block common config/composer files
+RedirectMatch 404 "(^|/)(composer\.(json|lock)|package(-lock)?\.json|webpack\.config\.js|vite\.config\.js)$"
 
 # activate HSTS (HTTP Strict Transport Security)
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS

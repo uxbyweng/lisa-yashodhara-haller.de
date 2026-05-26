@@ -22,9 +22,48 @@ $errorMessage = 'Beim Absenden des Formulars ist ein Fehler aufgetreten. Bitte v
 error_reporting(E_ALL);
 ini_set('display_errors', '0');
 ini_set('log_errors', '1');
+
+function rateLimit(string $key, int $limit, int $seconds): bool
+{
+    $dir = sys_get_temp_dir() . '/contact-rate-limit';
+
+    if (!is_dir($dir)) {
+        mkdir($dir, 0700, true);
+    }
+
+    $file = $dir . '/' . hash('sha256', $key) . '.json';
+    $now = time();
+
+    $data = ['start' => $now, 'count' => 0];
+
+    if (is_file($file)) {
+        $stored = json_decode((string) file_get_contents($file), true);
+
+        if (is_array($stored)) {
+            $data = $stored;
+        }
+    }
+
+    if (($now - (int) $data['start']) > $seconds) {
+        $data = ['start' => $now, 'count' => 0];
+    }
+
+    $data['count']++;
+
+    file_put_contents($file, json_encode($data), LOCK_EX);
+
+    return $data['count'] <= $limit;
+}
+
 try {
     if ($_SERVER['REQUEST_METHOD'] !== 'POST' || count($_POST) === 0) {
         throw new \Exception('Form is empty');
+    }
+
+    $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+
+    if (!rateLimit('contact:' . $ip, 5, 3600)) {
+        throw new \Exception('Rate limit exceeded');
     }
 
     // CSRF
@@ -67,25 +106,47 @@ try {
     }
 
     if ($isHuman) {
-        $emailText = "Neue Nachricht von lisa-yashodhara-haller.de\n=============================\n\n";
-        foreach ($_POST as $key => $value) {
-            if (isset($fields[$key])) {
-                $emailText .= $fields[$key] . ': ' . strip_tags((string) $value) . "\n\n";
-            }
+        if ($senderName === '' || strlen($senderName) > 120) {
+            throw new \Exception('Invalid name');
         }
+
+        if ($senderEmail === '' || !filter_var($senderEmail, FILTER_VALIDATE_EMAIL)) {
+            throw new \Exception('Invalid email');
+        }
+
+        $senderEmail = str_replace(["\r", "\n"], '', $senderEmail);
+
+        if ($message === '' || strlen($message) < 20 || strlen($message) > 5000) {
+            throw new \Exception('Invalid message');
+        }
+
+        $emailText = "Neue Nachricht von lisa-yashodhara-haller.de\n";
+        $emailText .= "=============================\n\n";
+        $emailText .= "Name: " . strip_tags($senderName) . "\n\n";
+        $emailText .= "E-Mail: " . strip_tags($senderEmail) . "\n\n";
+        $emailText .= "Nachricht:\n" . strip_tags($message) . "\n\n";
 
         $headers = [
             'Content-Type: text/plain; charset="UTF-8"',
-            'From: '        . $fromEnc . ' <' . $fromEmail . '>',
-            'Reply-To: '    . $fromEmail,
-            'Return-Path: ' . $fromEmail,
+            'From: ' . $fromEnc . ' <' . $fromEmail . '>',
+            'Reply-To: ' . $senderEmail,
         ];
+
         if ($bcc !== '') {
             $headers[] = 'Bcc: ' . $bcc;
         }
 
-        @mail($sendTo, 'Neue Mitteilung von lisa-yashodhara-haller.de', $emailText, implode("\n", $headers));
+        $sent = mail(
+            $sendTo,
+            'Neue Mitteilung von lisa-yashodhara-haller.de',
+            $emailText,
+            implode("\r\n", $headers)
+        );
 
+        if (!$sent) {
+            error_log('Contact form mail() failed');
+            throw new \Exception('Mail sending failed');
+        }
     }
     // Bots bekommen dieselbe Erfolgsmeldung – kein Hinweis auf Erkennung
 

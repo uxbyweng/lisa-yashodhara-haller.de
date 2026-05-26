@@ -34,7 +34,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="form-style-three md-mb-60">
-                            <form action="contact.php" id="contact-form" data-toggle="validator">
+                            <form action="contact.php" method="post" id="contact-form" data-toggle="validator">
                                 <div class="messages"></div>
                                 <div class="row controls">
                                     <div class="col-12">
@@ -68,8 +68,8 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
                                     </div>
                                     <!-- Honeypots: für Menschen unsichtbar, Bots füllen sie aus -->
                                     <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;">
-                                        <input type="text"     name="<?= htmlspecialchars(HP_WEBSITE,       ENT_QUOTES, 'UTF-8') ?>" tabindex="-1" autocomplete="off">
-                                        <input type="email"    name="<?= htmlspecialchars(HP_EMAIL_CONFIRM, ENT_QUOTES, 'UTF-8') ?>" tabindex="-1" autocomplete="off">
+                                        <input type="text" name="<?= htmlspecialchars(HP_WEBSITE,       ENT_QUOTES, 'UTF-8') ?>" tabindex="-1" autocomplete="off">
+                                        <input type="email" name="<?= htmlspecialchars(HP_EMAIL_CONFIRM, ENT_QUOTES, 'UTF-8') ?>" tabindex="-1" autocomplete="off">
                                         <input type="checkbox" name="<?= htmlspecialchars(HP_TERMS,         ENT_QUOTES, 'UTF-8') ?>" tabindex="-1">
                                     </div>
                                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8') ?>">
