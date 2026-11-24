@@ -18,9 +18,17 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                     <h1 class="main-title fw-bold tx-dark m0">
                         <span>Lehre</span> & Gastvorträge
                     </h1>
-                    <p class="text-lg pt-60 pb-60 lg-pt-30 lg-pb-30">
-                        Mein Ziel ist es, den Seminarkontext zu einem Erlebnisraum zu machen, an dem Inhalte vermittelt werden, die das eigene Leben betreffen, wo Diskussionen geführt werden, die berühren, die nahe gehen und die nicht ausschließlich kognitiv, sondern darüber hinaus auch emotional verarbeitet werden.
-                    </p>
+                    <div class="text-lg pt-60 pb-60 lg-pt-30 lg-pb-30">
+                        <p>
+                            Meine Lehre verbindet sozialpolitische und ökonomische Grundlagen mit aktuellen gesellschaftlichen Fragen und den Handlungsfeldern Sozialer Arbeit. Studierende lernen, sozialpolitische Regelungen zu analysieren, die Organisation und Finanzierung sozialer Dienste zu verstehen und deren Auswirkungen auf unterschiedliche Lebenslagen zu beurteilen.
+                        </p>
+                        <p>
+                            Im Mittelpunkt steht die Entwicklung wissenschaftlich begründeter Urteilsfähigkeit. Die Lehrveranstaltungen bieten Raum, theoretische Ansätze und empirische Befunde kritisch zu diskutieren und mit Erfahrungen aus Alltag und Praxis in Beziehung zu setzen.
+                        </p>
+                        <p>
+                            Mein Ziel ist es, den Seminarkontext zu einem Erlebnisraum zu machen, an dem Inhalte vermittelt werden, die das eigene Leben betreffen, wo Diskussionen geführt werden, die berühren, die nahe gehen und die nicht ausschließlich kognitiv, sondern darüber hinaus auch emotional verarbeitet werden.
+                        </p>
+                    </div>
                 </div> 
             </div>
             <div class="col-lg-5 col-md-8 col-sm-10 offset-md-1 ms-auto d-none d-lg-block">
@@ -46,7 +54,102 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 <div class="portfolio-gallery-four">
     <div class="container">
         <h2 class="fs-30 pb-4">
-            Gastvorträge & Ringvorlesungen
+            Aktuelle Lehre
+        </h2>
+        <h3 class="fs-24 pb-3">
+            Wintersemester 2026/27 – Hochschule Neubrandenburg
+        </h3>
+        <section>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57884&amp;vmfile=no" target="_blank" rel="nofollow">Vorlesung: Grundlagen der Sozialpolitik</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57743&amp;vmfile=no" target="_blank" rel="nofollow">Soziale Arbeit als Sprachrohr sozialer Bewegungen – Gruppe 2</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57747&amp;vmfile=no" target="_blank" rel="nofollow">Soziale Arbeit als Sprachrohr sozialer Bewegungen – Gruppe 6</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57774&amp;vmfile=no" target="_blank" rel="nofollow">Forschungswerkstatt: Sozialarbeiter als Akteure der Familienpolitik – Gruppe 3</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57849&amp;vmfile=no" target="_blank" rel="nofollow">Kapitalismus, Sozialpolitik und die Mandate Sozialer Arbeit – Gruppe 1</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57844&amp;vmfile=no" target="_blank" rel="nofollow">Kapitalismus, Sozialpolitik und die Mandate Sozialer Arbeit – Gruppe 3</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57813&amp;vmfile=no" target="_blank" rel="nofollow">Projektwerkstatt: Gewerkschaftliche Organisierung in der Sozialen Arbeit – Gruppe 6</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="pt-3 pb-5">
+            Aktuelle Informationen zur Sprechstunde und zur Betreuung von Abschlussarbeiten finden Sie auf meiner <a href="https://www.hs-nb.de/fachbereich-soziale-arbeit-bildung-und-erziehung/ppages/lisa-yashodhara-haller/" target="_blank" rel="nofollow">Hochschulseite</a>.
+        </p>
+        <h2 class="fs-30 pb-4">
+            Gastvorträge und Ringvorlesungen
         </h2>
         <section>
             <!-- 01 -->
@@ -180,8 +283,100 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
             </div>
         </section>
         <h2 class="fs-30 py-4">
-            Lehrveranstaltungen
+            Lehrarchiv
         </h2>
+        <h3 class="fs-24 pb-3">
+            Sommersemester 2026 – Hochschule Neubrandenburg
+        </h3>
+        <section>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57884&amp;vmfile=no" target="_blank" rel="nofollow">Vorlesung: Grundlagen der Sozialpolitik</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55019" target="_blank" rel="nofollow">Vorlesung: Ökonomische Grundlagen und Rahmenbedingungen</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;publishid=57813&amp;state=verpublish&amp;status=init&amp;vmfile=no" target="_blank" rel="nofollow">Projektwerkstatt: Gewerkschaftliche Organisierung in der Sozialen Arbeit</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55200" target="_blank" rel="nofollow">Seminar: Soziale Dienste in der Care-Ökonomie</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55021" target="_blank" rel="nofollow">Seminar: Tagespolitische Herausforderungen der Familienpolitik</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55170" target="_blank" rel="nofollow">Seminar: Organisation und Transformation wohlfahrtsstaatlicher Sicherungssysteme</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="isotop-item hcard courses">
+                <div class="row">
+                    <div class="col-sm-1 p-5 d-none d-sm-block">
+                        <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
+                    </div>
+                    <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
+                        <h3>
+                            <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55167" target="_blank" rel="nofollow">Seminar: Nachbereitung des Kurzpraktikums</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h3 class="fs-24 py-3">
+            Frühere Lehrveranstaltungen
+        </h3>
         <section>
             <!-- 01 -->
             <div class="isotop-item hcard courses">
