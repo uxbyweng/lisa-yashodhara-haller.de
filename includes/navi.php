@@ -78,13 +78,13 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="/talks-and-workshops/" class="dropdown-item">
-                                        <span>Vorträge & Workshops</span>
+                                    <a href="/courses/" class="dropdown-item">
+                                        <span>Lehrveranstaltungen</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/courses/" class="dropdown-item">
-                                        <span>Lehrveranstaltungen</span>
+                                    <a href="/talks-and-workshops/" class="dropdown-item">
+                                        <span>Vorträge & Workshops</span>
                                     </a>
                                 </li>
                             </ul>

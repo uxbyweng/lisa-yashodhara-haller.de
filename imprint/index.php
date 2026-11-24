@@ -1,16 +1,16 @@
-<?php 
+<?php
 $metaTitle = "Impressum | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "";
-include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
+include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
 ?>
 
-<!-- 
+<!--
 =============================================
     TITLE
-============================================== 
+==============================================
 -->
 <div class="position-relative pt-200 lg-pt-120">
-    <div class="container"> 
+    <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="mb-60 lg-mb-40">
@@ -21,14 +21,14 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                 </div>
             </div>
         </div>
-    </div> 
-</div> 
+    </div>
+</div>
 
 
-<!-- 
+<!--
 =============================================
     IMPRESSUM
-============================================== 
+==============================================
 -->
 <div class="pt-70 pb-50 lg-pb-10 md-pt-10">
     <div class="project-desctiption">
@@ -58,15 +58,15 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                     </p>
                     <hr class="mb-50">
                     <p>
-                        <strong>Web design and development by:</strong> Karsten Weng
+                        <strong>Webdesign & Webentwicklung:</strong> Karsten Weng, <a href="https://www.weng.eu" target="_blank" rel="noopener noreferrer">WENG.EU</a>
                     </p>
-                </div> 
+                </div>
             </div>
         </div>
-    </div> 
-</div> 
+    </div>
+</div>
 
 
-<?php 
-include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/footer.php" );
+<?php
+include($_SERVER["DOCUMENT_ROOT"] . "/includes/footer.php");
 ?>

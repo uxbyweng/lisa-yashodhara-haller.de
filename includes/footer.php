@@ -82,14 +82,14 @@
                         Lehre
                     </h3>
                      <ul class="footer-nav-link style-none">
-                         <li>
-                             <a href="/talks-and-workshops/">
-                                Vorträge & Workshops
-                            </a>
-                         </li>
                         <li>
                             <a href="/courses/">
                                 Lehrveranstaltungen
+                            </a>
+                         </li>
+                         <li>
+                             <a href="/talks-and-workshops/">
+                                Vorträge & Workshops
                             </a>
                          </li>
                         </ul>
