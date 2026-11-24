@@ -1,10 +1,10 @@
-<?php 
+<?php
 $metaTitle = "About | Prof. Dr. Lisa Yashodhara Haller";
 $metaDesc = "Ich forsche, berate und lehre rund um die Themen Sozialpolitik, Elternschaft und Geschlecht.";
-include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
+include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
 ?>
 
-<!-- 
+<!--
 =====================================================
     TITLE
 =====================================================
@@ -13,12 +13,12 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
     <div class="container">
         <div class="row">
             <div class="col-xl-5 col-lg-6">
-                <?php echo generate_breadcrumb(); ?> 
+                <?php echo generate_breadcrumb(); ?>
                 <h1 class="main-title">
                     <span>About</span> <br>Lisa Yashodhara Haller
                 </h1>
                 <p class="text-lg pt-60 lg-pt-30">
-                    Eigentlich können wir leben, wie wir wollen! Und dennoch unterliegen unsere Entscheidungen einer sozialstaatlichen Steuerung. 
+                    Eigentlich können wir leben, wie wir wollen! Und dennoch unterliegen unsere Entscheidungen einer sozialstaatlichen Steuerung.
                 </p>
                 <p class="text-lg pb-60 lg-pb-30">
                     Wie aber regulieren staatliche Steuerungsinstrumente unser Privatleben? In welcher Weise werden Handlungsmöglichkeiten durch den Staat geöffnet und geschlossen? Und für wen? Ich forsche zu der Frage, wie die ökonomischen und rechtlichen Strukturen unserer Gesellschaft von Subjekten verarbeitet werden.
@@ -28,11 +28,11 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                 <div class="img-meta-two d-inline-block position-relative pb-50">
                     <img src="/images/about/lisa_501x620_sw.jpg" alt="" class="rounded-3" loading="lazy">
                     <img src="/images/shape/shape_16.svg" alt="" class="shapes shape-two" style="animation: none;">
-                </div> 
+                </div>
             </div>
         </div>
-    </div> 
-</div> 
+    </div>
+</div>
 
 
 <!--
@@ -48,7 +48,7 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                     <div class="col-md-7 col-sm-8">
                         <div class="block-wrapper block-one">
                             <h3 style="color:#FFAE10;">
-                                Seit 2007 bis 2025
+                                Seit 2007
                             </h3>
                             <p>
                                 Forschung im Bereich der Grundlagen-, Praxis- und Transferforschung
@@ -57,23 +57,23 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                     </div>
                 </div>
                 <div class="row gx-xxl-5">
-                    <div class="col-sm-7" >
+                    <div class="col-sm-7">
                         <div class="block-wrapper block-two position-relative mt-50 sm-mt-30" style="background:#ffccf3; border: 1.5px solid #ff0099;" onclick="location.href='/courses';" style="cursor: pointer">
                             <h3 style="color:#ff0099;">
-                                15+ Jahre
+                                Langjährige Lehrerfahrung
                             </h3>
                             <p>
-                                Lehre zu Ökonomie, Recht, Geschlecht, Sozialpolitik, sozialen Dienstleistungen und Elternschaft
+                                zu Ökonomie, Recht, Geschlecht, Sozialpolitik, sozialen Dienstleistungen und Elternschaft
                             </p>
                         </div>
                     </div>
                     <div class="col-sm-5">
                         <div class="block-wrapper block-three mt-50 sm-mt-30" onclick="location.href='/talks-and-workshops';" style="cursor: pointer">
                             <h3 style="color:#00BDE6;">
-                                50+ <span>Vorträge und Workshops</span>
+                                Vorträge und Workshops
                             </h3>
                             <p>
-                                im Bereich Kinder- und Jugendhilfe, Paarforschung, Familien- und Sozialpolitik
+                                zu Kinder- und Jugendhilfe, Familien- und Sozialpolitik sowie Paar- und Geschlechter&shy;forschung.
                             </p>
                         </div>
                     </div>
@@ -85,10 +85,13 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         So viele private Entscheidungen unterliegen einer sozialstaatlichen Steuerung und damit politischen Bestimmungen. Ohne deren Aufdeckung erscheint uns unser Privatleben mit samt allen Entscheidungen und Handlungen jedoch als die jeweils individuelle Präferenz. Die Individualisierung gesellschaftlicher Problemlagen zu entlarven, ist für mich daher mehr als ein Bildungsauftrag, es ist eine aus den Verhältnissen, in denen wir leben, unmittelbar resultierende Notwendigkeit!
                     </p>
                     <p class="text-lg tx-dark">
-                        Seit meiner Promotion zur Elternschaft im Kapitalismus widme ich mich in mehreren Büchern, Fach- und Zeitungsbeiträgen diesen Bezügen. Ich verfüge in der Politikberatung, der Projektleitung und als politische Bildnerin über langjährige Erfahrung mit der Transformation von Fachwissen in die sozialpolitische Praxis. 
+                        Seit März 2025 bin ich Professorin für Sozialpolitik, Ökonomie sozialer Einrichtungen und sozialer Dienste am Fachbereich Soziale Arbeit, Bildung und Erziehung der Hochschule Neubrandenburg.
                     </p>
                     <p class="text-lg tx-dark">
-                        Ein besonderes Anliegen in der Fort- und Weiterbildung sowie der Superrevision von Fachkräften der elternbezogenen Beratung ist mir die Sensibilisierung für die Herausforderungen unseres Wirtschaftssystems dem Kapitalismus und den darauf entstehenden geschlechterbezogenen Konflikten von Paaren in unterschiedlichenStadien der Elternschaft.
+                        Meine Forschung befasst sich mit der Frage, wie sozialpolitische Regelungen und ökonomische Strukturen gesellschaftliche Handlungsmöglichkeiten eröffnen, begrenzen und ungleich verteilen. Ein besonderes Interesse gilt der Organisation und Finanzierung sozialer Dienste sowie den Auswirkungen familien- und gleichstellungspolitischer Maßnahmen auf die Arbeitsteilung und die materiellen Lebensbedingungen von Eltern.
+                    </p>
+                    <p class="text-lg tx-dark">
+                        Ein besonderes Anliegen in der Fort- und Weiterbildung sowie der Supervision von Fachkräften der elternbezogenen Beratung ist mir die Sensibilisierung für die Herausforderungen unseres Wirtschaftssystems dem Kapitalismus und den darauf entstehenden geschlechterbezogenen Konflikten von Paaren in unterschiedlichen Stadien der Elternschaft.
                     </p>
                 </div>
             </div>
@@ -115,6 +118,25 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                 </div>
             </div>
             <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="team-block-two mt-40">
+                        <a href="https://doi.org/10.14361/9783839473696" target="_blank" rel="nofollow">
+                            <div class="img-meta position-relative">
+                                <img src="/images/publications/placeholder_320_270.jpg" alt="Buchcover: Familie, Sorge und Recht" class="team-img w-100" loading="lazy">
+                                <div class="info text-center">
+                                    <h5 class="tx-dark fs-20 mb-5 text-truncate">
+                                        Familie, Sorge und Recht. Theoretische und empirische Verhältnisbestimmungen (Hrsg.)
+                                    </h5>
+                                    <div class="tx-dark opacity-75">
+                                        transcript<br>
+                                        11. März 2026
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-block-two mt-40">
                         <a href="https://www.campus.de/e-books/wissenschaft/soziologie/materialistischer_feminismus-18348.html" target="_blank" rel="nofollow">
@@ -156,15 +178,14 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                     <div class="team-block-two mt-40">
                         <a href="https://shop.budrich.de/produkt/handbuch-feministische-perspektiven-auf-elternschaft/" target="_blank" rel="nofollow">
                             <div class="img-meta position-relative">
-                                <img src="/images/publications/
-handbuch_feministische_perspektiven_auf_elternschaft_300x270.jpg" alt="Buchcover: Handbuch Feministische Perspektiven auf Elternschaft" class="team-img w-100" loading="lazy">
+                                <img src="/images/publications/handbuch_feministische_perspektiven_auf_elternschaft_300x270.jpg" alt="Buchcover: Handbuch Feministische Perspektiven auf Elternschaft" class="team-img w-100" loading="lazy">
                                 <div class="info text-center">
                                     <h5 class="tx-dark fs-20 mb-5 text-truncate">
                                         Handbuch Feministische Perspektiven auf Elternschaft
                                     </h5>
                                     <div class="tx-dark opacity-75">
                                         Verlag Barbara Budrich<br>
-                                        2021
+                                        2022
                                     </div>
                                 </div>
                             </div>
@@ -218,10 +239,10 @@ handbuch_feministische_perspektiven_auf_elternschaft_300x270.jpg" alt="Buchcover
 </div>
 
 
-<!-- 
+<!--
 =============================================
-    YOUTUBE VIDEO 
-============================================== 
+    YOUTUBE VIDEO
+==============================================
 -->
 <div class="team-section-two position-relative pt-200 lg-pt-120">
     <div class="container">
@@ -264,7 +285,7 @@ handbuch_feministische_perspektiven_auf_elternschaft_300x270.jpg" alt="Buchcover
                             ?>
                             <div class="info text-center">
                                 <h5 class="tx-dark fs-20 mb-5 text-truncate">
-                                   DEBATTE: Was ist materialistischer Feminismus?
+                                    DEBATTE: Was ist materialistischer Feminismus?
                                 </h5>
                                 <div class="tx-dark opacity-75">
                                     05/2023 - IfS Institut für Sozialforschung Frankfurt am Main
@@ -341,7 +362,7 @@ handbuch_feministische_perspektiven_auf_elternschaft_300x270.jpg" alt="Buchcover
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-block-two mt-40">
                         <div class="img-meta position-relative"><a href="https://mosaik-blog.at/kinder-haben-im-kapitalismus/" target="_blank">
-                            <img src="/images/media/elternschaftkapitalismus.jpg" alt="Kinder haben im Kapitalismus" class="w-100" loading="lazy"></a>
+                                <img src="/images/media/elternschaftkapitalismus.jpg" alt="Kinder haben im Kapitalismus" class="w-100" loading="lazy"></a>
                             <div class="info text-center">
                                 <h5 class="tx-dark fs-20 mb-5 text-truncate">
                                     Kinder haben im Kapitalismus
@@ -356,7 +377,7 @@ handbuch_feministische_perspektiven_auf_elternschaft_300x270.jpg" alt="Buchcover
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-block-two mt-40">
                         <div class="img-meta position-relative"><a href="https://www.freie-radios.net/124752" target="_blank">
-                            <img src="/images/media/freie_radios_net.jpg" alt="Logo: Freie Radios Net" class="w-100" loading="lazy"></a>
+                                <img src="/images/media/freie_radios_net.jpg" alt="Logo: Freie Radios Net" class="w-100" loading="lazy"></a>
                             <div class="info text-center">
                                 <h5 class="tx-dark fs-20 mb-5 text-truncate">
                                     BURNING DOWN THE HOUSE. Elternschaft im Kapitalismus
@@ -371,7 +392,7 @@ handbuch_feministische_perspektiven_auf_elternschaft_300x270.jpg" alt="Buchcover
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-block-two mt-40">
                         <div class="img-meta position-relative"><a href="https://grossvater.hypotheses.org/400" target="_blank">
-                            <img src="/images/media/hypotheses.jpg" alt="Hypotheses" class="w-100" loading="lazy"></a>
+                                <img src="/images/media/hypotheses.jpg" alt="Hypotheses" class="w-100" loading="lazy"></a>
                             <div class="info text-center">
                                 <h5 class="tx-dark fs-20 mb-5 text-truncate">
                                     Es ist eine einfache Rechnung – Elternschaft im Kapitalismus
@@ -386,29 +407,29 @@ handbuch_feministische_perspektiven_auf_elternschaft_300x270.jpg" alt="Buchcover
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-block-two mt-40">
                         <div class="img-meta position-relative"><a href="https://www.mixcloud.com/evibes/elternschaft-im-kapitalismus-lisa-yashodhara-haller/" target="_blank">
-                            <img src="/images/media/mxcloud_elternschaft_im_kapitalismus.jpg" alt="Elternschaft im Kapitalismus" class="w-100" loading="lazy"><a>
-                            <div class="info text-center">
-                                <h5 class="tx-dark fs-20 mb-5 text-truncate">
-                                    Elternschaft im Kapitalismus – Die Bedeutung der Fürsorge für unsere Wirtschaft
-                                </h5>
-                                <div class="tx-dark opacity-75">
-                                    10/2019 - mixcloud.com
-                                </div>
-                            </div>
+                                <img src="/images/media/mxcloud_elternschaft_im_kapitalismus.jpg" alt="Elternschaft im Kapitalismus" class="w-100" loading="lazy"><a>
+                                    <div class="info text-center">
+                                        <h5 class="tx-dark fs-20 mb-5 text-truncate">
+                                            Elternschaft im Kapitalismus – Die Bedeutung der Fürsorge für unsere Wirtschaft
+                                        </h5>
+                                        <div class="tx-dark opacity-75">
+                                            10/2019 - mixcloud.com
+                                        </div>
+                                    </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-30">
                 <a href="/media/" class="btn-one fs-18 fw-500">
-                   Alle Podcasts
+                    Alle Podcasts
                 </a>
             </div>
         </div>
     </div>
 </div>
 
-	
-<?php 
-include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/footer.php" );
+
+<?php
+include($_SERVER["DOCUMENT_ROOT"] . "/includes/footer.php");
 ?>
