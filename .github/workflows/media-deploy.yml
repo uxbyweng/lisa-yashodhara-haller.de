@@ -1,0 +1,128 @@
+name: Deploy media via SFTP (STRATO, changed files only)
+
+env:
+    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+on:
+    push:
+        branches: ["main"]
+        paths:
+            - "images/**"
+            - "downloads/**"
+            - "media/**"
+    workflow_dispatch:
+        inputs:
+            full_deploy:
+                description: "Alle Medien hochladen (nicht nur Änderungen)"
+                type: boolean
+                default: false
+
+concurrency:
+    group: "deploy-media"
+    cancel-in-progress: false
+
+jobs:
+    deploy-media:
+        runs-on: ubuntu-24.04 # bewusst fest: ubuntu-latest wechselt ab 19.10.2026 auf Ubuntu 26
+        steps:
+            - name: Checkout (full history for diff)
+              uses: actions/checkout@v5
+              with:
+                  fetch-depth: 0
+
+            - name: Compute changed media files
+              id: changes
+              shell: bash
+              run: |
+                  set -euo pipefail
+                  git config core.quotepath false
+
+                  BASE="${{ github.event.before }}"
+                  HEAD="${{ github.sha }}"
+                  FULL="${{ github.event.inputs.full_deploy }}"
+                  PATHS=( images downloads media )
+
+                  if [ -z "${BASE}" ] || [ "${BASE}" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "${BASE}" 2>/dev/null; then
+                    BASE="$(git rev-parse "${HEAD}~1" 2>/dev/null || true)"
+                  fi
+
+                  : > all.txt
+                  : > deletes.txt
+                  if [ "${FULL}" = "true" ] || [ -z "${BASE}" ]; then
+                    echo "Voll-Deploy"
+                    git ls-tree -r -z --name-only "${HEAD}" -- "${PATHS[@]}" | tr '\0' '\n' > all.txt
+                  else
+                    echo "Diff ${BASE} -> ${HEAD}"
+                    git diff -z --name-status --no-renames "${BASE}" "${HEAD}" -- "${PATHS[@]}" \
+                      | while IFS= read -r -d '' s && IFS= read -r -d '' f; do
+                          case "$s" in
+                            A|M) printf '%s\n' "$f" >> all.txt;;
+                            D)   printf '%s\n' "$f" >> deletes.txt;;
+                          esac
+                        done
+                  fi
+
+                  # Quelldateien (psd/ai) nie hochladen; nur existierende Dateien
+                  filter_media() { grep -Eiv '\.(psd|ai)$' | sed '/^$/d' | sort -u || true; }
+                  filter_media < all.txt | while IFS= read -r f; do [ -f "$f" ] && printf '%s\n' "$f"; done > uploads.txt || true
+                  filter_media < deletes.txt > deletes.sorted
+                  # Wurde etwas gelöscht UND neu hochgeladen -> nicht löschen
+                  comm -23 deletes.sorted uploads.txt > deletes.txt
+
+                  echo "Uploads:"; cat uploads.txt || true
+                  echo "Deletes:"; cat deletes.txt || true
+
+                  if [ ! -s uploads.txt ] && [ ! -s deletes.txt ]; then
+                    echo "nothing_to_do=true" >> "$GITHUB_OUTPUT"
+                  else
+                    echo "nothing_to_do=false" >> "$GITHUB_OUTPUT"
+                  fi
+
+            - name: Skip if nothing to do
+              if: steps.changes.outputs.nothing_to_do == 'true'
+              run: echo "Keine Medien-Änderungen – fertig."
+
+            - name: Install sshpass
+              if: steps.changes.outputs.nothing_to_do != 'true'
+              run: sudo apt-get update -qq && sudo apt-get install -y sshpass -qq
+
+            - name: Build SFTP batch & deploy
+              if: steps.changes.outputs.nothing_to_do != 'true'
+              env:
+                  HOST: ${{ secrets.FTP_SERVER }}
+                  USER: ${{ secrets.FTP_USERNAME }}
+                  PASS: ${{ secrets.FTP_PASSWORD }}
+                  PORT: 22
+                  REMOTE_ROOT: "/home/www/lisa-yashodhara-haller.de" # SFTP startet in /home, Webroot liegt darunter
+              shell: bash
+              run: |
+                  set -euo pipefail
+                  BATCH="$(mktemp)"
+                  declare -A seen=()
+
+                  while IFS= read -r f; do
+                    [ -z "$f" ] && continue
+                    path="${REMOTE_ROOT}"
+                    IFS='/' read -ra parts <<< "$(dirname "$f")"
+                    for p in "${parts[@]}"; do
+                      if [ -z "$p" ] || [ "$p" = "." ]; then continue; fi
+                      path="${path}/${p}"
+                      if [ -z "${seen[$path]:-}" ]; then
+                        seen[$path]=1
+                        printf -- '-mkdir "%s"\n' "$path" >> "$BATCH"
+                      fi
+                    done
+                    printf 'put -p "./%s" "%s/%s"\n' "$f" "$REMOTE_ROOT" "$f" >> "$BATCH"
+                  done < uploads.txt
+
+                  # "-rm": Fehler ignorieren (Datei schon weg)
+                  while IFS= read -r f; do
+                    [ -z "$f" ] && continue
+                    printf -- '-rm "%s/%s"\n' "$REMOTE_ROOT" "$f" >> "$BATCH"
+                  done < deletes.txt
+
+                  echo "=== SFTP Batch ==="
+                  cat "$BATCH"
+                  echo "=================="
+
+                  sshpass -p "$PASS" sftp -b "$BATCH" -o StrictHostKeyChecking=no -P "$PORT" "${USER}@${HOST}"

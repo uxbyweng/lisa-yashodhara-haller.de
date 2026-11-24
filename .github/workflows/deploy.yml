@@ -1,0 +1,144 @@
+name: Deploy via SFTP (STRATO, changed files only)
+
+env:
+    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+on:
+    push:
+        branches: ["main"]
+        paths:
+            # KEIN images/, downloads/, media/ (eigener Workflow: media-deploy.yml)
+            # KEIN .config/, .env*, router.php, README/CLAUDE.md, package.json (nie deployen)
+            - "about/**"
+            - "aktuelles/**"
+            - "components/**"
+            - "contact/**"
+            - "courses/**"
+            - "css/**"
+            - "error/**"
+            - "fonts/**"
+            - "imprint/**"
+            - "includes/**"
+            - "js/**"
+            - "press/**"
+            - "privacy/**"
+            - "projects/**"
+            - "publications/**"
+            - "talks-and-workshops/**"
+            - "vendor/**"
+            - "index.php"
+            - ".htaccess"
+            - "robots.txt"
+            - "sitemap.xml"
+            - "site.webmanifest"
+            - "browserconfig.xml"
+            - "*.png"
+            - "*.ico"
+            - "safari-pinned-tab.svg"
+    workflow_dispatch:
+        inputs:
+            full_deploy:
+                description: "Alle Code-Dateien hochladen (nicht nur Änderungen)"
+                type: boolean
+                default: false
+
+concurrency:
+    group: "deploy-code"
+    cancel-in-progress: false
+
+jobs:
+    deploy:
+        runs-on: ubuntu-24.04 # bewusst fest: ubuntu-latest wechselt ab 19.10.2026 auf Ubuntu 26
+        steps:
+            - name: Checkout (full history for diff)
+              uses: actions/checkout@v5
+              with:
+                  fetch-depth: 0
+
+            - name: Detect changed files
+              id: changes
+              shell: bash
+              run: |
+                  set -euo pipefail
+                  git config core.quotepath false
+
+                  BASE="${{ github.event.before }}"
+                  HEAD="${{ github.sha }}"
+                  FULL="${{ github.event.inputs.full_deploy }}"
+
+                  PATHS=( about aktuelles components contact courses css error fonts imprint includes js press privacy
+                          projects publications talks-and-workshops vendor
+                          index.php .htaccess robots.txt sitemap.xml site.webmanifest browserconfig.xml
+                          safari-pinned-tab.svg ':(glob)*.png' ':(glob)*.ico' )
+
+                  # Fallback (workflow_dispatch, Erst-Push, ungültige BASE)
+                  if [ -z "${BASE}" ] || [ "${BASE}" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "${BASE}" 2>/dev/null; then
+                    BASE="$(git rev-parse "${HEAD}~1" 2>/dev/null || true)"
+                  fi
+
+                  : > uploads.txt
+                  if [ "${FULL}" = "true" ] || [ -z "${BASE}" ]; then
+                    echo "Voll-Deploy"
+                    git ls-files -z -- "${PATHS[@]}" | tr '\0' '\n' > uploads.txt
+                  else
+                    echo "Diff ${BASE} -> ${HEAD}"
+                    git diff -z --name-status --no-renames --diff-filter=AM "${BASE}" "${HEAD}" -- "${PATHS[@]}" \
+                      | while IFS= read -r -d '' s && IFS= read -r -d '' f; do printf '%s\n' "$f"; done > uploads.txt
+                  fi
+
+                  # nur existierende Dateien, Duplikate/Leerzeilen raus
+                  sed -i '/^$/d' uploads.txt
+                  sort -u uploads.txt | while IFS= read -r f; do [ -f "$f" ] && printf '%s\n' "$f"; done > uploads.sorted
+                  mv uploads.sorted uploads.txt
+
+                  echo "Uploads:"; cat uploads.txt || true
+
+                  if [ ! -s uploads.txt ]; then
+                    echo "nothing_to_do=true" >> "$GITHUB_OUTPUT"
+                  else
+                    echo "nothing_to_do=false" >> "$GITHUB_OUTPUT"
+                  fi
+
+            - name: Skip if nothing to do
+              if: steps.changes.outputs.nothing_to_do == 'true'
+              run: echo "Keine Code-Änderungen – fertig."
+
+            - name: Install sshpass
+              if: steps.changes.outputs.nothing_to_do != 'true'
+              run: sudo apt-get update -qq && sudo apt-get install -y sshpass -qq
+
+            - name: SFTP deploy (single session)
+              if: steps.changes.outputs.nothing_to_do != 'true'
+              env:
+                  HOST: ${{ secrets.FTP_SERVER }} # z. B. ssh.strato.de
+                  USER: ${{ secrets.FTP_USERNAME }}
+                  PASS: ${{ secrets.FTP_PASSWORD }}
+                  PORT: 22
+                  REMOTE_ROOT: "/home/www/lisa-yashodhara-haller.de" # SFTP startet in /home, Webroot liegt darunter
+              shell: bash
+              run: |
+                  set -euo pipefail
+                  BATCH="$(mktemp)"
+                  declare -A seen=()
+                  while IFS= read -r f; do
+                    [ -z "$f" ] && continue
+                    # Verzeichnisleiter (jede Ebene nur einmal); "-" = Fehler ignorieren (existiert schon)
+                    path="${REMOTE_ROOT}"
+                    IFS='/' read -ra parts <<< "$(dirname "$f")"
+                    for p in "${parts[@]}"; do
+                      if [ -z "$p" ] || [ "$p" = "." ]; then continue; fi
+                      path="${path}/${p}"
+                      if [ -z "${seen[$path]:-}" ]; then
+                        seen[$path]=1
+                        printf -- '-mkdir "%s"\n' "$path" >> "$BATCH"
+                      fi
+                    done
+                    printf 'put -p "./%s" "%s/%s"\n' "$f" "$REMOTE_ROOT" "$f" >> "$BATCH"
+                  done < uploads.txt
+
+                  echo "=== SFTP Batch ==="
+                  cat "$BATCH"
+                  echo "=================="
+
+                  # -b: bricht bei fehlgeschlagenem put ab -> Job schlägt fehl
+                  sshpass -p "$PASS" sftp -b "$BATCH" -o StrictHostKeyChecking=no -P "$PORT" "${USER}@${HOST}"
