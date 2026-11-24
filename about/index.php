@@ -122,7 +122,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
                     <div class="team-block-two mt-40">
                         <a href="https://doi.org/10.14361/9783839473696" target="_blank" rel="nofollow">
                             <div class="img-meta position-relative">
-                                <img src="/images/publications/placeholder_320_270.jpg" alt="Buchcover: Familie, Sorge und Recht" class="team-img w-100" loading="lazy">
+                                <img src="/images/publications/familie_sorge_und_recht_300x270.jpg" alt="Buchcover: Familie, Sorge und Recht" width="300" height="270" class="team-img w-100" loading="lazy">
                                 <div class="info text-center">
                                     <h5 class="tx-dark fs-20 mb-5 text-truncate">
                                         Familie, Sorge und Recht. Theoretische und empirische Verhältnisbestimmungen (Hrsg.)
