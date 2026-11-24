@@ -8425,3 +8425,41 @@ body .btn-twentySix:hover:after {top: 0; left: 0;}
         aspect-ratio: 16 / 9;
     }
 }
+
+/* Startseite: Bühne (Desktop). Hero-Höhe folgt der Fensterhöhe (min. 560 px, max. 900 px).
+   Das Foto sitzt bündig am unteren Rand der Bühne und ragt nie aus dem sichtbaren Bereich,
+   der Text ist vertikal zur Bühne zentriert. */
+@media (min-width: 992px) {
+    .home-stage.home-stage {
+        --stage-h: clamp(560px, 100svh, 900px);
+        --stage-header: 110px;
+        padding-top: var(--stage-header) !important;
+    }
+    .home-stage > .container > .row {
+        min-height: calc(var(--stage-h) - var(--stage-header));
+        align-items: stretch;
+    }
+    .home-stage-text {
+        align-self: center;
+        padding-bottom: 30px;
+    }
+    .home-stage-text h1 {
+        font-size: clamp(2.25rem, 3.8vw, 4rem);
+    }
+    .home-stage-text p.text-lg {
+        padding-bottom: 0;
+    }
+    .home-stage-photo {
+        align-self: flex-end;
+    }
+    .home-stage-photo img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: calc(var(--stage-h) - var(--stage-header) - 20px);
+        margin-left: auto;
+        object-fit: contain;
+        object-position: right bottom;
+    }
+}

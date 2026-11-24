@@ -9,25 +9,28 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
     TITLE
 =====================================================
 -->
-<div class="position-relative pt-200 lg-pt-120">
+<div class="home-stage position-relative pt-200 lg-pt-120">
     <div class="container">
         <div class="row">
-            <div class="col-xxl-6 col-xl-5 col-lg-6 col-md-6">
+            <div class="home-stage-text col-xxl-6 col-xl-5 col-lg-6 col-md-6">
                 <div class="sm-mb-10 md-mb-60"> <?php echo generate_breadcrumb(); ?>
-                    <h2 class="main-title mb-20">
-                        <span class="position-relative d-inline-block">Lisa Yashodhara Haller</span> forscht, berät und bildet rund um die Themen Sozialpolitik, Elternschaft und Geschlecht.
-                    </h2>
+                    <h1 class="main-title mb-20">
+                        <span class="position-relative d-inline-block">Prof. Dr. Lisa Yashodhara Haller</span>
+                    </h1>
                     <picture>
                         <source srcset="/images/home/img_lisa_haller_xs.webp" type="image/webp">
                         <source srcset="/images/home/img_lisa_haller_xs.png" type="image/png">
                         <img class="d-block d-lg-none img-responsive mb-3 start-50" src="/images/home/img_lisa_haller_xs.png" alt="Porträt von Prof. Dr. Lisa Yashodhara Haller" width="320" height="400" fetchpriority="high" loading="eager">
                     </picture>
                     <p class="text-lg pb-60 lg-pb-10">
-                        Einprägsam veranschaulicht sie Vermittlungszusammenhänge zwischen der staatlichen Steuerung unserer kapitalistischen Wirtschaft und vermeintlich ganz privaten Entscheidungen des Alltags: sozialstaatliche Steuerungsabsichten können so, in den einzelnen Subjekten, deren Handlungen, Einstellungen und der Ausgestaltung ihres Lebens wiederentdeckt und als gewordene und veränderbare Resultate politischer Steuerung entmystifiziert werden.
+                        Lisa Yashodhara Haller forscht, lehrt und berät zu Sozialpolitik, der Ökonomie sozialer Dienste sowie zu Familien- und Geschlechterverhältnissen.
+                    </p>
+                    <p class="text-lg pb-60 lg-pb-10">
+                        Sie ist Professorin für Sozialpolitik, Ökonomie sozialer Einrichtungen und sozialer Dienste an der Hochschule Neubrandenburg.
                     </p>
                 </div>
             </div>
-            <div class="col-xxl-6 col-xl-6 col-lg-5 col-md-6 col-sm-10 ms-auto d-none d-lg-block">
+            <div class="home-stage-photo col-xxl-6 col-xl-6 col-lg-5 col-md-6 col-sm-10 ms-auto d-none d-lg-block">
                 <picture>
                     <source srcset="/images/home/img_lisa_haller.webp" type="image/webp">
                     <source srcset="/images/home/img_lisa_haller.avif" type="image/avif">
@@ -143,9 +146,9 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
             <div class="col-md-6 order-md-first d-none d-lg-block">
                 <div class="img-meta d-inline-block position-relative ps-3 ps-lg-5 pb-50 md-mt-50 sm-mt-80">
                     <picture>
-                        <source srcset="/images/home/about_lisa_501x620_sw.webp" type="image/webp">
-                        <source srcset="/images/home/about_lisa_501x620_sw.jpg" type="image/jpeg">
-                        <img src="/images/home/about_lisa_501x620_sw.jpg" alt="Porträt von Prof. Dr. Lisa Yashodhara Haller" class="img-responsive" loading="lazy" width="501" height="620">
+                        <source srcset="/images/home/img_lisa_haller_500x520.webp" type="image/webp">
+                        <source srcset="/images/home/img_lisa_haller_500x520.png" type="image/png">
+                        <img src="/images/home/img_lisa_haller_500x520.png" alt="Porträt von Prof. Dr. Lisa Yashodhara Haller" class="img-responsive" loading="lazy" width="500" height="620">
                     </picture>
                 </div>
             </div>
@@ -164,26 +167,100 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
         <div class="row align-items-center">
             <div class="col-xl-7 col-md-8">
                 <div class="title-style-one mb-30 mt-30">
+                    <div class="sc-title">
+                        15. November 2026
+                    </div>
                     <h2 class="main-title">
-                        Kommentar zur Abstammungsrechtsreform
+                        Neue Veröffentlichung: Geld, Geschlecht und soziale Sicherung
                     </h2>
                 </div>
                 <p class="fs-20 mb-50 md-mb-30">
-                    Erfahren Sie, was die neue Abstammungsrechtsreform bringt. Lisa Yashodhara Haller kommentiert die neuesten Entwicklungen im Freitag+.
+                    Im aktuellen Schwerpunktheft des Deutschen Vereins zeigt Lisa Yashodhara Haller, wie familienpolitische Entscheidungen seit 2006 die Verteilung von Sorgearbeit und die finanzielle Absicherung prägen – vom Elterngeld über die Kindergrundsicherung bis zur Rente.
                 </p>
+                <div class="text-start">
+                    <a href="https://www.deutscher-verein.de/shop/produktdetail/archiv-42026-20-jahre-siebter-familienbericht-familienpolitik-auf-dem-pruefstand/" class="btn-one fs-18 fw-500" target="_blank" rel="nofollow">
+                        Zur Veröffentlichung
+                    </a>
+                </div>
             </div>
             <div class="col-xl-4 col-md-4 ms-auto mb-30">
-                <a href="https://www.freitag.de/autoren/lisa-yashodhara-haller/abstammungsrecht-will-elternschaft-neu-regeln/cc2233bf-b79d-46b6-9a31-acf4af04b2cc" target="_blank" rel="nofollow">
-                    <picture>
-                        <source srcset="/images/aktuelles/abstammungsrecht-will-elternschaft-neu-regeln.webp" type="image/webp">
-                        <source srcset="/images/aktuelles/abstammungsrecht-will-elternschaft-neu-regeln.jpg" type="image/jpg">
-                        <img src="/images/aktuelles/abstammungsrecht-will-elternschaft-neu-regeln.jpg" alt="Abstammungsrecht will Elternschaft neu regeln" width="425" height="239" loading="lazy">
-                    </picture>
+                <a href="https://www.deutscher-verein.de/shop/produktdetail/archiv-42026-20-jahre-siebter-familienbericht-familienpolitik-auf-dem-pruefstand/" target="_blank" rel="nofollow">
+                    <img src="/images/publications/20-jahre-siebter-familienbericht-familienpolitik-auf-dem-pruefstand.jpg" alt="Cover: Archiv für Wissenschaft und Praxis der Sozialen Arbeit, Heft 4/2026" class="img-responsive" width="425" height="239" loading="lazy">
                 </a>
             </div>
-            <div class="text-start">
-                <a href="https://www.freitag.de/autoren/lisa-yashodhara-haller/abstammungsrecht-will-elternschaft-neu-regeln/cc2233bf-b79d-46b6-9a31-acf4af04b2cc" class="btn-one fs-18 fw-500" target="_blank">
-                    Zum Artikel
+        </div>
+        <div class="row align-items-center flex-md-row-reverse mt-80 lg-mt-50">
+            <div class="col-xl-7 col-md-8">
+                <div class="title-style-one mb-30 mt-30">
+                    <div class="sc-title">
+                        22. Juli 2026
+                    </div>
+                    <h2 class="main-title">
+                        Neue Veröffentlichung: Wenn Recht Mütter adressiert
+                    </h2>
+                </div>
+                <p class="fs-20 mb-50 md-mb-30">
+                    Der Beitrag in Sozial Extra untersucht, wie geschlechtsneutral formuliertes Recht in elternbezogenen Beratungskontexten geschlechtsspezifisch umgesetzt wird und welche Bedeutung dies für die Soziale Arbeit hat.
+                </p>
+                <div class="text-start">
+                    <a href="https://doi.org/10.1007/s12054-026-00890-9" class="btn-one fs-18 fw-500" target="_blank" rel="nofollow">
+                        Zur Veröffentlichung
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 me-auto mb-30">
+                <a href="https://doi.org/10.1007/s12054-026-00890-9" target="_blank" rel="nofollow">
+                    <img src="/images/publications/wenn-recht-muetter-adressiert.jpg" alt="Cover: Sozial Extra" class="img-responsive" width="425" height="239" loading="lazy">
+                </a>
+            </div>
+        </div>
+        <div class="row align-items-center mt-80 lg-mt-50">
+            <div class="col-xl-7 col-md-8">
+                <div class="title-style-one mb-30 mt-30">
+                    <div class="sc-title">
+                        26. Mai 2026
+                    </div>
+                    <h2 class="main-title">
+                        Radiogespräch: Familienpolitik und sinkende Geburtenzahlen
+                    </h2>
+                </div>
+                <p class="fs-20 mb-50 md-mb-30">
+                    Im SWR Kultur Forum „Babyflaute statt Kindersegen – Warum uns der Nachwuchs ausgeht“ diskutiert Lisa Yashodhara Haller mit Matthias Dantlgraber und Katharina Spieß über die Ursachen sinkender Geburtenzahlen und die Möglichkeiten und Grenzen familienpolitischer Maßnahmen. Moderation: Marion Theis.
+                </p>
+                <div class="text-start">
+                    <a href="https://www.ardsounds.de/episode/urn:ard:episode:d8086fa3e4980ca7/" class="btn-one fs-18 fw-500" target="_blank" rel="nofollow">
+                        Zum Radiogespräch
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 ms-auto mb-30">
+                <a href="https://www.ardsounds.de/episode/urn:ard:episode:d8086fa3e4980ca7/" target="_blank" rel="nofollow">
+                    <img src="/images/media/babyflaute_statt_kindersegen.jpg" alt="Babyflaute statt Kindersegen" class="img-responsive" width="425" height="239" loading="lazy">
+                </a>
+            </div>
+        </div>
+        <div class="row align-items-center flex-md-row-reverse mt-80 lg-mt-50">
+            <div class="col-xl-7 col-md-8">
+                <div class="title-style-one mb-30 mt-30">
+                    <div class="sc-title">
+                        11. März 2026
+                    </div>
+                    <h2 class="main-title">
+                        Neu erschienen: Familie, Sorge und Recht
+                    </h2>
+                </div>
+                <p class="fs-20 mb-50 md-mb-30">
+                    Der gemeinsam herausgegebene Sammelband untersucht die Wechselverhältnisse von familialen Lebensformen, Sorge und Recht aus theoretischen und empirischen Perspektiven. Das Buch ist im Open Access frei zugänglich.
+                </p>
+                <div class="text-start">
+                    <a href="https://doi.org/10.14361/9783839473696" class="btn-one fs-18 fw-500" target="_blank" rel="nofollow">
+                        Zum Buch
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 me-auto mb-30">
+                <a href="https://doi.org/10.14361/9783839473696" target="_blank" rel="nofollow">
+                    <img src="/images/publications/familie_sorge_und_recht_300x270.jpg" alt="Buchcover: Familie, Sorge und Recht" class="img-responsive" width="425" height="239" loading="lazy">
                 </a>
             </div>
         </div>

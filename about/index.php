@@ -26,7 +26,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
             </div>
             <div class="col-xl-6 col-lg-5 col-md-8 col-sm-10 ms-auto">
                 <div class="img-meta-two d-inline-block position-relative pb-50">
-                    <img src="/images/about/lisa_501x620_sw.jpg" alt="" class="rounded-3" loading="lazy">
+                    <img src="/images/about/img_lisa_500x620.webp" alt="Prof. Dr. Lisa Yashodhara Haller" class="rounded-3" loading="lazy">
                     <img src="/images/shape/shape_16.svg" alt="" class="shapes shape-two" style="animation: none;">
                 </div>
             </div>
