@@ -66,9 +66,15 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57884&amp;vmfile=no" target="_blank" rel="nofollow">Vorlesung: Grundlagen der Sozialpolitik</a>
-                        </h3>
+                        <h2>
+                            Vorlesung: Grundlagen der Sozialpolitik
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Vorlesung, 1 SWS, Lehramt an beruflichen Schulen (Sozialpädagogik), Hochschule Neubrandenburg, WiSe 2026/27
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57884&amp;vmfile=no" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -78,9 +84,18 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57743&amp;vmfile=no" target="_blank" rel="nofollow">Soziale Arbeit als Sprachrohr sozialer Bewegungen – Gruppe 2</a>
-                        </h3>
+                        <h2>
+                            Soziale Arbeit als Sprachrohr sozialer Bewegungen – Gruppe 2
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Übung, 2 SWS, Studiengang Soziale Arbeit (auch dual), Hochschule Neubrandenburg, WiSe 2026/27
+                        </p>
+                        <p class="foldable">
+                            Die Übung begleitet die Vorlesung und behandelt die Entstehung der Sozialen Arbeit als Berufsfeld am Beispiel der Kinder- und Jugendhilfe. Im Mittelpunkt stehen historische Phasen, fachliche Ansätze, das Selbstverständnis und die Heimerziehung. Anhand von Beispielen geht es um gesellschaftliche Rahmenbedingungen und sozialpolitische Konflikte um Leistungen für junge Menschen. Eingeführt werden die klassischen Methoden Einzelfall-, Gruppen- und Gemeinwesenarbeit. Grundlage sind historische Quellen, Filmausschnitte und Fachtexte, dazu kommen Leseaufgaben, Gruppendiskussionen und Präsentationen.
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57743&amp;vmfile=no" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -90,9 +105,15 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57747&amp;vmfile=no" target="_blank" rel="nofollow">Soziale Arbeit als Sprachrohr sozialer Bewegungen – Gruppe 6</a>
-                        </h3>
+                        <h2>
+                            Soziale Arbeit als Sprachrohr sozialer Bewegungen – Gruppe 6
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Übung, 2 SWS, Studiengang Soziale Arbeit (auch dual), Hochschule Neubrandenburg, WiSe 2026/27
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57747&amp;vmfile=no" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -102,9 +123,18 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57774&amp;vmfile=no" target="_blank" rel="nofollow">Forschungswerkstatt: Sozialarbeiter als Akteure der Familienpolitik – Gruppe 3</a>
-                        </h3>
+                        <h2>
+                            Forschungswerkstatt: Sozialarbeiter als Akteure der Familienpolitik – Gruppe 3
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Seminar, 2 SWS, Studiengang Soziale Arbeit, Hochschule Neubrandenburg, WiSe 2026/27
+                        </p>
+                        <p class="foldable">
+                            Die Forschungswerkstatt vertieft erkenntnis- und wissenschaftstheoretische Kompetenzen. Familienpolitische Fragen werden aus Sicht der Sozialen Arbeit empirisch, analytisch und handlungsorientiert bearbeitet. Untersucht werden die Wirkungen familienpolitischer Maßnahmen auf verschiedene Adressatengruppen und auf das professionelle Selbstverständnis. Die Studierenden entwickeln Forschungsfragen, ordnen aktuelle Reformdebatten anhand von Studien ein und untersuchen sie mit qualitativen und quantitativen Methoden. Zusätzlich sollen eigene politische Handlungsempfehlungen entstehen.
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57774&amp;vmfile=no" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -114,9 +144,18 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57849&amp;vmfile=no" target="_blank" rel="nofollow">Kapitalismus, Sozialpolitik und die Mandate Sozialer Arbeit – Gruppe 1</a>
-                        </h3>
+                        <h2>
+                            Kapitalismus, Sozialpolitik und die Mandate Sozialer Arbeit – Gruppe 1
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Übung, 3 SWS, Studiengang Soziale Arbeit, Hochschule Neubrandenburg, WiSe 2026/27
+                        </p>
+                        <p class="foldable">
+                            Thema ist das Verhältnis von Sozialer Arbeit und Gerechtigkeit. Leitfragen sind, was Gerechtigkeit bedeutet und was sie mit Sozialer Arbeit zu tun hat. Außerdem geht es darum, wo Studierende im Praxissemester oder im Alltag Ungerechtigkeit und Diskriminierung erlebt haben und wie Fachkräfte sich für gerechtere Verhältnisse einsetzen können. Grundlage sind ausgewählte Texte. Erwartet werden Begleitlektüre, Vor- und Nachbereitung, aktive Mitarbeit und regelmäßige obligatorische Schreibübungen.
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57849&amp;vmfile=no" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -126,9 +165,15 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57844&amp;vmfile=no" target="_blank" rel="nofollow">Kapitalismus, Sozialpolitik und die Mandate Sozialer Arbeit – Gruppe 3</a>
-                        </h3>
+                        <h2>
+                            Kapitalismus, Sozialpolitik und die Mandate Sozialer Arbeit – Gruppe 3
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Seminaristischer Unterricht, 2 SWS, Studiengang Soziale Arbeit, Hochschule Neubrandenburg, WiSe 2026/27
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57844&amp;vmfile=no" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -138,9 +183,18 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57813&amp;vmfile=no" target="_blank" rel="nofollow">Projektwerkstatt: Gewerkschaftliche Organisierung in der Sozialen Arbeit – Gruppe 6</a>
-                        </h3>
+                        <h2>
+                            Projektwerkstatt: Gewerkschaftliche Organisierung in der Sozialen Arbeit – Gruppe 6
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Seminar, 2 SWS, Studiengang Soziale Arbeit, Hochschule Neubrandenburg, WiSe 2026/27
+                        </p>
+                        <p class="foldable">
+                            Die Projektwerkstatt fragt, wie Soziale Arbeit ihre Interessen kollektiv vertreten kann und welche Rolle Gewerkschaften dabei spielen. Behandelt werden die Schwierigkeiten gewerkschaftlicher Mobilisierung in einem „helfenden“ Beruf sowie das Verhältnis von Berufsethik, professioneller Identität und sozialpolitischem Auftrag. Analysiert werden Tarifverträge, Arbeitsrecht und Organisationsformen ebenso wie Einstellungen zu Streik, Loyalitäten gegenüber Trägern und Spannungen zwischen Autonomie und institutionellen Vorgaben. Die Veranstaltung ist als laborartiger, fortlaufender Arbeitsprozess angelegt und lebt vom Austausch der Teilnehmenden. Deshalb besteht Anwesenheitspflicht.
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57813&amp;vmfile=no" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -295,9 +349,15 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57884&amp;vmfile=no" target="_blank" rel="nofollow">Vorlesung: Grundlagen der Sozialpolitik</a>
-                        </h3>
+                        <h2>
+                            Vorlesung: Grundlagen der Sozialpolitik
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Vorlesung, 1 SWS, Lehramt an beruflichen Schulen (Sozialpädagogik), Hochschule Neubrandenburg, SoSe 2026
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;state=verpublish&amp;status=init&amp;veranstaltung.veranstid=57884&amp;vmfile=no" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -307,9 +367,18 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55019" target="_blank" rel="nofollow">Vorlesung: Ökonomische Grundlagen und Rahmenbedingungen</a>
-                        </h3>
+                        <h2>
+                            Vorlesung: Ökonomische Grundlagen und Rahmenbedingungen
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Vorlesung, 1 SWS, Studiengang Soziale Arbeit (auch dual), Hochschule Neubrandenburg, SoSe 2026
+                        </p>
+                        <p class="foldable">
+                            Die Vorlesung fragt, wie wirtschaftliche Bedingungen die Arbeit im sozialen Dienstleistungsbereich prägen und welche Rahmenbedingungen professionelle Hilfe bräuchte. Behandelt werden das Spannungsverhältnis zwischen kapitalistischer Wirtschaft und staatlich organisierter Sozialwirtschaft, Finanzierungsquellen und ihre rechtlichen Grundlagen sowie sozialpolitische Organisationsformen. Ein internationaler Vergleich von Finanzierungsformen dient der Abwägung von Vor- und Nachteilen. Abschließend geht es um Veränderungen bei der Mittelvergabe und deren Folgen für den Berufsalltag.
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55019" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -319,9 +388,18 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;publishid=57813&amp;state=verpublish&amp;status=init&amp;vmfile=no" target="_blank" rel="nofollow">Projektwerkstatt: Gewerkschaftliche Organisierung in der Sozialen Arbeit</a>
-                        </h3>
+                        <h2>
+                            Projektwerkstatt: Gewerkschaftliche Organisierung in der Sozialen Arbeit
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Seminar, 2 SWS, Studiengang Soziale Arbeit, Hochschule Neubrandenburg, SoSe 2026
+                        </p>
+                        <p class="foldable">
+                            Die Projektwerkstatt fragt, wie Soziale Arbeit ihre Interessen kollektiv vertreten kann und welche Rolle Gewerkschaften dabei spielen. Behandelt werden die Schwierigkeiten gewerkschaftlicher Mobilisierung in einem „helfenden“ Beruf sowie das Verhältnis von Berufsethik, professioneller Identität und sozialpolitischem Auftrag. Analysiert werden Tarifverträge, Arbeitsrecht und Organisationsformen ebenso wie Einstellungen zu Streik, Loyalitäten gegenüber Trägern und Spannungen zwischen Autonomie und institutionellen Vorgaben. Die Veranstaltung ist als laborartiger, fortlaufender Arbeitsprozess angelegt und lebt vom Austausch der Teilnehmenden. Deshalb besteht Anwesenheitspflicht.
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;publishid=57813&amp;state=verpublish&amp;status=init&amp;vmfile=no" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -331,9 +409,18 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55200" target="_blank" rel="nofollow">Seminar: Soziale Dienste in der Care-Ökonomie</a>
-                        </h3>
+                        <h2>
+                            Seminar: Soziale Dienste in der Care-Ökonomie
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Seminaristischer Unterricht, 2 SWS, Studiengang Soziale Arbeit, Hochschule Neubrandenburg, SoSe 2026
+                        </p>
+                        <p class="foldable">
+                            Das Seminar klärt, was unter dem Begriff Care zu verstehen ist. Es fragt, warum zentrale Versorgungsaufgaben der kapitalistischen Verwertungslogik widersprechen und warum Streiks im Care-Bereich schwer zu organisieren sind. Im Blick stehen soziale Dienstleistungen für Menschen in abhängigen Lebenslagen sowie Sorgearbeit in persönlichen Beziehungen. Behandelt werden die wohlfahrtsstaatliche Organisation, die wirtschaftlichen, politischen und sozialen Rahmenbedingungen und Konzepte für eine gerechtere Verteilung von Care-Arbeit.
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55200" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -343,9 +430,18 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55021" target="_blank" rel="nofollow">Seminar: Tagespolitische Herausforderungen der Familienpolitik</a>
-                        </h3>
+                        <h2>
+                            Seminar: Tagespolitische Herausforderungen der Familienpolitik
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Seminaristischer Unterricht, 2 SWS, Studiengang Soziale Arbeit (auch dual), Hochschule Neubrandenburg, SoSe 2026
+                        </p>
+                        <p class="foldable">
+                            Das Seminar behandelt, wofür Familienpolitik gebraucht wird, welche aktuellen Herausforderungen sie hat und was daraus für Fachkräfte der Sozialen Arbeit folgt. Im Mittelpunkt stehen historische Entstehung und Grundsätze der Familienpolitik sowie aktuelle Debatten, Reformen und Maßnahmen. Ziel ist, konkrete Handlungsempfehlungen an die Politik zu erarbeiten und zu lernen, wie Soziale Arbeit Politik mitgestalten kann.
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55021" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -355,9 +451,18 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55170" target="_blank" rel="nofollow">Seminar: Organisation und Transformation wohlfahrtsstaatlicher Sicherungssysteme</a>
-                        </h3>
+                        <h2>
+                            Seminar: Organisation und Transformation wohlfahrtsstaatlicher Sicherungssysteme
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Seminaristischer Unterricht, 2 SWS, Studiengang Soziale Arbeit (auch dual), Hochschule Neubrandenburg, SoSe 2026
+                        </p>
+                        <p class="foldable">
+                            Das Seminar fragt, wie das wohlfahrtsstaatliche Sicherungssystem organisiert ist, welche Reformen gerade stattfinden und wer davon profitiert oder nicht. Die Reformvorhaben werden bewertet, unter anderem die Einführung eines Quasimarkts, der die Arbeit von Sozialarbeitenden verändert. Außerdem geht es um Soziale Arbeit als politischen Akteur. Die Studierenden sollen politische Dimensionen Sozialer Arbeit begründen und Methoden politischer Intervention anwenden können.
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55170" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
@@ -367,9 +472,15 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                         <i class="fa-solid fa-users-viewfinder fa-2xl"></i>
                     </div>
                     <div class="col-12 col-sm-9 col-lg-10 px-5 py-4 p-sm-4">
-                        <h3>
-                            <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55167" target="_blank" rel="nofollow">Seminar: Nachbereitung des Kurzpraktikums</a>
-                        </h3>
+                        <h2>
+                            Seminar: Nachbereitung des Kurzpraktikums
+                        </h2>
+                        <p class="font--777 fs-18">
+                            Seminar, 2 SWS, Studiengang Soziale Arbeit, Hochschule Neubrandenburg, SoSe 2026
+                        </p>
+                        <a href="https://lsf.hs-nb.de/qisserver/rds?state=verpublish&amp;status=init&amp;vmfile=no&amp;moduleCall=webInfo&amp;publishConfFile=webInfo&amp;publishSubDir=veranstaltung&amp;veranstaltung.veranstid=55167" target="_blank" rel="nofollow" class="btn-hcard tran3s">
+                            Zur Veranstaltung | lsf.hs-nb.de
+                        </a>
                     </div>
                 </div>
             </div>
