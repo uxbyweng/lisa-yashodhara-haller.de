@@ -41,9 +41,9 @@ RewriteBase /
 # RewriteCond %{HTTPS} !=on
 # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# force www
-# RewriteCond %{HTTP_HOST} ^lisa-yashodhara-haller\.de [NC]
-# RewriteRule ^(.*)$ https://www.lisa-yashodhara-haller.de/$1 [L,R=301,NC]
+# force www (Canonical, Sitemap und robots.txt verwenden www)
+RewriteCond %{HTTP_HOST} ^lisa-yashodhara-haller\.de$ [NC]
+RewriteRule ^ https://www.lisa-yashodhara-haller.de%{REQUEST_URI} [L,R=301]
 
 # remove index.php from domain (works only on root)
 # RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.(php)\ HTTP/
@@ -162,6 +162,10 @@ FilterProtocol  COMPRESS  DEFLATE change=yes;byteranges=no
 
 # Your document php
   ExpiresByType text/php                  "access plus 0 seconds"
+
+# HTML-Seiten (PHP-Ausgabe) nie cachen: sonst 30 Tage "ExpiresDefault"
+# (Inhalte erscheinen verzögert, Kontaktseite mit CSRF-Token/Cookie veraltet)
+  ExpiresByType text/html                 "access plus 0 seconds"
   
 # Data
   ExpiresByType text/xml                  "access plus 0 seconds"
@@ -202,8 +206,11 @@ FilterProtocol  COMPRESS  DEFLATE change=yes;byteranges=no
   ExpiresByType application/javascript    "access plus 1 year"
   ExpiresByType text/javascript           "access plus 1 year"
   
+  # "public" nur für statische Dateien, nicht für HTML-Seiten
   <IfModule mod_headers.c>
-    Header append Cache-Control "public"
+    <FilesMatch "\.(css|js|jpe?g|png|gif|webp|avif|svg|ico|woff2?|ttf|eot|otf|mp3|mp4|mpeg|ogg|webm|pdf)$">
+      Header append Cache-Control "public"
+    </FilesMatch>
   </IfModule>
   
 </IfModule>

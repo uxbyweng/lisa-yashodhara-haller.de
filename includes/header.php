@@ -6,6 +6,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/auth.php';
 require_once( $_SERVER[ "DOCUMENT_ROOT" ] . "/components/gallery_component.php" );
 require_once( $_SERVER[ "DOCUMENT_ROOT" ] . "/components/breadcrumb.php" );
 require_once( $_SERVER[ "DOCUMENT_ROOT" ] . "/components/youtube_video.php" );
+
+// Cache-Busting: hängt die Änderungszeit der Datei als ?v= an (CSS/JS haben 1 Jahr Cache).
+// Ändert sich die Datei auf dem Server, ändert sich die URL, und Besucher laden die neue Version.
+if (!function_exists('asset')) {
+    function asset(string $path): string {
+        $file = $_SERVER['DOCUMENT_ROOT'] . $path;
+        return is_file($file) ? $path . '?v=' . filemtime($file) : $path;
+    }
+}
 ?>
 <!DOCTYPE html>
 
@@ -15,7 +24,6 @@ require_once( $_SERVER[ "DOCUMENT_ROOT" ] . "/components/youtube_video.php" );
 <?php /* TECHNISCHE META-ANGABEN, WICHTIG FÜR DIE DARSTELLUNG IM BROWSER */ ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta content="/img/lisa-Yashodhara-haller.png" itemprop="image">
 <meta name="theme-color" content="#950000">
 <meta name="msapplication-navbutton-color" content="#950000">
 <meta name="apple-mobile-web-app-status-bar-style" content="#950000">
@@ -38,13 +46,17 @@ require_once( $_SERVER[ "DOCUMENT_ROOT" ] . "/components/youtube_video.php" );
 <meta property="og:locale" content="de_DE" />
 <meta property="og:site_name" content="Prof. Dr. Lisa Yashodhara Haller" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.lisa-yashodhara-haller.de<?php echo dirname($_SERVER['SCRIPT_NAME']); ?>/" />
+<meta property="og:url" content="https://www.lisa-yashodhara-haller.de<?php echo rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\'); ?>/" />
 <meta property="og:title" content='<?= isset ($metaTitle) ? $metaTitle : "Prof. Dr. Lisa Yashodhara Haller" ?>' />
 <meta property="og:description" content="<?= isset ($metaDesc) ? $metaDesc :  'Forschung, Beratung und Bildung rund um die Themen Sozialpolitik, Elternschaft und Geschlecht.' ?>" />
-<meta property="og:image:width" content="1050" />
-<meta property="og:image:height" content="400" />
+<?php if (isset($ogImg)) : ?>
+<meta property="og:image" content="<?= htmlspecialchars($ogImg, ENT_QUOTES, 'UTF-8') ?>" />
+<?php else : /* Standard-Vorschaubild: vorhandene Datei, Maße/Typ passen zur Datei */ ?>
+<meta property="og:image" content="https://www.lisa-yashodhara-haller.de/images/home/about_lisa_501x620_sw.jpg" />
+<meta property="og:image:width" content="501" />
+<meta property="og:image:height" content="620" />
 <meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image" content="<?= isset ($ogImg) ? $ogImg : 'https://www.lisa-yashodhara-haller.de/img/og_lisa-haller.jpg' ?>" />
+<?php endif; ?>
     
 <script type="application/ld+json">
 {
@@ -61,14 +73,24 @@ require_once( $_SERVER[ "DOCUMENT_ROOT" ] . "/components/youtube_video.php" );
   ]
 }
 </script>
-<script src="/js/setimglazy.js" defer></script>
+<script src="<?= asset('/js/setimglazy.js') ?>" defer></script>
 	
 <?php /* CANONICAL-TAG (um Duplicate Content zu vermeiden) */ ?>
 <link rel="canonical" href="https://www.lisa-yashodhara-haller.de<?php echo dirname($_SERVER['SCRIPT_NAME']); if (dirname($_SERVER['SCRIPT_NAME']) != '/') { echo "/";} ?>" />
     
 <?php /* CSS */ ?>
-<link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
-<link rel="stylesheet" type="text/css" href="/css/responsive.css" media="all">
+<?php /* Reihenfolge wie früher die @import-Kette in style.css (jetzt parallel statt nacheinander geladen) */ ?>
+<link rel="stylesheet" href="/fonts/gordita/stylesheet.css">
+<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?= asset('/css/navbar.css') ?>">
+<link rel="stylesheet" href="<?= asset('/css/framework.css') ?>">
+<link rel="stylesheet" href="/fonts/bootstrap-icons/font-css.css">
+<link rel="stylesheet" href="/fonts/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/vendor/fancybox/dist/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/vendor/slick/slick.css">
+<link rel="stylesheet" href="/vendor/nice-select/nice-select.css">
+<link rel="stylesheet" href="<?= asset('/css/style.css') ?>" media="all">
+<link rel="stylesheet" href="<?= asset('/css/responsive.css') ?>" media="all">
 </head>
 
 <body>

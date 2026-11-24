@@ -110,7 +110,7 @@
 <!-- JAVASCRIPT -->
 <script src="/vendor/jquery.min.js"></script>
 <!-- MoreLess -->
-<script src="/js/moreless.js"></script>
+<script src="<?= asset('/js/moreless.js') ?>"></script>
 <script>
 $(function () {
   $(".foldable").moreLess({
@@ -133,8 +133,8 @@ $(function () {
 <!-- validator js -->
 <script src="/vendor/validator.js"></script>
 <!-- Custom js -->
-<script src="/js/email.js"></script>
-<script src="/js/theme.js"></script>
+<script src="<?= asset('/js/email.js') ?>"></script>
+<script src="<?= asset('/js/theme.js') ?>"></script>
 
 
 

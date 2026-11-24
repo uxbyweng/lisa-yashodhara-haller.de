@@ -9,26 +9,10 @@
    
 */
 /**
-* Importing necessary  Styles.
+* Die früheren @import-Anweisungen (Fonts, Bootstrap, Navbar, Framework, Icons,
+* Fancybox, Slick, Nice-Select) stehen jetzt als <link>-Tags in includes/header.php.
+* @import lädt seriell (Wasserfall), <link> parallel.
 **/
-/*----- Fonts ----*/
-@import url('../fonts/gordita/stylesheet.css');
-/*----Bootstrap css ----- */
-@import url('../vendor/bootstrap/css/bootstrap.min.css');
-/*---- Navbar Css------*/
-@import url('navbar.css');
-/*----Framework css-----*/
-@import url('framework.css');
-/*----- Bootstrap Icons ----------*/
-@import url('../fonts/bootstrap-icons/font-css.css');
-/*---- Font Awesome Icons -------*/
-@import url('../fonts/font-awesome/css/all.min.css');
-/*----------- Fancybox css -------*/
-@import url('../vendor/fancybox/dist/jquery.fancybox.min.css');
-/*----------- Slick Slider -------*/
-@import url('../vendor/slick/slick.css');
-/*----Nice Select----*/
-@import url('../vendor/nice-select/nice-select.css');
 
 
 

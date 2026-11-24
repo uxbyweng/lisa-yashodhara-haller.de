@@ -1,5 +1,7 @@
 <?php
 require __DIR__ . '/../.config/private.php';
+// Seite mit Token + Cookie darf von Browser/Proxy nicht gespeichert werden
+header('Cache-Control: no-store, max-age=0');
 $csrfToken = bin2hex(random_bytes(32));
 setcookie('csrf_token', $csrfToken, [
     'expires'  => 0,
