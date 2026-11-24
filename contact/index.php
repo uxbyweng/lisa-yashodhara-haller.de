@@ -85,16 +85,32 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-5 ms-auto wow fadeInRight">
-                        <div class="address-block-three d-flex mb-70 lg-mb-40 mt-20">
-                            <img src="/images/contact/lisa_contact_250x250.jpg" alt="Dr. Lisa Yashodhara Haller" class="rounded-3">
+                        <div class="address-block-three contact-photo d-flex mb-40 lg-mb-30 mt-20">
+                            <img src="/images/contact/lisa_contact_250x250.jpg" alt="Prof. Dr. Lisa Yashodhara Haller" class="rounded-circle" width="160" height="160">
+                        </div>
+                        <div class="address-block-three d-flex mb-70 lg-mb-40">
+                            <div class="icon"><img src="/images/icon/icon_161.svg" alt=""></div>
+                            <div class="text">
+                                <h5 class="title">Kontaktdaten</h5>
+                                <p>
+                                    <strong>Prof. Dr. Lisa Yashodhara Haller</strong><br>
+                                    Professur für Sozialpolitik, Ökonomie sozialer Einrichtungen und sozialer Dienste
+                                </p>
+                                <p>
+                                    Hochschule Neubrandenburg<br>
+                                    Fachbereich Soziale Arbeit, Bildung und Erziehung
+                                </p>
+                                <p>
+                                    E-Mail: <a class="mailaddress" href="#" data-name="haller" data-domain="hs-nb" data-tld="de"><noscript>haller [at] hs-nb [dot] de</noscript></a>
+                                </p>
+                            </div>
                         </div>
                         <div class="address-block-three d-flex mb-70 lg-mb-40">
                             <div class="icon"><img src="/images/icon/icon_162.svg" alt=""></div>
                             <div class="text">
                                 <h5 class="title">Academic Networks</h5>
                                 <a href="https://www.researchgate.net/profile/Lisa-Haller" target="_blank">researchgate.net</a><br>
-                                <a href="https://orcid.org/0000-0001-5094-207X" target="_blank">OrcID</a><br>
-                                <a href="mailto:L.Haller@em.uni-frankfurt.de" target="_blank">E-Mail</a>
+                                <a href="https://orcid.org/0000-0001-5094-207X" target="_blank">OrcID</a>
                             </div>
                         </div>
                     </div>

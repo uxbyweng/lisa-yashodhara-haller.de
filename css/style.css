@@ -7998,8 +7998,6 @@ body .btn-twentySix:hover:after {top: 0; left: 0;}
 }
 /*^^^^^^^^^^^^^^^^^^^^^ Theme Inner Banner Three ^^^^^^^^^^^^^^^^^^^^^^^^*/
 .inner-banner-three .bg-wrapper {
-  background: url(/images/svg/bg-16.svg) no-repeat top center;
-  background-size: cover;
   padding: 150px 0 108px;
   position: relative;
   z-index: 1;
@@ -8032,7 +8030,7 @@ body .btn-twentySix:hover:after {top: 0; left: 0;}
   background: #fff;
   border-radius: 20px;
   padding: 60px 80px 85px;
-  box-shadow: 0px 35px 70px rgba(0, 104, 31, 0.05);
+  box-shadow: 0px 35px 70px rgba(0, 0, 0, 0.05);
 }
 .form-style-three .input-group-meta label {
   font-size: 14px; 
@@ -8463,3 +8461,10 @@ body .btn-twentySix:hover:after {top: 0; left: 0;}
         object-position: right bottom;
     }
 }
+
+/* Kontakt: Anschriftsblock in lesbare Absätze gegliedert */
+.address-block-three p + p {margin-top: 14px;}
+.address-block-three p strong {color: #000; font-weight: 600;}
+.address-block-three img.rounded-circle {width: 160px; height: 160px; object-fit: cover;}
+/* Profilbild mittig über der Textspalte (Icon 35 px + Abstand 30 px) */
+.address-block-three.contact-photo {padding-left: 65px; justify-content: center;}
