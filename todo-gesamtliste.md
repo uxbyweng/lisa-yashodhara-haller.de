@@ -1,28 +1,19 @@
-# Gesamtliste offener Punkte (lisa-yashodhara-haller.de)
 
-Alle offenen To-dos, Fehler, Auffälligkeiten, Rückfragen und Wartepunkte. Erledigtes durchstreichen (`~~…~~`) mit Datum + Ergebnis, nicht löschen.
-Eintrag: Ort (Datei/Zeile oder URL) · kurze Beschreibung · Status.
+**Anlass:** 500 Spam-Mails über das Kontaktformular.
 
-## 1. Sofort / live-Fehler
-- (leer)
+| Schicht | Implementierung | Datei |
+|---|---|---|
+| Rate-Limit | Max. 5 Absendungen pro IP pro Stunde, dateibasiert in `sys_get_temp_dir()` | `contact/contact.php` |
+| CSRF-Token | Token + Hidden-Field, `hash_equals()` (Sitzung vs. Cookie: **prüfen**, siehe Gesamtliste) | `contact/index.php`, `contact/contact.php` |
+| Honeypot 1–3 | Unsichtbares Textfeld (`HP_WEBSITE`), E-Mail-Feld (`HP_EMAIL_CONFIRM`), Checkbox (`HP_TERMS`) | `contact/index.php` |
+| URL-Filter | `preg_match('/\bhttps?:\/\/\S+/i', $message)` | `contact/contact.php` |
+| Mindestlänge | Mindestens 3 Wörter, 20–5000 Zeichen | `contact/contact.php` |
+| Eingabevalidierung | Name max. 120 Z., E-Mail via `filter_var`, Newlines entfernt | `contact/contact.php` |
+| Datenschutz-Checkbox | Pflichtfeld `privacy` | `contact/index.php` |
+| Fake-Success | Bots bekommen dieselbe Erfolgsmeldung | `contact/contact.php` |
+| Bestätigungsmail | Nur wenn alle Schichten bestanden (kein Relay-Risiko) | `contact/contact.php` |
 
-## 2. Wartet auf andere
-- (leer)
-
-## 3. Zeitgebunden
-- (leer)
-
-## 4. Technik
-- `js/theme.js`/Slider · Slick Slider (seit 2017 ohne Pflege) bei nächster Überarbeitung durch Swiper.js ersetzen, ca. 4–6 Std · offen
-- `contact/index.php`, `contact/contact.php` · CSRF-Prüfung: CLAUDE.md nennt einmal Sitzung (`session_start()`), einmal Cookie; Code prüfen, Doku angleichen · offen
-- `includes/footer.php`, `.htaccess` · prüfen, dass `.env` und `.config/` nicht im Deploy landen · offen
-- Repo-Root · neues technisches Audit durchführen (Analyse → `docs/SEO-ANALYSE.md`, danach `SEO-TASK-PLAN.md`); letztes Audit war 07.05.2026 · offen
-
-## 5. SEO / Inhalt
-- (leer)
-
-## 6. Admin / Betrieb
-- `_backup/` · ZIP-Archive vom Server löschen (nur per `.htaccess` gesperrt, gehören nicht ins Webroot) · offen
-
-## 7. Ideen / Entscheidungen
-- (leer)
+- **Konfiguration:** `.config/private.php` (gitignored, **auf dem Server von Hand pflegen**) enthält `MAIL_FROM`, `MAIL_FROM_NAME`, `MAIL_SENDTO`, `MAIL_BCC` und die Honeypot-Feldnamen `HP_WEBSITE`, `HP_EMAIL_CONFIRM`, `HP_TERMS`. Vorlage: `.config/private.example.php` (im Repo, Platzhalter). Die echten Feldnamen stehen bewusst nur dort, damit sie aus dem öffentlichen Repo nicht ablesbar sind.
+- **Honeypot-Versteck:** Die Inputs stehen in einem `<div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;">`. Der Inline-Style ist **bewusste Ausnahme** von der Regel „kein Inline-CSS“.
+- **`.htaccess`:** gesperrt sind `.config/` (404), `.env*`, `.git`, `composer.json`, `package.json` u. ä.
+- **Bekannte Konsolen-Warnung (kein Bug):** `Unchecked runtime.lastError: Could not establish connection. Receiving end does not exist.` kommt von einer Browser-Extension, nicht von der Seite.

@@ -125,4 +125,12 @@ jobs:
                   cat "$BATCH"
                   echo "=================="
 
-                  sshpass -p "$PASS" sftp -b "$BATCH" -o StrictHostKeyChecking=no -P "$PORT" "${USER}@${HOST}"
+                  # Batch per stdin (NICHT "sftp -b": das setzt BatchMode=yes und sshpass kann das Passwort nicht eingeben).
+                  # sftp liefert über stdin immer Exit 0 -> Erfolg selbst prüfen: jedes "put" muss ein "Uploading" erzeugen.
+                  LOG="$(mktemp)"
+                  sshpass -p "$PASS" sftp -o StrictHostKeyChecking=no -P "$PORT" "${USER}@${HOST}" < "$BATCH" 2>&1 | tee "$LOG"
+                  grep -q "^Connected to" "$LOG" || { echo "::error::SFTP-Verbindung fehlgeschlagen"; exit 1; }
+                  EXPECTED="$(grep -c '^put ' "$BATCH" || true)"
+                  DONE="$(grep -c 'Uploading ' "$LOG" || true)"
+                  echo "Uploads erwartet: ${EXPECTED}, durchgeführt: ${DONE}"
+                  [ "${EXPECTED}" = "${DONE}" ] || { echo "::error::Nicht alle Dateien wurden hochgeladen"; exit 1; }
