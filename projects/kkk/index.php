@@ -54,7 +54,7 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                                     Laufzeit
                                 </div>
                                 <div class="sb-text">
-                                    2023-2024
+                                    2023
                                 </div>
                             </div>
                             <div class="col-12 mb-30">
@@ -73,7 +73,7 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                                     Tätigkeit
                                 </div>
                                 <div class="sb-text">
-                                    Autorin
+                                    Projektkoordination
                                 </div>
                             </div>
                         </div>

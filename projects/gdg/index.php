@@ -70,7 +70,8 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                                     Tätigkeit
                                 </div>
                                 <div class="sb-text">
-                                    Wissenschaftliche Mitarbeiterin in der Geschäftsstelle für den Dritten Gleichstellungsbericht
+                                    Wissenschaftliche Mitarbeit in der Geschäftsstelle Dritter Gleichstellungsbericht, 2019–2020<br>
+                                    Institut für Sozialarbeit und Sozialpädagogik, Frankfurt am Main
                                 </div>
                             </div>
                         </div>

@@ -77,7 +77,7 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                             KKK - Körper, Kinder, Kassensturz.
                         </h2>
                         <h3 class="card-text">
-                            Die geschlechter&shy;differente Regulierung von Elternschaft im Recht, ihre Legitimation und Kritik aus gendertheoretischer Sicht
+                            Handlungsempfehlungen für die Umsetzung des Koalitionsvertrags. Projektkoordination, 2023, Gunda-Werner-Institut der Heinrich-Böll-Stiftung.
                         </h3>
                     </a>
                 </div> 
@@ -181,7 +181,7 @@ include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
                             GDG – Dritter Gleichstellungs&shy;bericht der Bundesregierung. 
                         </h2>
                         <h3 class="card-text">
-                            Digitalisierung geschlechter&shy;gerecht gestalten
+                            Geschäftsstelle Dritter Gleichstellungsbericht der Bundesregierung: ‚Digitalisierung geschlechtergerecht gestalten‘. Wissenschaftliche Mitarbeit, 2019–2020, Institut für Sozialarbeit und Sozialpädagogik, Frankfurt am Main.
                         </h3>
                     </a>
                 </div> 

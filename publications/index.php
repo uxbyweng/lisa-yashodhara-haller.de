@@ -1,6 +1,6 @@
 <?php 
 $metaTitle = "Publikationen | Prof. Dr. Lisa Yashodhara Haller";
-$metaDesc = "Veröffentlichungen, Bücher und Beiträge zm Thema Geschlechterpolitik von Dr. Lisa Yashodhara Haller.";
+$metaDesc = "Veröffentlichungen, Bücher und Beiträge zum Thema Geschlechterpolitik von Prof. Dr. Lisa Yashodhara Haller.";
 include( $_SERVER[ "DOCUMENT_ROOT" ] . "/includes/header.php" );
 ?>
 
