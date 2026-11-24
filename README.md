@@ -13,7 +13,7 @@ Live: [https://www.lisa-yashodhara-haller.de](https://www.lisa-yashodhara-haller
 | Backend | PHP (no CMS, no framework) |
 | Frontend | Bootstrap 5, Vanilla JS, jQuery 3.7.1 |
 | Server | Apache, `.htaccess` |
-| Deployment | FTP upload |
+| Deployment | GitHub Actions (SFTP) |
 | Language | German (`de_DE`) |
 
 ---
@@ -131,9 +131,17 @@ http://localhost:8000/publications/
 
 ## Deployment
 
-Deployment is done via **FTP upload** to the Apache web server. There is no build step — all assets are pre-compiled and committed.
+Deployment is automated via **GitHub Actions over SFTP**: every push to `main` uploads only the changed files to the Apache web server. There is no build step — all assets are pre-compiled and committed.
 
-After uploading, verify `.env` is present on the server (it is not committed to the repository) and that `.htaccess` is active.
+| Workflow | Triggers on changes in | Purpose |
+|---|---|---|
+| `.github/workflows/deploy.yml` | page folders (`about/`, `css/`, `js/`, `includes/`, `vendor/`, …), `index.php`, `.htaccess`, `sitemap.xml`, favicons in the root | Code |
+| `.github/workflows/media-deploy.yml` | `images/`, `downloads/`, `media/` | Media (files deleted in the repo are also removed on the server; `.psd`/`.ai` are never uploaded) |
+
+- **Secrets** (repository settings → Actions): `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`. The target directory (`REMOTE_ROOT`) is set in both workflow files.
+- **Full deploy:** run a workflow manually under *Actions → Run workflow* and tick `full_deploy` to upload all files instead of only the changes.
+- **Never deployed** (not in the path lists): `.config/`, `.env*`, `router.php`, `README.md`, `CLAUDE.md`, `package.json`, `todo-gesamtliste.md`. Maintain `.config/private.php` and `.env` on the server by hand and verify `.htaccess` is active after changes.
+- **Note:** the workflows use `sftp` via stdin, not `sftp -b` — batch mode disables password prompts, so `sshpass` cannot log in.
 
 ---
 
