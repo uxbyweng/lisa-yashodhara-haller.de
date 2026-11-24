@@ -94,13 +94,13 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
             </a>
         </div>
         <div class="col-lg-3 col-sm-6 mt-40">
-            <a href="/press/">
+            <a href="/press-media/">
                 <div class="card-style-ten d-flex flex-column bg-white pe-3 ps-3 pe-xl-5 ps-xl-5 pt-30 pb-30 lg-pt-40 lg-pb-30">
                     <div class="icon d-flex align-items-end">
-                        <img src="/images/svg/icon_53.svg" alt="Icon: Presse" width="69" height="61" loading="lazy">
+                        <img src="/images/svg/icon_53.svg" alt="Icon: Presse und Medien" width="69" height="61" loading="lazy">
                     </div>
                     <h3 class="fs-24 fw-500 mt-20 mh-70">
-                        Presse
+                        Presse und Medien
                     </h3>
                 </div>
             </a>

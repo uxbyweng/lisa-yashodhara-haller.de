@@ -332,7 +332,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
                 </div>
             </div>
             <div class="text-center mt-30">
-                <a href="/media/" class="btn-one fs-18 fw-500">
+                <a href="/press-media/" class="btn-one fs-18 fw-500">
                     Alle Clips
                 </a>
             </div>
@@ -421,7 +421,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/includes/header.php");
                 </div>
             </div>
             <div class="text-center mt-30">
-                <a href="/media/" class="btn-one fs-18 fw-500">
+                <a href="/press-media/" class="btn-one fs-18 fw-500">
                     Alle Podcasts
                 </a>
             </div>

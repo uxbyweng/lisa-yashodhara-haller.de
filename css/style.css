@@ -8402,3 +8402,26 @@ body .btn-twentySix:hover:after {top: 0; left: 0;}
 .yt-facade__accept:focus { background: #b30000; }
 .form-style-five [class*="btn-"] {font-size: 14px; letter-spacing: 0.88px;}
 .form-style-five [class*="btn-"]:hover {background: var(--prime-eight); color: #000;}
+
+/* Presse und Medien: Bild/Video füllt die Bildspalte der Karte komplett aus (kein weißer Rand unten) */
+@media (min-width: 768px) {
+    .hcard-fill .hcard > .row > .col-md-5 {
+        display: flex;
+    }
+    .hcard-fill .hcard > .row > .col-md-5 > a {
+        display: flex;
+        width: 100%;
+    }
+    .hcard-fill .hcard > .row > .col-md-5 > a > img,
+    .hcard-fill .hcard > .row > .col-md-5 > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .hcard-fill .hcard > .row > .col-md-5 .yt-facade {
+        width: 100%;
+        height: auto;
+        padding-bottom: 0;
+        aspect-ratio: 16 / 9;
+    }
+}

@@ -54,6 +54,8 @@ RewriteRule ^ https://www.lisa-yashodhara-haller.de%{REQUEST_URI} [L,R=301]
 # REDIRECT // 301 Weiterleitungen
 # ----------------------------------------------------------------------
 # RewriteRule ^impressum(.*) https://www.lisa-yashodhara-haller.de/imprint/ [R=301,L]
+# Presse und Medien zusammengefuehrt
+RewriteRule ^(press|media)/?$ https://www.lisa-yashodhara-haller.de/press-media/ [R=301,L]
 
 
 

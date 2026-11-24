@@ -71,8 +71,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/press/">
-                                Presse
+                            <a href="/press-media/">
+                                Presse &amp; Medien
                             </a>
                         </li>
                     </ul>
@@ -92,12 +92,7 @@
                                 Lehrveranstaltungen
                             </a>
                          </li>
-                        <li>
-                            <a href="/media/">
-                                Zum anschauen (Clips)
-                            </a>
-                         </li>
-                    </ul>
+                        </ul>
                 </div>
             </div>
         </div>

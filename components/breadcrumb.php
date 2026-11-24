@@ -12,11 +12,12 @@ function generate_breadcrumb() {
     // Füge den Home-Link als ersten Breadcrumb hinzu
     $breadcrumb .= '<a href="/">Home</a> &nbsp;&gt;&nbsp; ';
     
+    $labels = ['press-media' => 'Presse und Medien'];
     $currentPath = '/';
     foreach ($breadcrumbs as $crumb) {
         $currentPath .= $crumb . '/';
         if ($crumb !== '') {
-            $breadcrumb .= '<a href="' . $currentPath . '">' . ucfirst($crumb) . '</a> &nbsp;&gt;&nbsp; ';
+            $breadcrumb .= '<a href="' . $currentPath . '">' . ($labels[$crumb] ?? ucfirst($crumb)) . '</a> &nbsp;&gt;&nbsp; ';
         }
     }
     

@@ -42,7 +42,7 @@
                         <li class="nav-item dropdown<?php if (
                                                         (dirname($_SERVER['SCRIPT_NAME']) == '/projects') or
                                                         (dirname($_SERVER['SCRIPT_NAME']) == '/publications') or
-                                                        (dirname($_SERVER['SCRIPT_NAME']) == '/press')
+                                                        (dirname($_SERVER['SCRIPT_NAME']) == '/press-media')
                                                     ) {
                                                         echo " active";
                                                     } ?>">
@@ -61,16 +61,15 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/press/" class="dropdown-item">
-                                        <span>Presse</span>
+                                    <a href="/press-media/" class="dropdown-item">
+                                        <span>Presse &amp; Medien</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown<?php if (
                                                         (dirname($_SERVER['SCRIPT_NAME']) == '/talks-and-workshops') or
-                                                        (dirname($_SERVER['SCRIPT_NAME']) == '/courses') or
-                                                        (dirname($_SERVER['SCRIPT_NAME']) == '/media')
+                                                        (dirname($_SERVER['SCRIPT_NAME']) == '/courses')
                                                     ) {
                                                         echo " active";
                                                     } ?>">
@@ -86,11 +85,6 @@
                                 <li>
                                     <a href="/courses/" class="dropdown-item">
                                         <span>Lehrveranstaltungen</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/media/" class="dropdown-item">
-                                        <span>Zum anschauen (Clips)</span>
                                     </a>
                                 </li>
                             </ul>
