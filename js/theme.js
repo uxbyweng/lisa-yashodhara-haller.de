@@ -157,22 +157,35 @@ $(window).on ('load', function (){
 
 // ----------------------------- isotop gallery
         if ($("#isotop-gallery-wrapper").length) {
-            var $grid = $('#isotop-gallery-wrapper').isotope({
-              // options
-              itemSelector: '.isotop-item',
-              percentPosition: true,
-              masonry: {
-                // use element for option
-                columnWidth: '.grid-sizer'
-              }
+            var $wrapper = $('#isotop-gallery-wrapper');
 
-            });
+            if ($wrapper.hasClass('grid-1column')) {
+                // Einspaltige Listen (Publikationen, Medien, Vorträge): normaler Seitenfluss, nur ein-/ausblenden.
+                // Isotope würde hier Positionen berechnen, bevor die lazy geladenen Bilder ihre Höhe haben,
+                // und beim Filtern alles quer über die Seite animieren.
+                $('.isotop-menu-wrapper').on( 'click', 'li', function() {
+                  var filterValue = $(this).attr('data-filter');
+                  $wrapper.find('.isotop-item').each( function() {
+                    $(this).toggle( filterValue === '*' || $(this).is(filterValue) );
+                  });
+                });
+            } else {
+                var $grid = $wrapper.isotope({
+                  // options
+                  itemSelector: '.isotop-item',
+                  percentPosition: true,
+                  masonry: {
+                    // use element for option
+                    columnWidth: '.grid-sizer'
+                  }
+                });
 
-            // filter items on button click
-            $('.isotop-menu-wrapper').on( 'click', 'li', function() {
-              var filterValue = $(this).attr('data-filter');
-              $grid.isotope({ filter: filterValue });
-            });
+                // filter items on button click
+                $('.isotop-menu-wrapper').on( 'click', 'li', function() {
+                  var filterValue = $(this).attr('data-filter');
+                  $grid.isotope({ filter: filterValue });
+                });
+            }
 
             // change is-checked class on buttons
             $('.isotop-menu-wrapper').each( function( i, buttonGroup ) {
