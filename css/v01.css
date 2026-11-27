@@ -1540,3 +1540,31 @@ body.v01 {
     .v01-pagehead--legal .v01-pagehead__inner { padding-bottom: 24px; }
     .v01-section--legal { padding-top: 32px; padding-bottom: 56px; }
 }
+
+/* ===== Projektdetailseiten und Fehlerseite ===== */
+.v01-prose__h3 { margin: 16px 0 0; font-size: 18px; font-weight: 600; line-height: 1.4; }
+.v01-linklist { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.v01-linklist li { padding: 10px 0; border-bottom: 1px solid var(--v01-line); overflow-wrap: anywhere; }
+.v01-linklist li:first-child { border-top: 1px solid var(--v01-line); }
+.v01-prose__fig { margin: 8px 0; }
+.v01-prose__fig img { max-width: 100%; height: auto; display: block; }
+.v01-prose__video { max-width: 640px; }
+.v01-prose__video .v01-mthumb { background: #000; }
+.v01-prose__videotitle { font-size: 15px; font-weight: 600; }
+.v01 .v01-prose__videotitle a { color: var(--v01-text); text-decoration: none; }
+.v01 .v01-prose__videotitle a:hover { color: var(--v01-red); text-decoration: underline; }
+
+.v01-error { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 48px 72px; align-items: center; padding-top: 56px; padding-bottom: 96px; }
+.v01-error__text { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+.v01-error__text .v01-lead { max-width: 28em; }
+.v01-error__art { margin: 0; justify-self: center; width: 100%; max-width: 480px; }
+.v01-error__art img { width: 100%; height: auto; display: block; }
+.v01-error__links { margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 4px 24px; }
+@media (max-width: 860px) {
+    .v01-error { padding-top: 24px; padding-bottom: 48px; gap: 32px; }
+    .v01-error__art { order: -1; max-width: 320px; }
+}
+
+/* Lange Wörter in Überschriften trennen statt über den Rand laufen zu lassen */
+.v01 h1, .v01 h2, .v01 h3 { overflow-wrap: break-word; hyphens: auto; }
+.v01-h1--project { font-size: clamp(32px, 4.6vw, 54px); }

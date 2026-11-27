@@ -140,5 +140,6 @@ $svg = static fn(string $inner, int $s = 22): string => '<svg aria-hidden="true"
     </div>
 </section>
 
+<script src="<?= asset('/js/v01-youtube.js') ?>" defer></script>
 <script src="<?= asset('/js/v01-media.js') ?>" defer></script>
 <?php require dirname(__DIR__) . '/includes/footer.php'; ?>

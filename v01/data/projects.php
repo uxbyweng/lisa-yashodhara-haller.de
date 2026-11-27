@@ -25,7 +25,7 @@ return array (
     'title' => 'FFA – Feminismus: Fragen und Antworten',
     'sub' => 'Klarheit zu Begriffen und Konzepten',
     'img' => '/images/v01/projects/ffa.webp',
-    'href' => '/projects/ffa/',
+    'href' => '/v01/projects/ffa/',
   ),
   2 => 
   array (
@@ -36,7 +36,7 @@ return array (
     'title' => 'GKJV – Gleichstellungsorientierte Kinder- und Jugendhilfe Vorarlberg',
     'sub' => 'Konzeptualisierung eines Beratungsinstruments zur Sensibilisierung der Multiplikator*innen',
     'img' => '/images/v01/projects/gkjv.webp',
-    'href' => '/projects/gkjv/',
+    'href' => '/v01/projects/gkjv/',
   ),
   3 => 
   array (
@@ -47,7 +47,7 @@ return array (
     'title' => 'PRiNa – Politiken der Reproduktion',
     'sub' => 'DFG Wissenschaftliches Netzwerk: Umkämpfte Forschungsperspektiven und Praxisfelder',
     'img' => '/images/v01/projects/prina.webp',
-    'href' => '/projects/prina/',
+    'href' => '/v01/projects/prina/',
   ),
   4 => 
   array (
@@ -58,7 +58,7 @@ return array (
     'title' => 'GDG – Dritter Gleichstellungsbericht der Bundesregierung',
     'sub' => 'Geschäftsstelle Dritter Gleichstellungsbericht: „Digitalisierung geschlechtergerecht gestalten“',
     'img' => '/images/v01/projects/gdg.webp',
-    'href' => '/projects/gdg/',
+    'href' => '/v01/projects/gdg/',
   ),
   5 => 
   array (
@@ -69,7 +69,7 @@ return array (
     'title' => 'MOM – Macht und Ohnmacht der Mutterschaft',
     'sub' => 'Die geschlechterdifferente Regulierung von Elternschaft im Recht, ihre Legitimation und Kritik aus gendertheoretischer Sicht',
     'img' => '/images/v01/projects/mom.webp',
-    'href' => '/projects/mom/',
+    'href' => '/v01/projects/mom/',
   ),
   6 => 
   array (
@@ -80,7 +80,7 @@ return array (
     'title' => 'GagS – Gemeinschaftliche oder Alleinausübung der gemeinsamen elterlichen Sorge?',
     'sub' => 'Ein internationaler Vergleich der Rechtsregeln und ihr Einfluss auf die Verhandlungsmacht',
     'img' => '/images/v01/projects/gags.webp',
-    'href' => '/projects/gags/',
+    'href' => '/v01/projects/gags/',
   ),
   7 => 
   array (
@@ -91,7 +91,7 @@ return array (
     'title' => 'CMP – Unterhaltsrichtlinien für Kinder, gemeinsame Betreuung und neue familiäre Verpflichtungen',
     'sub' => 'Kindesunterhalt: Systeme und Verpflichtungen bei getrennten Eltern',
     'img' => '/images/v01/projects/cmp.webp',
-    'href' => '/projects/cmp/',
+    'href' => '/v01/projects/cmp/',
   ),
   8 => 
   array (
@@ -102,7 +102,7 @@ return array (
     'title' => 'JEAP – Junge Erwachsene zwischen Aktivierung und Prekarisierung',
     'sub' => 'Der Wandel des Sozialstaats: Herausforderungen und Auswirkungen',
     'img' => '/images/v01/projects/jeap.webp',
-    'href' => '/projects/jeap/',
+    'href' => '/v01/projects/jeap/',
   ),
   9 => 
   array (
@@ -113,7 +113,7 @@ return array (
     'title' => 'LAA – Liebe, Arbeit, Anerkennung',
     'sub' => 'Anerkennung und Ungleichheit in Doppelkarriere-Paaren',
     'img' => '/images/v01/projects/laa.webp',
-    'href' => '/projects/laa/',
+    'href' => '/v01/projects/laa/',
   ),
   10 => 
   array (
@@ -124,6 +124,6 @@ return array (
     'title' => 'VEIL – Werte, Gleichheit und Unterschiede in liberalen Demokratien',
     'sub' => 'Kopftuchdebatten in Europa',
     'img' => '/images/v01/projects/veil.webp',
-    'href' => '/projects/veil/',
+    'href' => '/v01/projects/veil/',
   ),
 );

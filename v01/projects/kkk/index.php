@@ -49,7 +49,7 @@ $weitere = array_values(array_filter($projects, static fn($p) => in_array($p['sl
                 <div><dt>Laufzeit</dt><dd>2023</dd></div>
                 <div><dt>Institution</dt><dd>Gunda-Werner-Institut der Heinrich-Böll-Stiftung</dd></div>
                 <div><dt>Tätigkeit</dt><dd>Projektkoordination</dd></div>
-                <div><dt>Kontext</dt><dd><a href="/projects/prina/">PRiNa – Politiken der Reproduktion</a></dd></div>
+                <div><dt>Kontext</dt><dd><a href="/v01/projects/prina/">PRiNa – Politiken der Reproduktion</a></dd></div>
             </dl>
         </aside>
     </div>
