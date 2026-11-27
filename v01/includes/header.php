@@ -22,9 +22,9 @@ if (!function_exists('v01_url')) {
         static $map = [
             'home'         => '/v01/',
             'profil'       => '/v01/about/',
-            'forschung'    => '/projects/',
+            'forschung'    => '/v01/projects/',
             'publikationen'=> '/v01/publications/',
-            'lehre'        => '/courses/',
+            'lehre'        => '/v01/courses/',
             'vortraege'    => '/talks-and-workshops/',
             'medien'       => '/press-media/',
             'kontakt'      => '/contact/',

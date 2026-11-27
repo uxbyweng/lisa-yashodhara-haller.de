@@ -824,3 +824,178 @@ html:not(.v01-js) .v01-nav__toggle { display: none; }
     .v01-pub { gap: 12px; }
     .v01-iconbtn__label { display: none; }
 }
+
+/* ===== Phase 3: Lehre ===== */
+.v01-h2--lg { font-size: clamp(30px, 3.6vw, 40px); line-height: 1.15; }
+.v01-pagehead--gold { background: var(--v01-gold-bg); }
+.v01-pagehead--gold .v01-pagehead__inner { padding-bottom: 80px; }
+.v01-pagehead__grid--center { align-items: center; grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr)); gap: 48px 72px; }
+.v01-pagehead__figure--wide { max-width: 480px; }
+.v01-pagehead__figure--wide img { aspect-ratio: 1137 / 1280; }
+.v01-gray { filter: grayscale(1); }
+.v01-section--lined-top-only { border-top: 1px solid var(--v01-line); }
+.v01-section--talks { padding: 88px 0 104px; }
+.v01-courses-section { padding-top: 88px; padding-bottom: 96px; }
+
+.v01-students {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px;
+    background: var(--v01-white);
+    border-top: 4px solid var(--v01-gold-rule);
+}
+.v01-students p { margin: 0; font-size: 16px; color: var(--v01-text-soft); }
+.v01-students__title { margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--v01-gold); }
+.v01-students__links { display: flex; flex-direction: column; }
+.v01-students__links .v01-link { align-self: flex-start; }
+
+/* Reiter */
+.v01-tabs { flex-wrap: wrap; gap: 0 32px; border-bottom: 1px solid var(--v01-line-strong); }
+.v01-tab {
+    min-height: 48px;
+    margin-bottom: -1px;
+    padding: 14px 0;
+    font: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--v01-text-light);
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+.v01-tab:hover { color: var(--v01-text); }
+.v01-tab[aria-pressed="true"] { color: var(--v01-text); border-bottom-color: var(--v01-gold-rule); }
+.v01-js .v01-nojs { display: none; }
+.v01-panel { display: flex; flex-direction: column; gap: 32px; }
+.v01-panel + .v01-panel { margin-top: 24px; }
+.v01-js .v01-panel + .v01-panel { margin-top: 0; }
+.v01-panel__title { margin: 0; font-family: var(--v01-font-serif); font-weight: 500; font-size: 28px; line-height: 1.2; }
+.v01-panel__note { margin: 0; font-size: 15px; color: var(--v01-text-light); }
+
+/* Veranstaltungsliste */
+.v01-clist { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-top: 4px solid var(--v01-gold-rule); }
+.v01-clist__item { display: flex; flex-wrap: wrap; gap: 8px 48px; padding: 24px 0; border-bottom: 1px solid var(--v01-gold-line); }
+.v01-clist__type { flex: 0 0 200px; padding-top: 4px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--v01-gold); }
+.v01-clist__main { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.v01-clist__title { font-family: var(--v01-font-serif); font-size: 23px; font-weight: 500; line-height: 1.3; }
+.v01-clist__meta { font-size: 14px; color: var(--v01-text-light); }
+.v01-clist__desc { max-width: 44em; font-size: 16px; color: var(--v01-text-soft); }
+.v01-clist__links { display: flex; flex-wrap: wrap; gap: 0 24px; }
+.v01-clist__links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 600; }
+
+/* Lehrarchiv (Tabelle) */
+.v01-tablewrap { overflow-x: auto; border-top: 4px solid var(--v01-gold-rule); }
+.v01-table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
+.v01-table th {
+    padding: 14px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--v01-text-light);
+}
+.v01-table th:first-child { padding-left: 0; width: 110px; }
+.v01-table th:nth-child(3) { width: 300px; }
+.v01-table th:last-child { width: 140px; padding-right: 0; }
+.v01-table td { padding: 16px; vertical-align: top; border-top: 1px solid var(--v01-line); color: var(--v01-text-soft); }
+.v01-table td:first-child { padding-left: 0; }
+.v01-table td:last-child { padding-right: 0; }
+.v01-table__sem { color: var(--v01-gold) !important; font-weight: 600; white-space: nowrap; }
+.v01-table__title { display: block; font-weight: 600; color: var(--v01-text); }
+.v01-table__desc { display: block; color: var(--v01-text-mid); }
+.v01-table__fmt { color: var(--v01-text-light) !important; }
+
+/* Gastvorträge */
+.v01-talks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr));
+    gap: 0 48px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--v01-text);
+}
+.v01-talks__item { display: flex; gap: 16px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid var(--v01-line-strong); }
+.v01-talks__icon { flex: 0 0 22px; margin-top: 3px; color: var(--v01-gold-rule); }
+.v01-talks__body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.v01-talks__title { font-size: 17px; font-weight: 600; line-height: 1.35; }
+.v01-talks__meta { font-size: 14px; color: var(--v01-text-light); }
+
+@media (max-width: 860px) {
+    .v01-pagehead--gold .v01-pagehead__inner { padding-bottom: 48px; }
+    .v01-courses-section { padding-top: 48px; padding-bottom: 56px; }
+    .v01-section--talks { padding: 56px 0; }
+    .v01-clist__type { flex-basis: 100%; }
+    .v01-tabs { gap: 0 20px; }
+}
+
+/* ===== Phase 3: Forschung und Projekte, Projekt KKK ===== */
+.v01-twocol { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 24px 64px; }
+.v01-twocol .v01-lead { max-width: none; }
+.v01-twocol__right { margin: 0; color: var(--v01-text-mid); text-wrap: pretty; }
+.v01-focus--compact { gap: 40px; }
+.v01-focus--compact .v01-focus__item { gap: 10px; padding-top: 20px; }
+.v01-focus--compact .v01-focus__no { font-size: 20px; }
+.v01-focus--compact .v01-focus__item p { font-size: 15px; }
+.v01-h3--sm { font-size: 19px; }
+
+/* Projektkacheln */
+.v01-pcards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: 48px 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.v01-pcards--three { grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 32px; }
+.v01 .v01-pcard__link { display: flex; flex-direction: column; gap: 10px; height: 100%; color: var(--v01-text); text-decoration: none; }
+.v01-pcard__img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; margin-bottom: 4px; }
+.v01-pcard__years { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--v01-red); }
+.v01-pcard__title { font-family: var(--v01-font-serif); font-size: 21px; font-weight: 500; line-height: 1.25; text-wrap: balance; }
+.v01-pcard__link:hover .v01-pcard__title { color: var(--v01-red); text-decoration: underline; text-underline-offset: 3px; }
+.v01-pcard__sub { font-size: 14px; line-height: 1.5; color: var(--v01-text-light); }
+
+/* Projektseite */
+.v01-pagehead__grid--project { grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 48px 64px; }
+.v01-eyebrow--row { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.v01-eyebrow__year { color: var(--v01-text-light); }
+.v01-h1--project { font-size: clamp(36px, 4.6vw, 54px); line-height: 1.08; letter-spacing: -0.01em; }
+.v01-lead--lg { font-size: 21px; line-height: 1.45; }
+.v01-project__hero { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+.v01-prose__intro { font-family: var(--v01-font-serif); font-size: clamp(21px, 2.3vw, 26px); line-height: 1.4; }
+.v01-bio__aside--red { border-top: 4px solid var(--v01-red); }
+.v01 .v01-download {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 16px;
+    padding: 24px;
+    color: var(--v01-text);
+    text-decoration: none;
+    background: var(--v01-beige);
+    border: 1px solid var(--v01-line);
+}
+.v01 .v01-download:hover { background: var(--v01-line); color: var(--v01-text); }
+.v01-download__icon { flex: none; color: var(--v01-red); }
+.v01-download__text { flex: 1 1 auto; display: flex; flex-direction: column; gap: 2px; }
+.v01-download__title { font-weight: 600; }
+.v01-download__meta { font-size: 14px; color: var(--v01-text-light); }
+
+/* Zeilenlinks (Publikationen aus dem Projekt) */
+.v01-rows { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--v01-text); }
+.v01 .v01-rows__row { display: flex; flex-direction: column; gap: 6px; padding: 22px 16px; color: var(--v01-text); text-decoration: none; border-bottom: 1px solid var(--v01-line-strong); }
+.v01 .v01-rows__row:hover { background: var(--v01-white); color: var(--v01-text); }
+.v01-rows__label { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--v01-petrol); }
+.v01-rows__title { font-family: var(--v01-font-serif); font-size: 22px; font-weight: 500; line-height: 1.3; }
+.v01-rows__row:hover .v01-rows__title { color: var(--v01-red); }
+.v01-rows__meta { font-size: 15px; color: var(--v01-text-mid); }
+.v01-section--more { padding-top: 88px; padding-bottom: 104px; }
+
+@media (max-width: 860px) {
+    .v01-section--more { padding-top: 48px; padding-bottom: 56px; }
+    .v01-download { padding: 18px; }
+}
