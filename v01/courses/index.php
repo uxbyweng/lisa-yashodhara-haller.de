@@ -21,10 +21,10 @@ $panels = [
 <section class="v01-section--gold v01-pagehead v01-pagehead--gold">
     <div class="v01-container v01-pagehead__inner">
         <?= v01_breadcrumb([['Lehre']]) ?>
-        <div class="v01-pagehead__grid v01-pagehead__grid--center">
+        <div class="v01-pagehead__grid v01-pagehead__grid--center v01-pagehead__grid--imgfirst">
             <div class="v01-pagehead__text">
                 <p class="v01-eyebrow v01-eyebrow--gold">Lehre</p>
-                <h1 class="v01-h1 v01-h1--page">Lehre</h1>
+                <h1 class="v01-h1 v01-h1--page">Meine Lehre</h1>
                 <p class="v01-lead">Meine Lehre verbindet sozialpolitische und ökonomische Grundlagen mit aktuellen gesellschaftlichen Fragen und den Handlungsfeldern der Sozialen Arbeit. Ziel ist eine wissenschaftlich begründete Urteilsfähigkeit, und Seminare dürfen auch berühren.</p>
                 <aside class="v01-students" aria-labelledby="v01-students-title">
                     <h2 class="v01-students__title" id="v01-students-title">Für Studierende der HS Neubrandenburg</h2>

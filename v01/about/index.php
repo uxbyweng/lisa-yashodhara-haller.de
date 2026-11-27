@@ -30,7 +30,7 @@ $e = static fn(string $s): string => htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
 <section class="v01-pagehead">
     <div class="v01-container v01-pagehead__inner">
         <?= v01_breadcrumb([['Profil']]) ?>
-        <div class="v01-pagehead__grid">
+        <div class="v01-pagehead__grid v01-pagehead__grid--imgfirst">
             <div class="v01-pagehead__text">
                 <p class="v01-eyebrow">Profil</p>
                 <h1 class="v01-h1 v01-h1--page">Lisa Yashodhara Haller</h1>

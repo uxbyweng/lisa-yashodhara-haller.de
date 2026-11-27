@@ -1259,3 +1259,54 @@ html:not(.v01-js) .v01-nav__toggle { display: none; }
     .v01-formcard { padding: 28px 20px; }
 }
 .v01-mailrow { display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; color: var(--v01-red); }
+
+/* Tippflächen: Textlinks in Brotkrumen, Footer, Steckbriefen und E-Mail-Adressen mindestens 44 px hoch */
+.v01 .v01-breadcrumb a,
+.v01 .v01-footer a,
+.v01 .v01-dl a,
+.v01 a.mailaddress { display: inline-flex; align-items: center; min-height: 44px; }
+.v01 .v01-footer__list { gap: 0; }
+.v01-footer__col { gap: 4px; }
+.v01 .v01-dl__links a { min-height: 44px; }
+.v01-breadcrumb { align-items: center; }
+.v01-logo { min-height: 44px; align-items: center; }
+
+/* Mobil laut Entwurf (Startseite – Mobil): Kopfzeile einzeilig, Porträt vor dem Text, Footer zweispaltig */
+@media (max-width: 860px) {
+    .v01-header__inner { gap: 8px 16px; padding-top: 12px; padding-bottom: 12px; }
+    .v01-logo img { height: 34px; }
+    .v01-nav.is-open-wrap .v01-nav__toggle { margin-left: auto; }
+    .v01-js .v01-nav__list.is-open { padding-bottom: 8px; }
+
+    .v01-hero__figure { order: -1; justify-content: stretch; }
+    .v01-hero__figure img { max-width: none; aspect-ratio: 1 / 1; object-position: 50% 22%; }
+
+    .v01-footer__cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
+    .v01-footer__cols > :first-child { grid-column: 1 / -1; }
+    .v01-footer__inner { padding-top: 48px; gap: 40px; }
+}
+@media (max-width: 860px) {
+    .v01-header__inner { position: relative; }
+    .v01-js .v01-nav__toggle { position: absolute; top: 12px; right: 20px; }
+    .v01-js .v01-nav.is-open-wrap { padding-top: 4px; }
+}
+
+/* Mobil: Bild direkt nach der Überschrift (Profil, Lehre, Kontakt), im ersten Bildschirm sichtbar */
+@media (max-width: 860px) {
+    .v01-pagehead__grid--imgfirst { gap: 16px; }
+    .v01-pagehead__grid--imgfirst .v01-pagehead__text { display: contents; }
+    .v01-pagehead__grid--imgfirst .v01-pagehead__text > * { order: 4; }
+    .v01-pagehead__grid--imgfirst .v01-pagehead__text > .v01-eyebrow { order: 1; margin-bottom: -8px; }
+    .v01-pagehead__grid--imgfirst .v01-pagehead__text > .v01-h1 { order: 2; margin-bottom: 4px; }
+    .v01-pagehead__grid--imgfirst .v01-pagehead__figure { order: 3; justify-self: stretch; max-width: none; margin-bottom: 8px; }
+    .v01-pagehead__grid--imgfirst .v01-pagehead__figure img { width: 100%; max-height: 38vh; object-fit: cover; object-position: 50% 25%; }
+    .v01-pagehead__grid--imgfirst .v01-pagehead__text > .v01-lead { margin-top: 0; }
+    .v01-pagehead__inner:has(.v01-pagehead__grid--imgfirst) { gap: 4px; padding-top: 12px; }
+}
+
+/* Mobil: Brotkrumen ausblenden (auf allen v01-Seiten) */
+@media (max-width: 860px) {
+    .v01-breadcrumb { display: none; }
+    .v01-pagehead__inner { padding-top: 28px; }
+    .v01-pagehead__inner:has(.v01-pagehead__grid--imgfirst) { padding-top: 24px; }
+}
