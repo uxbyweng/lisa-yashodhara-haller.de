@@ -21,7 +21,7 @@ if (!function_exists('v01_url')) {
     function v01_url(string $key): string {
         static $map = [
             'home'         => '/v01/',
-            'profil'       => '/about/',
+            'profil'       => '/v01/about/',
             'forschung'    => '/projects/',
             'publikationen'=> '/publications/',
             'lehre'        => '/courses/',
@@ -32,6 +32,20 @@ if (!function_exists('v01_url')) {
             'datenschutz'  => '/privacy/',
         ];
         return $map[$key] ?? '/v01/';
+    }
+}
+
+/** Brotkrumen: $crumbs = [['Label', 'url'], …, ['Aktuelle Seite']]; Startseite wird vorangestellt. */
+if (!function_exists('v01_breadcrumb')) {
+    function v01_breadcrumb(array $crumbs): string {
+        $out = '<nav class="v01-breadcrumb" aria-label="Brotkrumen"><a href="' . v01_url('home') . '">Startseite</a>';
+        foreach ($crumbs as $c) {
+            $out .= '<span aria-hidden="true">/</span>';
+            $out .= isset($c[1])
+                ? '<a href="' . htmlspecialchars($c[1]) . '">' . htmlspecialchars($c[0]) . '</a>'
+                : '<span aria-current="page">' . htmlspecialchars($c[0]) . '</span>';
+        }
+        return $out . '</nav>';
     }
 }
 
@@ -71,14 +85,11 @@ $e = static fn(string $s): string => htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
 <meta property="og:type" content="website">
 <meta property="og:title" content="<?= $e($metaTitle) ?>">
 <meta property="og:description" content="<?= $e($metaDesc) ?>">
-<?php if (isset($ogImg)) : ?>
-<meta property="og:image" content="<?= $e($ogImg) ?>">
-<?php else : ?>
-<meta property="og:image" content="https://www.lisa-yashodhara-haller.de/images/og/og_startseite.jpg">
+<?php /* OG-Bilder liegen in images/og/ (1200×630, JPG); Seiten setzen $ogImg = Dateiname, z. B. 'og_profile.jpg' */ ?>
+<meta property="og:image" content="https://www.lisa-yashodhara-haller.de/images/og/<?= $e($ogImg ?? 'og_startseite.jpg') ?>">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/jpeg">
-<?php endif; ?>
 
 <link rel="preload" href="/fonts/v01/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/v01/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
