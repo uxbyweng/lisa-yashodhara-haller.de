@@ -26,7 +26,7 @@ if (!function_exists('v01_url')) {
             'publikationen'=> '/v01/publications/',
             'lehre'        => '/v01/courses/',
             'vortraege'    => '/talks-and-workshops/',
-            'medien'       => '/press-media/',
+            'medien'       => '/v01/press-media/',
             'kontakt'      => '/contact/',
             'impressum'    => '/imprint/',
             'datenschutz'  => '/privacy/',
