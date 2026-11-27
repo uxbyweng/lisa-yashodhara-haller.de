@@ -23,7 +23,7 @@ if (!function_exists('v01_url')) {
             'home'         => '/v01/',
             'profil'       => '/v01/about/',
             'forschung'    => '/projects/',
-            'publikationen'=> '/publications/',
+            'publikationen'=> '/v01/publications/',
             'lehre'        => '/courses/',
             'vortraege'    => '/talks-and-workshops/',
             'medien'       => '/press-media/',
