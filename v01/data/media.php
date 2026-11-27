@@ -13,6 +13,7 @@ return array (
     'desc' => 'Radiogespräch über sinkende Geburtenzahlen und Familienpolitik, mit Matthias Dantlgraber und Katharina Spieß. Moderation: Marion Theis.',
     'kind' => 'hoeren',
     'href' => 'https://www.ardsounds.de/episode/urn:ard:episode:d8086fa3e4980ca7/',
+    'img' => '/images/v01/media/swr-kultur-forum.jpg',
   ),
   1 => 
   array (
@@ -96,6 +97,7 @@ return array (
     'desc' => 'Vortrag über Ungerechtigkeiten im Elterngeldsystem und Reformvorschläge.',
     'kind' => 'sehen',
     'href' => 'https://www.youtube.com/watch?v=njq7dXJll-I&t=1s',
+    'img' => '/images/yt-thumbs/njq7dXJll-I.jpg',
   ),
   9 => 
   array (
@@ -115,6 +117,7 @@ return array (
     'desc' => 'Mit Sophie Schwab. Moderation: Alicia Schlender.',
     'kind' => 'sehen',
     'href' => 'https://www.youtube.com/watch?v=Ju1Hk1CyiGI&t=1s',
+    'img' => '/images/yt-thumbs/Ju1Hk1CyiGI.jpg',
   ),
   11 => 
   array (
@@ -135,6 +138,7 @@ return array (
     'desc' => 'Schaltgespräch mit Lisa Yashodhara Haller als Expertin für Familienrecht.',
     'kind' => 'sehen',
     'href' => 'https://www.youtube.com/watch?v=xYONhjKnKkU&t=1s',
+    'img' => '/images/yt-thumbs/xYONhjKnKkU.jpg',
   ),
   13 => 
   array (
@@ -144,6 +148,7 @@ return array (
     'desc' => 'Podiumsdiskussion mit Barbara Umrath. Moderation: Christina Engelmann.',
     'kind' => 'sehen',
     'href' => 'https://www.youtube.com/watch?v=OfS2OH6KJjI&t=1s',
+    'img' => '/images/yt-thumbs/OfS2OH6KJjI.jpg',
   ),
   14 => 
   array (
@@ -153,6 +158,7 @@ return array (
     'desc' => 'Zu den Änderungsvorhaben im Koalitionsvertrag der Ampelkoalition.',
     'kind' => 'lesen',
     'href' => 'https://de.readly.com/magazines/cosmopolitan-de/2023-01-11/63b6f5f70d097fd8f3671389',
+    'img' => '/images/press/cosmopolitan_artikel_lisa_yashodhara_haller_feminismus_im_familienrecht.jpg',
   ),
   15 => 
   array (
@@ -162,6 +168,7 @@ return array (
     'desc' => 'Mit Ulrike Wagener darüber, wie feministisch die geplanten Familienrechtsreformen sind.',
     'kind' => 'lesen',
     'href' => 'https://www.nd-aktuell.de/artikel/1168525.familienpolitik-gleichberechtigung-ist-im-kapitalismus-nicht-zu-haben.html',
+    'img' => '/images/press/4 Gleichberechtigung.jpg',
   ),
   16 => 
   array (
@@ -172,6 +179,7 @@ return array (
     'kind' => 'lesen',
     'href' => 'https://www.freitag.de/autoren/lisa-yashodhara-haller/hilft-die-neue-kindergrundsicherung-der-bundesregierung-gegen-armut',
     'pay' => true,
+    'img' => '/images/press/die_einkommen_unserer_kinder.jpg',
   ),
   17 => 
   array (
@@ -181,6 +189,7 @@ return array (
     'desc' => 'Feministische Perspektiven in der empirischen Sozialforschung, mit Sarah Speck.',
     'kind' => 'sehen',
     'href' => 'https://www.youtube.com/watch?v=nvlMCDxAWWs&t=1s',
+    'img' => '/images/yt-thumbs/nvlMCDxAWWs.jpg',
   ),
   18 => 
   array (
@@ -190,6 +199,7 @@ return array (
     'desc' => '',
     'kind' => 'sehen',
     'href' => 'https://www.youtube.com/watch?v=ANK57d-QJXw&t=1s',
+    'img' => '/images/yt-thumbs/ANK57d-QJXw.jpg',
   ),
   19 => 
   array (
@@ -199,6 +209,7 @@ return array (
     'desc' => 'Mit Lisa Yashodhara Haller, Julia Teschlade, Maya Halatcheva-Trapp und Christine Wimbauer.',
     'kind' => 'sehen',
     'href' => '/downloads/RS472_Mitschnitt_Soziale_Elternschaft_16_05_2022.mp4',
+    'img' => '/images/media/video_post.jpg',
   ),
   20 => 
   array (
@@ -208,6 +219,7 @@ return array (
     'desc' => 'Interview mit Carolin George.',
     'kind' => 'lesen',
     'href' => '',
+    'img' => '/images/press/6_Die_Erschoepfung_von_Muettern.png',
   ),
   21 => 
   array (
@@ -218,6 +230,7 @@ return array (
     'kind' => 'lesen',
     'href' => '',
     'gone' => true,
+    'img' => '/images/press/7_Im_deutsprachigen_Raum.png',
   ),
   22 => 
   array (
@@ -227,6 +240,7 @@ return array (
     'desc' => 'Dokumentation mit Lisa Yashodhara Haller als Expertin.',
     'kind' => 'sehen',
     'href' => 'https://www.youtube.com/watch?v=Bt0fevR0NT0&t=19s',
+    'img' => '/images/yt-thumbs/Bt0fevR0NT0.jpg',
   ),
   23 => 
   array (
@@ -236,6 +250,7 @@ return array (
     'desc' => 'Dokumentation mit Lisa Yashodhara Haller als Expertin.',
     'kind' => 'sehen',
     'href' => 'https://www.youtube.com/watch?v=YtzVA6RSR_o&t=1193s',
+    'img' => '/images/yt-thumbs/YtzVA6RSR_o.jpg',
   ),
   24 => 
   array (
@@ -245,6 +260,7 @@ return array (
     'desc' => '',
     'kind' => 'lesen',
     'href' => 'https://jungle.world/artikel/2019/51/zeit-ist-mehr-wert',
+    'img' => '/images/press/08-zeit_ist_mehr_wert.jpg',
   ),
   25 => 
   array (
@@ -254,6 +270,7 @@ return array (
     'desc' => 'Vortrag im AZ Conni Dresden.',
     'kind' => 'hoeren',
     'href' => 'https://www.mixcloud.com/evibes/elternschaft-im-kapitalismus-lisa-yashodhara-haller/',
+    'img' => '/images/media/mxcloud_elternschaft_im_kapitalismus.jpg',
   ),
   26 => 
   array (
@@ -264,6 +281,7 @@ return array (
     'kind' => 'lesen',
     'href' => 'https://www.freitag.de/autoren/christopher-wimmer/verbuendet-euch',
     'pay' => true,
+    'img' => '/images/press/9_Verbuendet_euch.jpg',
   ),
   27 => 
   array (
@@ -273,6 +291,7 @@ return array (
     'desc' => '',
     'kind' => 'lesen',
     'href' => 'https://jungle.world/artikel/2019/09/die-eingrenzung-der-freiheit',
+    'img' => '/images/press/10_ Die_Eingrenzung_der_Freiheit.jpg',
   ),
   28 => 
   array (
@@ -282,6 +301,7 @@ return array (
     'desc' => 'Zur Anhörung im Rechtsausschuss des Bundestags über Anträge von FDP und Linke zur Betreuung von Kindern nach Trennung.',
     'kind' => 'lesen',
     'href' => 'https://www.nd-aktuell.de/artikel/1112146.trennungskinder-kinder-wechseln-unterhalt-endet.html',
+    'img' => '/images/press/11_Kinder_wechseln.jpg',
   ),
   29 => 
   array (
@@ -291,6 +311,7 @@ return array (
     'desc' => 'Interview mit Peter Nowak.',
     'kind' => 'lesen',
     'href' => 'https://www.freitag.de/autoren/peter-nowak/elternschaft-im-kapitalismus',
+    'img' => '/images/press/12_Elternschaft_im_Kapitalismus.jpg',
   ),
   30 => 
   array (
@@ -300,6 +321,7 @@ return array (
     'desc' => 'Interview mit Fabian Hennig.',
     'kind' => 'lesen',
     'href' => 'https://jungle.world/artikel/2018/44/schwangerschaft-erscheint-als-defizit-der-frauen',
+    'img' => '/images/press/schwangerschaft_als_defizit_der_frau.jpg',
   ),
   31 => 
   array (
@@ -309,6 +331,7 @@ return array (
     'desc' => 'Interview mit Peter Nowak.',
     'kind' => 'lesen',
     'href' => 'https://www.nd-aktuell.de/artikel/1106488.arbeitsteilung-von-eltern-umgedeutetes-familienernaehrermodell.html',
+    'img' => '/images/press/14_Umgedeutetes_Familienernaehrermodell.jpg',
   ),
   32 => 
   array (
@@ -318,6 +341,7 @@ return array (
     'desc' => 'Interview mit Christina Baumeister.',
     'kind' => 'lesen',
     'href' => 'https://www.yumpu.com/de/document/read/62184546/vorwarts-berlin-09-10-2018',
+    'img' => '/images/press/15_Halbtags_fuer_Alle.JPG',
   ),
   33 => 
   array (
@@ -327,6 +351,7 @@ return array (
     'desc' => 'Interview mit Stina Menzig.',
     'kind' => 'lesen',
     'href' => 'https://www.nds-lagen.de/index.php?id=314',
+    'img' => '/images/press/16_Forschung_ueber_Elternschaft.jpg',
   ),
   34 => 
   array (
@@ -336,6 +361,7 @@ return array (
     'desc' => 'Interview mit Elsa Köster.',
     'kind' => 'lesen',
     'href' => 'https://www.nd-aktuell.de/artikel/1049199.judith-butler-und-die-suche-nach-der-sozialen-frage.html',
+    'img' => '/images/press/17_Judith_Butler.jpg',
   ),
   35 => 
   array (
@@ -345,6 +371,7 @@ return array (
     'desc' => 'Interview mit Ralf Ruhl.',
     'kind' => 'lesen',
     'href' => 'https://www.vaeter-zeit.de/arbeit-job/familie-beruf-vereinbaren.php',
+    'img' => '/images/press/18_Beruf_und_Familie.png',
   ),
   36 => 
   array (
@@ -354,5 +381,6 @@ return array (
     'desc' => '',
     'kind' => 'lesen',
     'href' => 'https://jungle.world/artikel/2016/44/arbeit-oder-liebe',
+    'img' => '/images/press/19_arbeit_oder_Liebe.jpg',
   ),
 );

@@ -86,6 +86,7 @@ $svg = static fn(string $inner, int $s = 22): string => '<svg aria-hidden="true"
                     <?php elseif (!empty($m['img'])) : ?>
                     <span class="v01-mthumb v01-mthumb--img">
                         <img src="<?= $e($m['img']) ?>" width="640" height="360" alt="" loading="lazy">
+                        <?php if ($m['kind'] === 'sehen') : ?><span class="v01-mthumb__play v01-mthumb__play--img"><?= $svg($icons['play'], 28) ?></span><?php endif; ?>
                         <span class="v01-mthumb__badge"><?= $kindLabel[$m['kind']] ?></span>
                     </span>
                     <?php elseif ($m['kind'] === 'lesen') : ?>

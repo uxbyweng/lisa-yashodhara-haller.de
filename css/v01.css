@@ -1132,3 +1132,4 @@ html:not(.v01-js) .v01-nav__toggle { display: none; }
     .v01-pagehead--petrol .v01-pagehead__inner { padding-bottom: 48px; }
     .v01-media-all { padding-top: 48px; padding-bottom: 56px; }
 }
+.v01-mthumb__play--img { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); }
