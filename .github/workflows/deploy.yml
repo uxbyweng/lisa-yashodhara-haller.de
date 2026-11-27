@@ -25,6 +25,7 @@ on:
             - "projects/**"
             - "publications/**"
             - "talks-and-workshops/**"
+            - "v01/**"
             - "vendor/**"
             - "index.php"
             - ".htaccess"
@@ -67,7 +68,7 @@ jobs:
                   FULL="${{ github.event.inputs.full_deploy }}"
 
                   PATHS=( about aktuelles components contact courses css error fonts imprint includes js press-media privacy
-                          projects publications talks-and-workshops vendor
+                          projects publications talks-and-workshops v01 vendor
                           index.php .htaccess robots.txt sitemap.xml site.webmanifest browserconfig.xml
                           safari-pinned-tab.svg ':(glob)*.png' ':(glob)*.ico' )
 
