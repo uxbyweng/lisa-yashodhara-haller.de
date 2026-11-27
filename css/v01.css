@@ -1460,3 +1460,61 @@ body.v01 {
     .v01-menu__org { display: flex; align-self: flex-start; margin-top: 8px; }
     .v01-menu__org img { height: 34px; width: auto; display: block; }
 }
+
+/* ===== Phase 3/4: Vorträge und Workshops ===== */
+.v01-pagehead__figure--talks { max-width: none; justify-self: stretch; }
+.v01-pagehead__figure--talks img { aspect-ratio: 4 / 3; object-fit: cover; object-position: 34% 30%; width: 100%; display: block; }
+
+.v01-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+    gap: 24px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+.v01-stats__item { display: flex; flex-direction: column; gap: 4px; padding-top: 16px; border-top: 4px solid var(--v01-gold-rule); }
+.v01-stats__n { font-family: var(--v01-font-serif); font-size: 44px; line-height: 1.1; }
+.v01-stats__t { font-size: 15px; color: var(--v01-text-mid); }
+
+.v01-section--formate { padding: 88px 0; }
+.v01-formats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.v01-format { display: flex; flex-direction: column; gap: 14px; padding: 32px; background: var(--v01-white); }
+.v01-format__icon { color: var(--v01-gold-rule); display: flex; }
+.v01-format__icon svg { stroke-width: 1.75; }
+.v01-format__title { margin: 0; font-family: var(--v01-font-serif); font-size: 26px; font-weight: 500; line-height: 1.2; }
+.v01-format__text { margin: 0; font-size: 16px; color: var(--v01-text-mid); }
+.v01-format__example { margin: auto 0 0; padding-top: 12px; font-size: 14px; color: var(--v01-text-light); border-top: 1px solid var(--v01-line); }
+
+.v01-events { padding-top: 88px; padding-bottom: 104px; }
+.v01-chip--gold[aria-pressed="true"] { background: var(--v01-gold-rule); border-color: var(--v01-gold-rule); color: var(--v01-white); }
+.v01-evyear { display: flex; flex-wrap: wrap; gap: 8px 48px; padding: 28px 0; border-top: 1px solid var(--v01-text); }
+.v01-evyear__year { margin: 0; flex: 0 0 120px; font-family: var(--v01-font-serif); font-weight: 500; font-size: 34px; line-height: 1.1; color: var(--v01-gold); }
+.v01-evlist { flex: 999 1 640px; min-width: 0; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; }
+.v01-ev { display: flex; gap: 18px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid var(--v01-line); }
+.v01-ev:focus { outline: none; }
+.v01-ev__icon { flex: 0 0 40px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--v01-gold); background: var(--v01-gold-bg); }
+.v01-ev__body { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.v01-ev__body p { margin: 0; }
+.v01-ev__meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 13px; color: var(--v01-text-light); }
+.v01-ev__type { font-weight: 600; color: var(--v01-gold); }
+.v01-ev__title { font-family: var(--v01-font-serif); font-size: 21px; font-weight: 500; line-height: 1.3; text-wrap: pretty; }
+.v01-ev__org { font-size: 15px; color: var(--v01-text-mid); }
+
+@media (max-width: 860px) {
+    .v01-section--formate { padding: 48px 0; }
+    .v01-events { padding-top: 48px; padding-bottom: 56px; }
+    .v01-format { padding: 24px; }
+    .v01-evyear { gap: 4px 24px; padding: 24px 0; }
+    .v01-evyear__year { flex-basis: 100%; font-size: 30px; }
+    .v01-ev { gap: 14px; }
+    .v01-stats { margin-top: 16px; }
+    .v01-stats__n { font-size: 38px; }
+}
