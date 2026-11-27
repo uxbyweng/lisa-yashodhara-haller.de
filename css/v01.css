@@ -1518,3 +1518,25 @@ body.v01 {
     .v01-stats { margin-top: 16px; }
     .v01-stats__n { font-size: 38px; }
 }
+
+/* ===== Impressum und Datenschutz ===== */
+.v01-legal { max-width: 760px; font-size: 17px; line-height: 1.65; overflow-wrap: anywhere; }
+.v01-legal > :first-child { margin-top: 0; }
+.v01-legal p { margin: 0 0 16px; text-wrap: pretty; }
+.v01-legal h2 { margin: 48px 0 16px; font-family: var(--v01-font-serif); font-weight: 500; font-size: clamp(24px, 3vw, 30px); line-height: 1.2; text-wrap: balance; }
+.v01-legal h3 { margin: 32px 0 10px; font-size: 18px; font-weight: 600; line-height: 1.35; }
+.v01-legal__list { margin: 0; padding: 0; list-style: none; }
+.v01-legal__list > li { margin: 0 0 8px; }
+.v01-legal ul:not(.v01-legal__list), .v01-legal ol { margin: 0 0 16px; padding-left: 1.4em; }
+.v01-legal li > p:last-child { margin-bottom: 0; }
+.v01-legal a { text-decoration: underline; }
+@media (max-width: 860px) {
+    .v01-legal { font-size: 16px; }
+    .v01-legal h2 { margin-top: 36px; }
+}
+.v01-pagehead--legal .v01-pagehead__inner { padding-bottom: 40px; }
+.v01-section--legal { padding-top: 56px; padding-bottom: 104px; }
+@media (max-width: 860px) {
+    .v01-pagehead--legal .v01-pagehead__inner { padding-bottom: 24px; }
+    .v01-section--legal { padding-top: 32px; padding-bottom: 56px; }
+}

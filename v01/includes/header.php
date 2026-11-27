@@ -28,8 +28,8 @@ if (!function_exists('v01_url')) {
             'vortraege'    => '/v01/talks-and-workshops/',
             'medien'       => '/v01/press-media/',
             'kontakt'      => '/v01/contact/',
-            'impressum'    => '/imprint/',
-            'datenschutz'  => '/privacy/',
+            'impressum'    => '/v01/imprint/',
+            'datenschutz'  => '/v01/privacy/',
         ];
         return $map[$key] ?? '/v01/';
     }
