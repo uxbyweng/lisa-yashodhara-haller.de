@@ -78,8 +78,34 @@ $svg = static fn(string $inner, int $s = 22): string => '<svg aria-hidden="true"
                 $tag = $link ? 'a' : 'div';
                 $attrs = $link ? ' href="' . $e($m['href']) . '" target="_blank" rel="noopener noreferrer"' : '';
                 $date = $iso($m['d']);
+                // YouTube-Beiträge: Video-ID und Startzeit aus dem Link (Abspielen direkt auf der Seite, siehe js/v01-media.js)
+                $yt = preg_match('~youtube\.com/watch\?v=([\w-]+)(?:&t=(\d+)s)?~', $m['href'], $x) ? [$x[1], (int)($x[2] ?? 0)] : null;
             ?>
             <li class="v01-mitem" data-kind="<?= $m['kind'] ?>">
+                <?php if ($yt) : ?>
+                <div class="v01-mcard v01-mcard--video" data-yt-id="<?= $e($yt[0]) ?>" data-yt-start="<?= $yt[1] ?>" data-yt-title="<?= $e($m['title']) ?>">
+                    <div class="v01-mthumb v01-mthumb--img v01-yt">
+                        <a class="v01-yt__link" href="<?= $e($m['href']) ?>" data-yt-trigger target="_blank" rel="noopener noreferrer">
+                            <img src="<?= $e($m['img']) ?>" width="640" height="360" alt="" loading="lazy">
+                            <span class="v01-mthumb__play v01-mthumb__play--img"><?= $svg($icons['play'], 28) ?></span>
+                            <span class="v01-mthumb__badge"><?= $kindLabel[$m['kind']] ?></span>
+                            <span class="v01-sr">Video abspielen: <?= $e($m['title']) ?></span>
+                        </a>
+                        <div class="v01-yt__notice" role="group" aria-label="Hinweis zum Datenschutz" hidden>
+                            <p>Dieses Video wird von YouTube bereitgestellt. Beim Abspielen werden Daten (u. a. Ihre IP-Adresse) an YouTube und Google übertragen. Mehr in der <a href="<?= v01_url('datenschutz') ?>">Datenschutzerklärung</a>.</p>
+                            <div class="v01-yt__buttons">
+                                <button class="v01-yt__accept" type="button">Zustimmen &amp; abspielen</button>
+                                <button class="v01-yt__cancel" type="button">Abbrechen</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="v01-mcard__body">
+                        <p class="v01-mcard__meta"><span class="v01-mcard__kind"><?= $kindLabel[$m['kind']] ?></span><time<?= $date !== '' ? ' datetime="' . $date . '"' : '' ?>><?= $e($m['d']) ?></time></p>
+                        <p class="v01-mcard__title"><a class="v01-mcard__titlelink" href="<?= $e($m['href']) ?>" data-yt-trigger target="_blank" rel="noopener noreferrer"><?= $e($m['title']) ?><span class="v01-sr"> (<?= $e($m['outlet']) ?>, YouTube, öffnet in neuem Tab)</span></a></p>
+                        <?php if ($m['desc'] !== '') : ?><p class="v01-mcard__desc"><?= $e($m['desc']) ?></p><?php endif; ?>
+                    </div>
+                </div>
+                <?php else : ?>
                 <<?= $tag ?> class="v01-mcard<?= !empty($m['gone']) ? ' v01-mcard--gone' : '' ?>"<?= $attrs ?>>
                     <?php if (!empty($m['gone'])) : ?>
                     <span class="v01-mthumb v01-mthumb--gone" aria-hidden="true"><span><?= $e($m['outlet']) ?></span></span>
@@ -102,6 +128,7 @@ $svg = static fn(string $inner, int $s = 22): string => '<svg aria-hidden="true"
                         <?php if (empty($m['gone']) && $m['desc'] !== '') : ?><span class="v01-mcard__desc"><?= $e($m['desc']) ?></span><?php endif; ?>
                     </span>
                 </<?= $tag ?>>
+                <?php endif; ?>
             </li>
             <?php endforeach; ?>
         </ul>
